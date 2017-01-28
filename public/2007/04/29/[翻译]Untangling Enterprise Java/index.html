@@ -1,0 +1,610 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="&amp;emsp;&amp;emsp;Untangling Enterprise Java――CHRIS RICHARDSON, CONSULTANTACM Queue June 2006A new breed of framework helps eliminate crossingcutting concerns.独立分层的设计方法是早期的重要的计算机科学的思想之一，由Dijkstra在1974年提出。它之">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《[翻译]Untangling Enterprise Java》">
+<meta property="og:url" content="http://yoursite.com/2007/04/29/[翻译]Untangling Enterprise Java/index.html">
+<meta property="og:site_name" content="我心中的香格里拉">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;Untangling Enterprise Java――CHRIS RICHARDSON, CONSULTANTACM Queue June 2006A new breed of framework helps eliminate crossingcutting concerns.独立分层的设计方法是早期的重要的计算机科学的思想之一，由Dijkstra在1974年提出。它之">
+<meta property="og:updated_time" content="2017-01-10T09:44:04.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="《[翻译]Untangling Enterprise Java》">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;Untangling Enterprise Java――CHRIS RICHARDSON, CONSULTANTACM Queue June 2006A new breed of framework helps eliminate crossingcutting concerns.独立分层的设计方法是早期的重要的计算机科学的思想之一，由Dijkstra在1974年提出。它之">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2007/04/29/[翻译]Untangling Enterprise Java/"/>
+
+
+
+
+
+  <title> 《[翻译]Untangling Enterprise Java》 | 我心中的香格里拉 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">我心中的香格里拉</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle"></p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2007/04/29/[翻译]Untangling Enterprise Java/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Sylvain Mars YU">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="我心中的香格里拉">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="我心中的香格里拉" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                《[翻译]Untangling Enterprise Java》
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2007-04-29T15:57:00+08:00">
+                2007-04-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>&emsp;&emsp;Untangling Enterprise Java――CHRIS RICHARDSON, CONSULTANTACM Queue June 2006A new breed of framework helps eliminate crossingcutting concerns.独立分层的设计方法是早期的重要的计算机科学的思想之一，由Dijkstra在1974年提出。它之所以很重要，是因为在这个理念下进行开发，可以使软件变得更加的简单，更有利于开发和维护。目前我们通过将应用程序分成多个组件的方式，来实现分层的理念，也就诞生了横切概念的这个说法。然而这些理念是无法在传统的模块化开发中实现的，因为用模块化开发方式开发的软件都比较复杂，维护相对困难。在企业应用程序的开发中，使用了横切概念这种说法的包括有：事务管理，安全管理，对象持久化以及程序的打包。通常，我们是把代码分散到程序的业务组件中去，然而这样的做法是很糟糕的。因为，这些代码会使得原本简单的业务流程组件变得复杂，同时分散在各个组件中的相似的代码会导致维护的成本上升。因此，近年来，不断的有一些开发人员，在努力开发一种新的开发框架和新的模块化开发方法，尝试去实现应用程序业务层中的横切概念。在本篇文章中，我们回顾了Java企业开发框架中横切概念的实现方式。我们首先着眼于第一代的Java企业开发框架：基于EJB的编程模型，这一代的开发框架也促使了许多程序员，萌发了去开发更好的开发框架的想法。当今的流行的最新版本的开发框架是基于POJO（简单的Java本地对象）的编程模型。虽然本文是针对Java来写的，但是里面提到的许多概念，对框架的开发者和使用其他编程语言进行企业开发的程序员是很有益处的。EJB（enterprise Java beans的缩写）是一个Java的开发标准框架，主要应用于开发基于组件的分布式应用程序。EJB提供了类似事务处理，授权，对象持久化和程序集打包等这样的服务。使用这个框架来构建商业逻辑组件的话，它可以帮助我们实现，一些在我们平时开发程序中很费时的应用。下面，我们一起看看EJB是怎么样工作的，有什么样的缺点，如何导致下一代的开发框架的诞生。使用EJB框架实现的分层设计在EJB出现前，Java程序员要自己去开发事务处理，授权，数据持久化的代码，不但容易出错,费时间,还常常和业务逻辑交织在一起。相比之下,使用了EJB的框架的话,要启用事务管理,安全和对象持久化的功能只需要配置一个单独的XML文件，一个按照一定规范来定义的XML文件，我们称之为部署文件。如图一显示，EJB框架，又称为EJB容器，读取部署配置文件，并且实施相关的行为。通过截获相关的组件的调用请求，并执行相应的额外的代码来完成横切概念的实现，比如说，EJB应用程序使用声明性事务，省去了在业务逻辑组件中夹杂事务管理的代码的步骤。EJB框架截取组件的调用后，让EJB完成事务的开始，提交和回滚操作。同样的，EJB框架使得组件支持声明性安全，简化了保障应用程序的安全的开发工作。一个EJB的部署文档可以指定某个用户对某个组件或方法的访问.EJB框架截取组件的调用后，让EJB完成对调用者的权限的检验。EJB还支持对象持久化组件，叫实体。通过配置文件来完成对实体的属性和数据库模式的映射，完成简单的属性值和表项，数据库表的外键和联结表的映射。EJB框架通过使用这些映射，来自动产生SQL语句来查询或者更新数据库的内容。EJB在一定程度上成功的将横切概念从业务逻辑中分离出来。EJB负责将他们从业务逻辑中提取出来再进行处理，然而EJB1.0和EJB2.0这两个版本的开发框架的实际效果，却让人感到非常失望。EJB的缺陷在早期的EJB框架中存在的最大的缺陷，也是当今使用Java来开发企业应用程序的程序员中抱怨得最多的，就是要求所有的类都必须去实现框架的组件。用了EJB1.0和EJB2.0编写的组件，是必须实现EJB框架定义的接口，而且还必须使用他的API。这样紧耦合的组件设计，理所当然会导致很多问题的出现。第一，分层的设计理念还是一个幻想。即使横切概念使得安全，事务处理和对象持久化的实现，从业务逻辑组件中分离了出来，用规范的配置文档来部署他们就可以了，但你也不能在开发业务流程的时候不理会他们。举个例子，一个对象持久化组件没有数据库的支持是不容易进行测试的，当你去测试组件的业务逻辑的时候，你就不得不去考虑数据库概念模式的设计。EJB做不到让你一次只专注完成一个部件。业务逻辑与开发框架的紧耦合，导致繁冗的编辑－编译－调试周期不断的循环。在EJB的容器里面部署EJB的组件，也是一份非常耗时的工作，经常会打断你的思路。比如方才部署了程序，刚打算去做点别的事情，例如上上网，和朋友聊聊天，然而不到10秒的功夫，可能又得重新部署。最没有效率的，莫过于每一两分钟要进行测试的，Test-driven开发。一般来说，Test-driven开发和单元测试都是Java开发中最具有可行性的开发方式，然而使用了EJB后，这些开发方式就变得难以进行。更糟糕的是，不同版本的EJB框架竟然是不兼容的，尽管EJB是一个标准性的东西，但是在短时间内竟然出现了互不兼容的版本,在EJB1.0和EJB2.0，以及EJB2.0和EJB3.0中，他们的差异是非常的大。如果你想使用新框架带来的便利或者最新的特性的话，你就必须重新的去构造你的程序，这对要长年累月维护EJB软件生命周期的程序员来说，是一个相当大的挑战。诸如此类的问题，促使开发企业应用的程序员，不得不去开发新的、具有横切概念的框架。因此，在开源社区中，出现了一些具有创新理念的开发框架，像Spring，Hibernate等。这些支持快速开发的组件模型，就是基于POJO技术的。POJO编程如今，用POJO来开发企业应用程序，是社区中公认的想法，因为比起用EJB开发的程序来说，用POJO来开发的话，不但简单，而且功能更强大。POJO对象就是那些不需要实现某些框架的接口，像EJB那样的，不需要用他们的框架的API来开发的对象。POJO这个概念，是由Martin Fowler和那些想鼓励更多的开发者使用本地对象的人提出的。就是这些简单的想法，却有让人意想不到的优势，有效和显著的横切分层就是其中之一。“非入侵”式框架POJO对象本身是不能发挥什么太大的作用的，你仍然需要去调用一些类似EJB框架的服务来实现像安全，事务这样的功能。但是我们使用一种叫做“非入侵”的框架，来提供这些服务给POJO程序。现在，比较出名的框架有：Spring，提供了声明式的事务处理方法；Hibernate和JDO，提供了对象持久化的功能；Acegi，拓展了Spring的应用，提供了认证和授权的企业安全的应用。另外，现在最新发布的EJB3.0的规范也是基于POJO的。与EJB2.0相似的是，这个框架也需要用配置文件。通过使用配置文件，来规定你的组件该怎么样运行。这些框架可以提供事务处理，安全，对象持久化和程序集打包的服务，但与EJB2.0不同的是不需要去实现基于框架的接口或调用框架的API。而且它尽量使得它对应用程序的约束最小，并且只让一小部分的程序的组件去调用这个框架，去执行创建，寻找和注销一个持久化对象的操作。正如图2所表示的一样，你的应用程序都是一些POJO的集合，独立于这个开发框架的事务，安全和对象持久化的处理过程。事务处理和安全处理都是这个框架去截取POJO程序的程序调用，检查调用者是否已授权，管理事务的处理；对象持久化的框架负责保持持久化组件和数据库的状态一致。另外，“非入侵”式框架与EJB2.0框架还有一个不同之处，就是“非入侵”式框架的配置文件变得非常的友好，而且变得非常的简单。此外，还有一些框架允许你在代码中，以写元数据的形式来代替那些XML配置文件，比如JAVA5的annotations机制。annotations是java语言中，对程序单元处做声明性信息（如声明式事务）的构造方法，由于他比XML更为简洁，而且可以嵌入到程序之中，更为靠近类，域或函数的定义，同时也避免了因程序的源代码和XML配置文件中的脆弱的连接引起的问题，所以受到越来越多的开发人员的青睐。annotations其实是一把双刃剑，因为annotations是源代码的一部分，你的程序就可以不依赖框架，程序和框架紧耦合的状态就消除了。随后，我会给大家展示一下使用这些支持元数据的框架的例子。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2007/04/25/成也java败也java/" rel="next" title="《成也java败也java》">
+                <i class="fa fa-chevron-left"></i> 《成也java败也java》
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2007/05/01/毕设进度之论文开始/" rel="prev" title="《毕设进度之论文开始》">
+                《毕设进度之论文开始》 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Sylvain Mars YU" />
+          <p class="site-author-name" itemprop="name">Sylvain Mars YU</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">280</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sylvain Mars YU</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid="></script>
+      <!-- UY END -->
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
