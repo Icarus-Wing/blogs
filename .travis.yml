@@ -1,0 +1,31 @@
+# S: Build Lifecycle
+install:
+  - npm install hexo-cli -g
+  - npm install hexo --save
+  - npm install
+
+before_script:
+  - npm install -g gulp
+
+script:
+  - hexo clean
+  - hexo g
+  - hexo d
+
+after_script:
+  - cd dist
+  - git init
+  - git config user.name "nasamars"
+  - git config user.email "canghai.yu@gmail.com"
+  - git add .
+  - git commit -m "Update docs"
+  - git push -f "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
+# E: Build LifeCycle
+
+branches:
+  only:
+    - master
+env:
+ global:
+   - GH_REF: github.com/Nasamars/nasamars.github.io.git
+   - secure: "cxgk0LGdzbiTHlKFZbti24eqBIv2U3wEJeFFynFPFblApxi3fIE1JAW7JIgE2kJgTnpdXAG51U88lKAami9mvPArRoJHVu+zgWcnGi5dKVyX+9H8YlpmPhOmsA0OTZpIFPiE7+ZNLg1I3Mnx3Uicinc9cF/6CeeC+5l2apSg/Pwdqh7XJuQqiFlq+iQP38AEWUaptNdCoYmXAG/8t1Dmv/0Fe4pVEn7tszpg2JzG6wWkxF8+3g5lyELaA75GdbBx1sSVqfovAEZsPfR3VsQLne15e5lKnZX0YkcNhY9MVh6NMjzImg0lihkDLsJ1ZBAXwE+ZV4JjzqIfSu0qYF487zJw+InwPoaziJrueFdz8STj4Jgq3l7TWettpDty7W9tLtE0cSe1VYqElxT7C8mdTFVd/QnSKLHXcv63ggpvajtLXX409OenYWDVHDHTFZEVVuSl9j5kEeQOkx50lgWjOKmPv6o7guZMp3uvtLxX+XH4K7LtVdz6ZUsa70RFL0gBcagpFCK1FHvdXm1VZZl8WwzARfYTi5i2R46QixpGMyjROSQvy2V0gOnvfbYRKG4A4DSY+XEHeYvVPDaMfExii2lHB4dz4rvSLiSy1oQr8WuWGO5fP+AY/hNJOry6xAG56UpZZYqwI+FRcuXzlrno3wRvXW4/zNkfN3hwO0/omtc="
