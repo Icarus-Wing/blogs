@@ -1,4 +1,5 @@
 # Blogs 
-[build-info](https://travis-ci.org/Nasamars/blogs.svg)
+
+![build-info](https://travis-ci.org/Nasamars/blogs.svg)
 
 Pages
