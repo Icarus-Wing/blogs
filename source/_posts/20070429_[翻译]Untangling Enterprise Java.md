@@ -1,8 +1,8 @@
 ---
-title: [翻译]Untangling Enterprise Java
+title: 翻译:Untangling Enterprise Java
 tags: []
 categories: []
-date: 2007-04-29 15:57:00 
+date: 2007-04-29 15:57:00
 ---
 
 
