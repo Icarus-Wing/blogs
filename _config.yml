@@ -8,7 +8,7 @@ subtitle:
 description:
 author: Sylvain Mars YU
 language: zh-Hans
-timezone: 
+timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -40,8 +40,8 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
-  tab_replace:
+  auto_detect: true
+  tab_replace: 
 
 # Category & Tag
 default_category: uncategorized
