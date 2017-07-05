@@ -266,10 +266,10 @@ mathjax:
 #baidu_analytics:
 
 # Duoshuo ShortName
-duoshuo_shortname: nasamars
+#duoshuo_shortname: nasamars
 
 # Disqus
-#disqus_shortname:
+disqus_shortname: nasamars
 
 # Hypercomments
 #hypercomments_id:
