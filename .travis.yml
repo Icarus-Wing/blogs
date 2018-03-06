@@ -39,4 +39,4 @@ env:
    - GH_REF: github.com/Nasamars/nasamars.github.io.git
 
 
-dist: precise
+#dist: precise
