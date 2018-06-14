@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8aad11dd-8039-4efa-884f-ab250ff037ed" name="Default" comment="小家，越住越大2">
+    <list default="true" id="8aad11dd-8039-4efa-884f-ab250ff037ed" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/source/_posts/20180614_七支柱.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/_posts/20180109_for 2018.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20180109_for 2018.md" afterDir="false" />
     </list>
@@ -17,48 +18,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="20180521_达摩克里斯之剑.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/_posts/20180521_达摩克里斯之剑.md">
+      <file leaf-file-name="20180614_七支柱.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/_posts/20180614_七支柱.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="115">
-                <caret line="5" column="3" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="31" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20180109_for 2018.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/_posts/20180109_for 2018.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="275">
-                <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20180523_家的容器.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/_posts/20180523_家的容器.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="89">
-                <caret line="7" selection-start-line="7" selection-end-line="7" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20180601_游侠刘邦.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/source/_posts/20180601_游侠刘邦.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="275">
-                <caret line="103" column="9" lean-forward="true" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="9" />
+              <first_editor relative-caret-position="252">
+                <caret line="62" column="44" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="44" />
               </first_editor>
               <second_editor />
             </state>
@@ -90,8 +55,10 @@
         <option value="$PROJECT_DIR$/source/_posts/20180504_再游京津.md" />
         <option value="$PROJECT_DIR$/source/_posts/20180517_两个世界.md" />
         <option value="$PROJECT_DIR$/source/_posts/20180523_家的容器.md" />
-        <option value="$PROJECT_DIR$/source/_posts/20180109_for 2018.md" />
         <option value="$PROJECT_DIR$/source/_posts/20180601_游侠刘邦.md" />
+        <option value="$PROJECT_DIR$/source/_posts/20180606_你或许不懂怎么玩乐高.md" />
+        <option value="$PROJECT_DIR$/source/_posts/20180109_for 2018.md" />
+        <option value="$PROJECT_DIR$/source/_posts/20180614_七支柱.md" />
       </list>
     </option>
   </component>
@@ -203,7 +170,10 @@
       <workItem from="1526860930245" duration="968000" />
       <workItem from="1527056493162" duration="1429000" />
       <workItem from="1527735611882" duration="609000" />
-      <workItem from="1527811878700" duration="14004000" />
+      <workItem from="1527811878700" duration="14865000" />
+      <workItem from="1528275751269" duration="4423000" />
+      <workItem from="1528341387685" duration="878000" />
+      <workItem from="1528927570181" duration="3365000" />
     </task>
     <task id="LOCAL-00001" summary="单车大战">
       <created>1523152461777</created>
@@ -247,11 +217,25 @@
       <option name="project" value="LOCAL" />
       <updated>1527064123796</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="游侠刘邦--《秦崩：从秦始皇到刘邦》">
+      <created>1528080516935</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1528080516935</updated>
+    </task>
+    <task id="LOCAL-00008" summary="《爆裂：未来社会的9大生存原则》">
+      <created>1528341495106</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1528341495106</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36709000" />
+    <option name="totallyTimeSpent" value="46236000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="31" width="1260" height="691" extended-state="0" />
@@ -273,12 +257,12 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Messages" order="7" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,29 +278,11 @@
     <MESSAGE value="两个世界" />
     <MESSAGE value="崩溃：社会如何选择成败兴亡" />
     <MESSAGE value="小家，越住越大2" />
-    <option name="LAST_COMMIT_MESSAGE" value="小家，越住越大2" />
+    <MESSAGE value="游侠刘邦--《秦崩：从秦始皇到刘邦》" />
+    <MESSAGE value="《爆裂：未来社会的9大生存原则》" />
+    <option name="LAST_COMMIT_MESSAGE" value="《爆裂：未来社会的9大生存原则》" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/source/_posts/20180424_字里藏医.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="138">
-            <caret line="6" column="3" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="22" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/20180517_两个世界.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="161">
-            <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/20180109_for 2018.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -665,11 +631,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/20180521_达摩克里斯之剑.md">
+    <entry file="file://$PROJECT_DIR$/source/_posts/20180601_游侠刘邦.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="115">
-            <caret line="5" column="3" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="31" />
+          <first_editor relative-caret-position="23">
+            <caret line="1" column="25" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="25" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/20180606_你或许不懂怎么玩乐高.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="5334">
+            <caret line="107" column="4" lean-forward="true" selection-start-line="107" selection-start-column="4" selection-end-line="107" selection-end-column="4" />
           </first_editor>
           <second_editor />
         </state>
@@ -678,7 +654,7 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/20180523_家的容器.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="89">
+          <first_editor relative-caret-position="161">
             <caret line="7" selection-start-line="7" selection-end-line="7" />
           </first_editor>
           <second_editor />
@@ -688,18 +664,28 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/20180109_for 2018.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="275">
-            <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+          <first_editor relative-caret-position="206">
+            <caret line="66" column="16" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="16" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/20180601_游侠刘邦.md">
+    <entry file="file://$PROJECT_DIR$/source/_posts/20180521_达摩克里斯之剑.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="275">
-            <caret line="103" column="9" lean-forward="true" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="9" />
+          <first_editor relative-caret-position="23">
+            <caret line="5" column="3" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="31" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/20180614_七支柱.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="252">
+            <caret line="62" column="44" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="44" />
           </first_editor>
           <second_editor />
         </state>
