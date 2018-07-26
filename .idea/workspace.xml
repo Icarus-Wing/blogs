@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8aad11dd-8039-4efa-884f-ab250ff037ed" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/20180724_担当.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20180724_担当.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/source/_posts/20180724_担当.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="233">
+              <first_editor relative-caret-position="4577">
                 <caret line="109" column="51" selection-start-line="109" selection-start-column="51" selection-end-line="109" selection-end-column="51" />
               </first_editor>
               <second_editor />
@@ -94,7 +93,7 @@
       <path value="$PROJECT_DIR$/themes/next_old/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="15" />
     <option name="y" value="55" />
     <option name="width" value="1260" />
@@ -192,7 +191,7 @@
       <workItem from="1529277871083" duration="600000" />
       <workItem from="1529455556864" duration="4502000" />
       <workItem from="1531101843745" duration="7723000" />
-      <workItem from="1532418878265" duration="10305000" />
+      <workItem from="1532418878265" duration="10632000" />
     </task>
     <task id="LOCAL-00001" summary="单车大战">
       <created>1523152461777</created>
@@ -285,14 +284,21 @@
       <option name="project" value="LOCAL" />
       <updated>1532448684836</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="担当--翻滚吧牛宝宝">
+      <created>1532472495768</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1532472495768</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70545000" />
+    <option name="totallyTimeSpent" value="70872000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="15" y="55" width="1260" height="691" extended-state="0" />
+    <frame x="15" y="55" width="1260" height="691" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26069412" />
@@ -742,7 +748,7 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/20180724_担当.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="233">
+          <first_editor relative-caret-position="4577">
             <caret line="109" column="51" selection-start-line="109" selection-start-column="51" selection-end-line="109" selection-end-column="51" />
           </first_editor>
           <second_editor />
