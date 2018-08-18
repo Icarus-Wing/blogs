@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8aad11dd-8039-4efa-884f-ab250ff037ed" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/source/_posts/20180802_人是意义的动物.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/20180109_for 2018.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20180109_for 2018.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20180817_人工智能觉醒的悖论.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,7 +21,7 @@
         <entry file="file://$PROJECT_DIR$/source/_posts/20180109_for 2018.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="274">
+              <first_editor relative-caret-position="1610">
                 <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
               </first_editor>
               <second_editor />
@@ -29,7 +29,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20180802_人是意义的动物.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="20180802_人是意义的动物.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/_posts/20180802_人是意义的动物.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -39,11 +39,23 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="20180817_人工智能觉醒的悖论.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/_posts/20180817_人工智能觉醒的悖论.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="219">
+                <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="20180724_担当.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/_posts/20180724_担当.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="357">
+              <first_editor relative-caret-position="2507">
                 <caret line="109" column="51" selection-start-line="109" selection-start-column="51" selection-end-line="109" selection-end-column="51" />
               </first_editor>
               <second_editor />
@@ -84,6 +96,7 @@
         <option value="$PROJECT_DIR$/source/_posts/20180709_一花一世界.md" />
         <option value="$PROJECT_DIR$/source/_posts/20180724_担当.md" />
         <option value="$PROJECT_DIR$/source/_posts/20180109_for 2018.md" />
+        <option value="$PROJECT_DIR$/source/_posts/20180817_人工智能觉醒的悖论.md" />
       </list>
     </option>
   </component>
@@ -106,7 +119,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="15" />
-    <option name="y" value="55" />
+    <option name="y" value="49" />
     <option name="width" value="1260" />
     <option name="height" value="691" />
   </component>
@@ -115,6 +128,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -137,7 +151,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -204,6 +217,7 @@
       <workItem from="1531101843745" duration="7723000" />
       <workItem from="1532418878265" duration="10632000" />
       <workItem from="1533193337078" duration="160000" />
+      <workItem from="1534493497990" duration="7863000" />
     </task>
     <task id="LOCAL-00001" summary="单车大战">
       <created>1523152461777</created>
@@ -307,10 +321,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71032000" />
+    <option name="totallyTimeSpent" value="78895000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="15" y="55" width="1260" height="691" extended-state="0" />
+    <frame x="15" y="49" width="1260" height="691" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26069412" />
@@ -359,16 +373,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="担当--翻滚吧牛宝宝" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/source/_posts/20180413_本能.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="255">
-            <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/20180424_字里藏医.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -740,7 +744,7 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/20180724_担当.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="357">
+          <first_editor relative-caret-position="2507">
             <caret line="109" column="51" selection-start-line="109" selection-start-column="51" selection-end-line="109" selection-end-column="51" />
           </first_editor>
           <second_editor />
@@ -750,7 +754,7 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/20180109_for 2018.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="274">
+          <first_editor relative-caret-position="1610">
             <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
           </first_editor>
           <second_editor />
@@ -761,6 +765,16 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/20180817_人工智能觉醒的悖论.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="219">
+            <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+          </first_editor>
           <second_editor />
         </state>
       </provider>
