@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.4.0',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="初心为了我的STEMP事业，我开始搜集那些能启迪小朋友们学习认知科学与程序的资料。忽然发现在上个世纪60年代，明斯基的同事西摩尔·帕普特就开始关注了少儿编程。这位先驱在2016年离我们而去，MIT校长拉斐尔·赖夫在悼文中提到：  西摩尔·帕普特至少为三个领域带来了革命，分别是儿童发展、人工智能以及科技与教育之融合。  这位牛人，当年曾经和明斯基（人工智能之父，图灵奖获得者）在某次学术会议中提交过几">
+<meta property="og:type" content="article">
+<meta property="og:title" content="思考怎么思考">
+<meta property="og:url" content="https://nasamars.github.io/2017/02/21/20170221_思考怎么思考/index.html">
+<meta property="og:site_name" content="我心中的香格里拉">
+<meta property="og:description" content="初心为了我的STEMP事业，我开始搜集那些能启迪小朋友们学习认知科学与程序的资料。忽然发现在上个世纪60年代，明斯基的同事西摩尔·帕普特就开始关注了少儿编程。这位先驱在2016年离我们而去，MIT校长拉斐尔·赖夫在悼文中提到：  西摩尔·帕普特至少为三个领域带来了革命，分别是儿童发展、人工智能以及科技与教育之融合。  这位牛人，当年曾经和明斯基（人工智能之父，图灵奖获得者）在某次学术会议中提交过几">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-02-21T08:06:26.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="思考怎么思考">
+<meta name="twitter:description" content="初心为了我的STEMP事业，我开始搜集那些能启迪小朋友们学习认知科学与程序的资料。忽然发现在上个世纪60年代，明斯基的同事西摩尔·帕普特就开始关注了少儿编程。这位先驱在2016年离我们而去，MIT校长拉斐尔·赖夫在悼文中提到：  西摩尔·帕普特至少为三个领域带来了革命，分别是儿童发展、人工智能以及科技与教育之融合。  这位牛人，当年曾经和明斯基（人工智能之父，图灵奖获得者）在某次学术会议中提交过几">
+
+
+
+
+
+
+  <link rel="canonical" href="https://nasamars.github.io/2017/02/21/20170221_思考怎么思考/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>思考怎么思考 | 我心中的香格里拉</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">我心中的香格里拉</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://nasamars.github.io/2017/02/21/20170221_思考怎么思考/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sylvain Mars YU">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我心中的香格里拉">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">思考怎么思考
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-02-21 02:19:00 / 修改时间：16:06:26" itemprop="dateCreated datePublished" datetime="2017-02-21T02:19:00+08:00">2017-02-21</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/读书笔记/" itemprop="url" rel="index"><span itemprop="name">读书笔记</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/21/20170221_思考怎么思考/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/02/21/20170221_思考怎么思考/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="初心"><a href="#初心" class="headerlink" title="初心"></a>初心</h1><p>为了我的STEMP事业，我开始搜集那些能启迪小朋友们学习认知科学与程序的资料。忽然发现在上个世纪60年代，明斯基的同事西摩尔·帕普特就开始关注了少儿编程。这位先驱在2016年离我们而去，MIT校长拉斐尔·赖夫在悼文中提到：</p>
+<blockquote>
+<p><strong>西摩尔·帕普特至少为三个领域带来了革命，分别是儿童发展、人工智能以及科技与教育之融合。</strong></p>
+</blockquote>
+<p>这位牛人，当年曾经和<strong>明斯基（人工智能之父，图灵奖获得者）</strong>在某次学术会议中提交过几乎雷同的论文，后来被明斯基邀请到MIT，组建了<strong>世界第一个人工智能实验室，也是后来MIT媒体实验室的始创人员</strong>。可能大部人对这位先生并没有太大的印象，包括我，但是他发明的LOGO可是一个传世经典。</p>
+<p>93年，我刚上小学三年级，学校来了一批计算机，然后准备开设计算机兴趣课程，平时让我们玩的是著名打字游戏TT，课外兴趣班学的就是LOGO。显然，我这种当时家里没有计算机的人是学不了LOGO的，但是某一次我接触了LOGO的书，发现原来计算机很有意思，可以画出好多图形。<br><a id="more"></a><br>或许这就是我最早接触的计算机，以及产生对计算机的各种幻想，导致了最后还是到了这个领域。<strong>LOGO虽然经典，但是与传统的计算机教育还是格格不入的，因为学会了LOGO，不能打字啊，不能计算啊，创造不了效益，更加拿不到计算机奥林匹克的奖。于是，LOGO便慢慢淡出了公众的视野。</strong></p>
+<h1 id="大师的光芒"><a href="#大师的光芒" class="headerlink" title="大师的光芒"></a>大师的光芒</h1><p>历史总是螺旋式的上升，20多年后的计算机发展得那个迅猛，让大部分人措手不及，以前计算机是尖端科技的代表，而现在计算机也就是个普通工具而已。反而，西摩尔·帕普特的观点又得到了大家的重视，这少不了MIT媒体实验室的努力。</p>
+<p>大师的思想博大精深，说起中三个就足以让大家领略到他的敏锐：</p>
+<h2 id="让孩子对电脑编程，而不是让电脑对孩子编程"><a href="#让孩子对电脑编程，而不是让电脑对孩子编程" class="headerlink" title="让孩子对电脑编程，而不是让电脑对孩子编程"></a>让孩子对电脑编程，而不是让电脑对孩子编程</h2><p>其实我有这样的同感，我觉得<strong>我们应该驾驭计算机，驾驭这个有着非凡计算能力的巨兽，而不是天天被项目与新技术倒逼，成为一名木讷的码农</strong>，放声大哭，“我再也不让我的小孩接触计算机了”。</p>
+<p>我想这才是我们搞计算机的初衷，而大家把目光聚焦在：</p>
+<ul>
+<li>某种语言上，争执C#与Java哪个好？PHP是不是世界上最好的网络编程语言？第一门语言应该先学C还是C++？</li>
+<li>某个技术体系上，到底机器学习是不是深度学习，大数据分析应该用hoodop嘛，微软系的技术都不靠谱。</li>
+<li>某个标新立异的观点上，比如万能的云计算，神一般的大数据，人工智能碾压人类，比特币取代美元。</li>
+</ul>
+<p>这些很没意思的事情，在我们的身边随处可见，当下这个年头，小孩子被游戏迷住，大孩子被IT创业迷住，本质上都是一样的，都是<strong>被电脑编程</strong>了。</p>
+<p>腾讯几乎把握住了当前热门的游戏，要么就收购，不行就抄一个，而且还弄出了电子竞技这么一个伎俩来诱惑小朋友，这种做法和大海中用歌声吸引水手的女妖有区别吗？</p>
+<p>大家争相使用IT技术创业，不断用新的商业模式创造了更多的新故事，然而大部分我觉得意义并不是这么的大，源自于最初基督教新教的资本主义精神，在如今的商业环境已经荡然无存，这种创业对计算机事业来说，并不具备太大的意义，因为新技术只是商人手里的小伎俩，<strong>只是有点面粉和酵母，就夸下海口有了美味的面包，最后可能做出来的是塌陷的馒头</strong>。</p>
+<p>LOGO就是西摩尔·帕普特的重要发明，图灵奖获得者Alan Kay（发明了smalltalk与GUI，乔布斯正是因为看到了他做的图形视窗才做的MAC）谈到西摩尔·帕普特对他的影响的时候：</p>
+<blockquote>
+<p>西摩尔·帕普特让我认识到，我们教给孩子的不应该是一种经过稀释的知识，孩子要学的并不是大人所掌握的知识的小孩版，我们要首先了解小孩的学习机制，才能为其提供很好的教育。</p>
+</blockquote>
+<p><strong>本质上，电脑的普及，并没有让孩子受惠，反而让他们争相成为了奴隶。</strong></p>
+<h2 id="通过计算机释放自己的潜能（Powerful-Idea）"><a href="#通过计算机释放自己的潜能（Powerful-Idea）" class="headerlink" title="通过计算机释放自己的潜能（Powerful Idea）"></a>通过计算机释放自己的潜能（Powerful Idea）</h2><p>你是不是一直都认为，小学数学就该从数数开始学，然后一路加深难度，直到大学的时候，才把微积分给祭出来？</p>
+<p>但你知道吗？小孩子对数数本身也许兴趣不大，他们更感兴趣的反而是微积分！</p>
+<p>其实小孩真正感兴趣的是理解他身处的世界，而微积分则是已知的认识这个物理世界最好的数学工具之一。在帕普特开发的 LOGO 语言环境里，孩子们可以创作任何图案，他们一开始通常会想到画正方形、三角形，然后自然就会想到去画圆形，画花瓣。要画圆形的话，就需要指挥小海龟往北走一小段路，然后左转，再走一小段路，再往北，然后往左，如是反复上千次之后，你就能画出一个比较接近圆的图案了。而这个过程本身，跟微积分的思维本质上就是一致的。所以小孩在画圆的时候，就不知不觉地学习到微积分了。</p>
+<p><strong>帕普特并不是为了发明 LOGO 而发明了 LOGO，他是希望小孩能够通过学编程，接触到「有力量的」数学概念，而编程则是实现这一目标的极佳手段。</strong>1980 年出版的 Mindstorms 一书的副标题是 Children, Computers, and Powerful Ideas，大多数人只看到副标题里的孩子和计算机，却忽视了 powerful ideas。其实 powerful ideas 才是帕普特最为关注的东西。</p>
+<p><strong>编程本身并不能使你成为更懂得思考的人，只有当你通过编程，在电脑上做了某些模拟，然后加深了对世界的理解和认识之后，你才真正接触到了帕普特说的 powerful ideas。</strong></p>
+<p><strong>假如说这个世界是由上帝创造的，那这位上帝应该是一位数学家。我们身处的这个世界，从城市交通、空气污染，到桥梁结构、地质演变，再到经济活动以及人际互动，无不可以用数学模型来帮助我们理解。帕普特自身是一位数学家，他深深明白这一点。而且他相信，这些模型不需要读到研究生才有资格去学习，一个小孩也能学习，而且说不定小孩还能发现模型的漏洞。</strong>在整个世界都日趋复杂的今天，我们更是需要懂得这种思维的人。而电脑则是培养这样的思维的最好的工具，只是非常可惜，大家都只把电脑当作升级版的电视，没有看到电脑的程序可供性（procedural affordance）。</p>
+<p>上面这几段是节选自《Seymour Papert 留给我们的思想遗产》，因为文章的描述太精彩了，我写不出这样的话语，只好借花献佛。科研有门槛，但是科研不应该有高墙。如果看看费曼的成长故事，你就会发现处于幼年的小孩，因为周围的环境其实他们完全可以完成欧氏几何的证明，自己发现很多的物理定律，但是，我们用了一种不科学的方式来教授科学，抹杀了太多的有想象力的天才。</p>
+<p>我最近刚看完《别闹了，费曼先生》，某天大学同学吃饭聊天的时候，发现另外一位同学看公众号“量子学院”中的费曼物理学讲义，深深的感叹为什么费曼口中的物理学如此的有趣，他甚至怀疑他读的是假物理。如果你对我说的话有兴趣或有质疑，请翻阅费曼的任何一本书，你会找到一个全新的正途。</p>
+<p>这也是我要坚持做好STEMP的初衷，作为一个普通的工程师，能够拿的出手的就是脑子里的科学精神与探索的工程能力，与其让别人来教我小孩科学，倒不如我给他创造一个自己探索的环境，而本身我必须成为那种愿意探索，愿意用计算机改变生活的人，让小孩感受到这是一种常态，而不是仅仅是学习而已。</p>
+<h2 id="思考怎么思考"><a href="#思考怎么思考" class="headerlink" title="思考怎么思考"></a>思考怎么思考</h2><blockquote>
+<p>You can’t think about thinking without thinking about thinking about something.</p>
+</blockquote>
+<p>这句话要了我的老命，我实在是是理解的模模糊糊，于是我就不写翻译，我觉得大概是如果不去想你是怎么思考的，你永远不知道你的东西是怎么来的。</p>
+<p><strong>帕普特所提倡的教育理念之核心，在于为孩子赋能，创造出能够让孩子发挥其好奇心的环境，而这本身就是对传统工业化教育理念的反思和颠覆。</strong>在 Mindstorms 一书里，帕普特特别强调了调试（debugging）之于思考的意义。所有写过电脑程序的人都知道，很多时候你写出来的程序不一定能运行良好，你需要调试，改变某个参数，或者修改某项指令，改完后再测试，假如不行，再改，如此反复，直到最后程序能按照预期那样运行。</p>
+<h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><p>继承了帕普特的精神，MIT媒体实验室推出了SCRATCH这个多媒体编程套件，而我这次看完的书正是台湾GOTOP出版社推出的教程《程式设计逻辑训练之SCRATCH初学特训班》。最开始，我以为这个套件只是一个做个小故事，小动画的程序，后来发现这是程序届的乐高。不得不说Lego其实和LOGO只是一字之差，他们是有渊源的，那又是另外一个故事了。</p>
+<p>在我继续查阅其他关于SCRATCH材料的时候，发现哈佛大学竟然用SCRATCH来给非计算机专业的学生教授程序设计。</p>
+<p>参考：</p>
+<ul>
+<li>《Seymour Papert 留给我们的思想遗产》:<a href="https://the-offline.com/article/seymour-papert/" target="_blank" rel="noopener">https://the-offline.com/article/seymour-papert/</a></li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.JPG" alt="Sylvain Mars YU 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Sylvain Mars YU 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+               <div id="needsharebutton-postbottom">
+                 <span class="btn">
+                    <i class="fa fa-share-alt" aria-hidden="true"></i>
+                 </span>
+               </div>
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/17/20170217_35岁是个坎/" rel="next" title="34岁是个坎">
+                <i class="fa fa-chevron-left"></i> 34岁是个坎
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/22/20170222_月亮还是六便士/" rel="prev" title="月亮还是六便士">
+                月亮还是六便士 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.JPG"
+                alt="Sylvain Mars YU" />
+            
+              <p class="site-author-name" itemprop="name">Sylvain Mars YU</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">398</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">99</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#初心"><span class="nav-number">1.</span> <span class="nav-text">初心</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#大师的光芒"><span class="nav-number">2.</span> <span class="nav-text">大师的光芒</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#让孩子对电脑编程，而不是让电脑对孩子编程"><span class="nav-number">2.1.</span> <span class="nav-text">让孩子对电脑编程，而不是让电脑对孩子编程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过计算机释放自己的潜能（Powerful-Idea）"><span class="nav-number">2.2.</span> <span class="nav-text">通过计算机释放自己的潜能（Powerful Idea）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思考怎么思考"><span class="nav-number">2.3.</span> <span class="nav-text">思考怎么思考</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#继承"><span class="nav-number">3.</span> <span class="nav-text">继承</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sylvain Mars YU</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Pisces</a> v6.4.0</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.0"></script>
+
+
+
+  
+
+  
+    <script id="dsq-count-scr" src="https://nasamars.disqus.com/count.js" async></script>
+  
+
+  
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'https://nasamars.github.io/2017/02/21/20170221_思考怎么思考/';
+        this.page.identifier = '2017/02/21/20170221_思考怎么思考/';
+        this.page.title = '思考怎么思考';
+        };
+      function loadComments () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://nasamars.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+      
+        loadComments();
+      
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=6.4.0"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+          flOptions.iconStyle = "box";
+      
+          flOptions.boxForm = "horizontal";
+      
+          flOptions.position = "middleRight";
+      
+          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

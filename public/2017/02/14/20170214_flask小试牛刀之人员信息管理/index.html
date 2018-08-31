@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.4.0',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="在情人节这天写技术文档，太没有情调了。不过有情人的话，哪天不是情人节，哈哈。 0x00 背景在流程不太明确，每个人的责任边界比较模糊的时候，软件需求与产品都是个深坑。 0x001 未必是坑对于在这个工作的经办人而言，这个时候的需求与产品会是：  一个关键的流程梳理工具 划分管理责任的重要依据 项目工作流程实时可见的重要手段 问题追溯定位的重要来源  0x002 要求不低理想很丰满，毕竟在一片混沌之">
+<meta property="og:type" content="article">
+<meta property="og:title" content="flask小试牛刀之人员信息管理">
+<meta property="og:url" content="https://nasamars.github.io/2017/02/14/20170214_flask小试牛刀之人员信息管理/index.html">
+<meta property="og:site_name" content="我心中的香格里拉">
+<meta property="og:description" content="在情人节这天写技术文档，太没有情调了。不过有情人的话，哪天不是情人节，哈哈。 0x00 背景在流程不太明确，每个人的责任边界比较模糊的时候，软件需求与产品都是个深坑。 0x001 未必是坑对于在这个工作的经办人而言，这个时候的需求与产品会是：  一个关键的流程梳理工具 划分管理责任的重要依据 项目工作流程实时可见的重要手段 问题追溯定位的重要来源  0x002 要求不低理想很丰满，毕竟在一片混沌之">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-02-14T14:32:07.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="flask小试牛刀之人员信息管理">
+<meta name="twitter:description" content="在情人节这天写技术文档，太没有情调了。不过有情人的话，哪天不是情人节，哈哈。 0x00 背景在流程不太明确，每个人的责任边界比较模糊的时候，软件需求与产品都是个深坑。 0x001 未必是坑对于在这个工作的经办人而言，这个时候的需求与产品会是：  一个关键的流程梳理工具 划分管理责任的重要依据 项目工作流程实时可见的重要手段 问题追溯定位的重要来源  0x002 要求不低理想很丰满，毕竟在一片混沌之">
+
+
+
+
+
+
+  <link rel="canonical" href="https://nasamars.github.io/2017/02/14/20170214_flask小试牛刀之人员信息管理/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>flask小试牛刀之人员信息管理 | 我心中的香格里拉</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">我心中的香格里拉</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://nasamars.github.io/2017/02/14/20170214_flask小试牛刀之人员信息管理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sylvain Mars YU">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我心中的香格里拉">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">flask小试牛刀之人员信息管理
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-02-14 00:00:00 / 修改时间：22:32:07" itemprop="dateCreated datePublished" datetime="2017-02-14T00:00:00+08:00">2017-02-14</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/技术文档/" itemprop="url" rel="index"><span itemprop="name">技术文档</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/14/20170214_flask小试牛刀之人员信息管理/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/02/14/20170214_flask小试牛刀之人员信息管理/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在情人节这天写技术文档，太没有情调了。不过有情人的话，哪天不是情人节，哈哈。</p>
+<h1 id="0x00-背景"><a href="#0x00-背景" class="headerlink" title="0x00 背景"></a>0x00 背景</h1><p>在流程不太明确，每个人的责任边界比较模糊的时候，软件需求与产品都是个深坑。</p>
+<h2 id="0x001-未必是坑"><a href="#0x001-未必是坑" class="headerlink" title="0x001 未必是坑"></a>0x001 未必是坑</h2><p>对于在这个工作的经办人而言，这个时候的需求与产品会是：</p>
+<ol>
+<li>一个关键的流程梳理工具</li>
+<li><strong>划分管理责任的重要依据</strong></li>
+<li>项目工作流程实时可见的重要手段</li>
+<li><strong>问题追溯定位的重要来源</strong></li>
+</ol>
+<h2 id="0x002-要求不低"><a href="#0x002-要求不低" class="headerlink" title="0x002 要求不低"></a>0x002 要求不低</h2><p>理想很丰满，毕竟在一片混沌之中，有个人杀出一条路之后，此后也就有路了。所以，为了完成这个目标，系统应该要具备：</p>
+<ol>
+<li>有一个可以快速开发的框架，至少包括数据持久化，后台处理与前台交互</li>
+<li>需要一个随需应变（On Demand）的设计架构，因为业务会随时的改，包括原来起初为一个会议参会人员设计的功能要变成多个会议同时进行的功能</li>
+<li>开发起来时间一定要短，效果一定不能太差，而且必须通过网络访问</li>
+</ol>
+<p>严格来说，上面那些需求都是非功能需求，那功能需求是：</p>
+<ol>
+<li>能够通过处理相片的规则化命名，新建参会人员的姓名、单位、证卡类型、参加会议的种类</li>
+<li>保留那些命名错误的照片，等待手工处理，总有一部分人提交的数据每次都有问题</li>
+<li>整理完一个批次的入库资料后，会打包并新建一个excel表格，经校验完之后生成一个zip压缩包，同时将证件的状态变成“送打印”</li>
+<li>每次打包的资料都是当前证件类型中未打印的资料</li>
+<li>卡证制作完毕后对每张证件进行校验，核校数据，通过点击“核校”按钮，将证件状态变成“已核校”</li>
+<li>对成产完成的证卡信息自动生成移交文档，通过选择批次数来选定数据，并合并同类证卡的人员名单</li>
+<li>会议结束后，整理出每种证件制作的数量，并打印名单</li>
+</ol>
+<p>在功能需求中提到的工作，就是我实际工作的内容，数据提交很零散，要汇总成一个大表，耗费的时间比较长，没有一个确切的统计数据和列表，核对制作证卡的时候就容易出错，上面的活不是很难，就是很反锁，很容易错，而且时候要做统计的时候又要花去不少的时间，此外还可能有多次提交制卡信息的单位，一个人实在是hold不住啊。</p>
+<p>事情做久了，自己对业务熟悉了，别人就不清楚了，所以到头来重担还得自己挑。所以拿起武器，开干，核心程序写了三个晚上，白天在真实数据与环境下调试了几天，主要是那些不按照规定乱命名的文件名，让我写了很多异常处理的语句。<br><a id="more"></a></p>
+<h1 id="0x01-准备"><a href="#0x01-准备" class="headerlink" title="0x01 准备"></a>0x01 准备</h1><p>我能拿起来的开发语言无非就是asp.net、java、php、python，至于javascript的什么Node.js，什么angularJs，什么TypeScript，今年应该就没问题了。备选的框架有：</p>
+<ol>
+<li>asp.net MVC5</li>
+<li>java Spring</li>
+<li>php thinkPhp</li>
+<li>python django／flask</li>
+</ol>
+<p>为了保持技术的连贯性，我选择python，框架的选择是一个难题，选熟悉的django还是选更流行的flask，看了一下午的文档之后最终选择，挑战自己，选择从未碰过的flask。</p>
+<h2 id="0x011-配置环境"><a href="#0x011-配置环境" class="headerlink" title="0x011 配置环境"></a>0x011 配置环境</h2><h3 id="0x0111-选择Anaconda"><a href="#0x0111-选择Anaconda" class="headerlink" title="0x0111 选择Anaconda"></a>0x0111 选择Anaconda</h3><p> 选择Anaconda <strong><a href="https://www.continuum.io/downloads" target="_blank" rel="noopener">python2.7</a></strong> 的发行版，下次选择python3.5的,有windows，mac与linux版本。</p>
+<h3 id="0x0112-选择pycharm"><a href="#0x0112-选择pycharm" class="headerlink" title="0x0112 选择pycharm"></a>0x0112 选择pycharm</h3><blockquote>
+<p>工欲善其事，必先利其器</p>
+</blockquote>
+<p>Python的IDE有很多，当然你也可以选择不用，但是我选的是Pycharm</p>
+<h3 id="0x0113"><a href="#0x0113" class="headerlink" title="0x0113"></a>0x0113</h3><p>需要安装的一些插件</p>
+<pre><code>pip install flask_bootstrap
+pip install flask_moment
+pip install docx
+pip install pymysql
+</code></pre><p>缺了的套件都可以用 pip install来安装</p>
+<h1 id="0x02-架构"><a href="#0x02-架构" class="headerlink" title="0x02 架构"></a>0x02 架构</h1><p>大体来说，代码架构是这样的</p>
+<pre><code>flack/
+├── app.py
+├── database.py
+├── models.py
+├── home.py
+├── templates/
+| └── some template html files
+├── static/
+| └── client-side js and css files
+└── requirements.txt
+</code></pre><h2 id="0x021-大致框架"><a href="#0x021-大致框架" class="headerlink" title="0x021 大致框架"></a>0x021 大致框架</h2><p>flask的框架大概是这样的：</p>
+<ul>
+<li>app.py的主要内容是包括页面显示，后台处理，Ajax服务以及自定义的页面面模版管道</li>
+<li>database.py与models.py主要是做数据持久化，以及数据实体的处理</li>
+<li>home.py是处理flask部署的时候设置</li>
+</ul>
+<h2 id="0x022-简单的后台处理流程"><a href="#0x022-简单的后台处理流程" class="headerlink" title="0x022 简单的后台处理流程"></a>0x022 简单的后台处理流程</h2><p>而页面处理主要是：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">初始化flask框架</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line">app = Flask(__name__)</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">初始化bootstrap前端样式</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line">bootstrap = Bootstrap(app)</span><br><span class="line"><span class="meta">@app.route('/index')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">()</span>:</span></span><br><span class="line">SQLQuery = <span class="string">'''select `user`.type_id,count(*)</span></span><br><span class="line"><span class="string">          from attend,`user`</span></span><br><span class="line"><span class="string">          where attend.user_id=`user`.id</span></span><br><span class="line"><span class="string">               and attend.`status`=TRUE</span></span><br><span class="line"><span class="string">               and attend.meeting_id = %s</span></span><br><span class="line"><span class="string">          GROUP BY `attend`.cardtype_id'''</span></span><br><span class="line">result = db_session.execute(SQLQuery % getMeeting_id())</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> render_template(<span class="string">'index.html'</span>, result=result)</span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>@app.route(‘/index’) 表示uri，资源的访问路径</li>
+<li>def index(): 定义一个函数，可以与路径名不一样，但是必须唯一，不支持函数重载</li>
+<li>return render_template(‘index.html’, result=result) 啪啦啪啦处理完了之后，通过render_template来与模版一起渲染，通过ninja引擎，来实现展现页面</li>
+</ol>
+<h2 id="0x023-简单的页面前端实现"><a href="#0x023-简单的页面前端实现" class="headerlink" title="0x023 简单的页面前端实现"></a>0x023 简单的页面前端实现</h2><p>必须实现框架的基本模版，扩展的是bootstrap框架的模版</p>
+<p>base.html<br><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name"><span class="name">extends</span></span> "bootstrap/base.html" %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name"><span class="name">block</span></span> title %&#125;</span><span class="xml">资料管理系统</span><span class="template-tag">&#123;% <span class="name"><span class="name">endblock</span></span> %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name"><span class="name">block</span></span> navbar %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"navbar navbar-inverse"</span> <span class="attr">role</span>=<span class="string">"navigation"</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"navbar-header"</span>&gt;</span></span></span><br><span class="line"><span class="xml">                <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">class</span>=<span class="string">"navbar-toggle"</span> <span class="attr">data-toggle</span>=<span class="string">"collapse"</span> <span class="attr">data-target</span>=<span class="string">".navbar-collapse"</span>&gt;</span></span></span><br><span class="line"><span class="xml">                    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"sr-only"</span>&gt;</span>Toggle navigation<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">                    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon-bar"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">                    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon-bar"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">                    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon-bar"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">                <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">                <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"navbar-brand"</span> <span class="attr">href</span>=<span class="string">"/index"</span>&gt;</span>参会人员管理系统<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"navbar-collapse collapse"</span>&gt;</span></span></span><br><span class="line"><span class="xml">                <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"nav navbar-nav"</span>&gt;</span></span></span><br><span class="line"><span class="xml">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/zhengjian/jizhe"</span>&gt;</span>记者证<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="xml">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/zhengjian/lan"</span>&gt;</span>蓝色工作证<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="xml">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/zhengjian/lv"</span>&gt;</span>绿色工作证<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="xml">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/zhengjian/anbao"</span>&gt;</span>安保证<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="xml">                <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    </span><span class="template-tag">&#123;% <span class="name"><span class="name">endblock</span></span> %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">    </span><span class="template-tag">&#123;% <span class="name"><span class="name">block</span></span> content %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span></span><br><span class="line"><span class="xml">        </span><span class="template-tag">&#123;% <span class="name"><span class="name">block</span></span> page_content %&#125;</span><span class="xml"></span><span class="template-tag">&#123;% <span class="name"><span class="name">endblock</span></span> %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    </span><span class="template-tag">&#123;% <span class="name"><span class="name">endblock</span></span> %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">    </span><span class="template-tag">&#123;% <span class="name"><span class="name">block</span></span> scripts %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">    </span><span class="template-variable">&#123;&#123; super() &#125;&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">    </span><span class="template-variable">&#123;&#123; moment.include_moment() &#125;&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">    </span><span class="template-variable">&#123;&#123; moment.lang('zh-CN') &#125;&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"application/javascript"</span>&gt;</span><span class="undefined"></span></span></span><br><span class="line"><span class="xml">        $SCRIPT_ROOT = </span><span class="template-variable">&#123;&#123; request.script_root|tojson|<span class="name">safe</span> &#125;&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">    </span><span class="template-tag">&#123;% <span class="name"><span class="name">endblock</span></span> %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure></p>
+<p>index.html<br><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name"><span class="name">extends</span></span> "base.html" %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name"><span class="name">block</span></span> title %&#125;</span><span class="xml">资料管理系统</span><span class="template-tag">&#123;% <span class="name"><span class="name">endblock</span></span> %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name"><span class="name">block</span></span> page_content %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>本次会议共制卡<span class="tag">&lt;<span class="name">b</span> <span class="attr">id</span>=<span class="string">"sum"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span>张，具体情况如下：<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name"><span class="name">if</span></span> result %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">    </span><span class="template-tag">&#123;% <span class="name"><span class="name">for</span></span> r <span class="keyword">in</span> result %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"result"</span>&gt;</span></span><span class="template-variable">&#123;&#123; r[0]|getTypeRealName &#125;&#125;</span><span class="xml">:</span><span class="template-variable">&#123;&#123; r[1] &#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="xml">    </span><span class="template-tag">&#123;% <span class="name"><span class="name">endfor</span></span> %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name"><span class="name">endif</span></span> %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">如果显示效果不好，请点击下载<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/static/Soft/Chrome.exe"</span>&gt;</span>谷歌浏览器<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name"><span class="name">endblock</span></span> %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name"><span class="name">block</span></span> scripts %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml"></span><span class="template-variable">&#123;&#123; super() &#125;&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span></span><br><span class="line"><span class="xml">    $(function () &#123;</span></span><br><span class="line"><span class="xml">        $sum=0;</span></span><br><span class="line"><span class="xml">       $('li#result').each(function () &#123;</span></span><br><span class="line"><span class="xml">           li = $(this);</span></span><br><span class="line"><span class="xml">           text = li.text();</span></span><br><span class="line"><span class="xml">           array = text.split(':');</span></span><br><span class="line"><span class="xml">           $sum+=parseInt(array[1]);</span></span><br><span class="line"><span class="xml">       &#125;);</span></span><br><span class="line"><span class="xml">       $('#sum').text($sum);</span></span><br><span class="line"><span class="xml">    &#125;);</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name"><span class="name">endblock</span></span> %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure></p>
+<p>index.html是通过获得后台的数据通过ninja引擎渲染获得的显示页面</p>
+<h2 id="0x024-数据对象持久化处理"><a href="#0x024-数据对象持久化处理" class="headerlink" title="0x024 数据对象持久化处理"></a>0x024 数据对象持久化处理</h2><p>最早开发的时候是用sqlite，后来改用mysql<br><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">from sqlalchemy <span class="built_in">import</span> create_engine</span><br><span class="line">from sqlalchemy.orm <span class="built_in">import</span> scoped_session, sessionmaker</span><br><span class="line">from sqlalchemy.ext.declarative <span class="built_in">import</span> declarative_base</span><br><span class="line"><span class="comment">#'sqlite:///./card.db'</span></span><br><span class="line"><span class="attr">engine</span> = create_engine('mysql+pymysql://root:root@localhost/card?<span class="attr">charset=utf8',</span> <span class="attr">convert_unicode=False)</span></span><br><span class="line"><span class="comment"># 创建数据库引擎( 当前目录下保存数据库文件)</span></span><br><span class="line"><span class="attr">db_session</span> = scoped_session(sessionmaker(<span class="attr">autocommit=False,</span></span><br><span class="line">                                     <span class="attr">autoflush=False,</span></span><br><span class="line">                                     <span class="attr">bind=engine))</span></span><br><span class="line"><span class="attr">Base</span> = declarative_base()</span><br><span class="line">Base.<span class="attr">query</span> = db_session.query_property()</span><br><span class="line"></span><br><span class="line">def init_db():</span><br><span class="line"><span class="comment"># 在这里导入所有的可能与定义模型有关的模块，这样他们才会合适地</span></span><br><span class="line"><span class="comment"># 在 metadata 中注册。否则，您将不得不在第一次执行 init_db() 时</span></span><br><span class="line"><span class="comment"># 先导入他们。</span></span><br><span class="line"><span class="built_in">import</span> models</span><br><span class="line">Base.metadata.create_all(<span class="attr">bind=engine)</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="0x025-数据实体定义"><a href="#0x025-数据实体定义" class="headerlink" title="0x025 数据实体定义"></a>0x025 数据实体定义</h2><p>一个数据实体类的定义，脱离了实际的数据库，很简单的完成CRUD的操作<br><figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="type">User</span>(<span class="type">Base</span>):</span></span><br><span class="line"><span class="class">    __tablename__ = '<span class="type">User'</span></span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">    id = <span class="type">Column</span>(<span class="type">Integer</span>, <span class="title">primary_key</span>=<span class="type">True</span>)</span></span><br><span class="line"><span class="class">    name = <span class="type">Column</span>(<span class="type">String(50)</span>, <span class="title">unique</span>=<span class="type">True</span>)</span></span><br><span class="line"><span class="class">    type_id = <span class="type">Column</span>(<span class="type">Integer</span>, <span class="type">ForeignKey</span>('<span class="type">CardType</span>.<span class="title">id'</span>))</span></span><br><span class="line"><span class="class">    department = <span class="type">Column</span>(<span class="type">String(250)</span>)</span></span><br><span class="line"><span class="class">    status = <span class="type">Column</span>(<span class="type">BOOLEAN</span>, <span class="title">default</span>=<span class="type">True</span>)</span></span><br><span class="line"><span class="class">    path = <span class="type">Column</span>(<span class="type">String(500)</span>)</span></span><br><span class="line"><span class="class">    updatetime = <span class="type">Column</span>(<span class="type">String(500)</span>, <span class="title">default</span>=<span class="title">datetime</span>.<span class="title">datetime</span>.<span class="title">now</span>())</span></span><br><span class="line"><span class="class">    batchlog = relationship('<span class="type">BatchLog</span>', <span class="title">backref</span>='<span class="title">users'</span>, <span class="title">lazy</span>='<span class="title">dynamic'</span>)</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">    @hybrid_property</span></span><br><span class="line"><span class="class">    def getUpdateTime(<span class="title">self</span>):</span></span><br><span class="line"><span class="class">        time = datetime.datetime.strptime(<span class="title">self</span>.<span class="title">updatetime</span>, '%<span class="type">Y</span>-%<span class="title">m</span>-%<span class="title">d</span> %<span class="type">H</span>:%<span class="type">M</span>:%<span class="type">S</span>.%<span class="title">f'</span>)</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">        return time - datetime.timedelta(<span class="title">hours</span>=8)</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="0x03-开发"><a href="#0x03-开发" class="headerlink" title="0x03 开发"></a>0x03 开发</h1><p>光靠上面的只言片语，想完成一个flask的demo，或许还是有点困难的，有问题可以问我，或者看看flask的入门教程，也可以看看鄙人的代码。记录一下掉过的坑。</p>
+<h2 id="0x031-中文编码"><a href="#0x031-中文编码" class="headerlink" title="0x031 中文编码"></a>0x031 中文编码</h2><p>python2.7处理中文永远绕不过的就是中文编码的问题，那个该死的‘utf8’，下一次我一定用python3.5了</p>
+<h3 id="0x0311-mysql编码"><a href="#0x0311-mysql编码" class="headerlink" title="0x0311 mysql编码"></a>0x0311 mysql编码</h3><p>我怎么设置mysql的字符集<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">variables</span> <span class="keyword">like</span> <span class="string">'character%'</span>;</span><br></pre></td></tr></table></figure></p>
+<p>mysql死活出来的乱码，于是使用了下面这一招<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">engine = create_engine(<span class="string">"mysql+pymysql://root:root@localhost/card?charset=utf8"</span>, <span class="attribute">convert_unicode</span>=<span class="literal">False</span>)</span><br><span class="line"><span class="comment"># 创建数据库引擎( 当前目录下保存数据库文件)</span></span><br><span class="line">db_session = scoped_session(sessionmaker(<span class="attribute">autocommit</span>=<span class="literal">False</span>,</span><br><span class="line">                                         <span class="attribute">autoflush</span>=<span class="literal">False</span>,</span><br><span class="line">                                         <span class="attribute">bind</span>=engine))</span><br></pre></td></tr></table></figure></p>
+<h3 id="0x0312-路径中文编码"><a href="#0x0312-路径中文编码" class="headerlink" title="0x0312 路径中文编码"></a>0x0312 路径中文编码</h3><p>普通变量，使用decode(‘utf8’)函数<br><figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span>.decode('utf8')</span><br></pre></td></tr></table></figure></p>
+<p>路径拼接，是用强制unicode的字符串<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rawpath = os.path.join(rawpath, <span class="string">u'记者证'</span>)</span><br></pre></td></tr></table></figure></p>
+<h2 id="0x032-word文档的仿宋字体设置"><a href="#0x032-word文档的仿宋字体设置" class="headerlink" title="0x032 word文档的仿宋字体设置"></a>0x032 word文档的仿宋字体设置</h2><p>在docx的源码，<code>--&gt;Lib--&gt;site-packages--&gt;docx--&gt;text--&gt;font.py</code><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@name.setter</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">name</span><span class="params">(<span class="keyword">self</span>,value)</span></span><span class="symbol">:</span></span><br><span class="line">    rPr = <span class="keyword">self</span>._element.get_or_add_rPr()</span><br><span class="line">    rPr.rFonts_ascii = value</span><br><span class="line">    rPr.rFonts_hAnsi = value</span><br><span class="line">    <span class="comment">#加上下面一句，亚洲字体</span></span><br><span class="line">    rPr.rFonts_eastAsia = value</span><br></pre></td></tr></table></figure></p>
+<p>一般的段落是<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">acceptorparagraph.runs[<span class="number">0</span>].font.name = <span class="string">u'仿宋_GB2312'</span></span><br><span class="line">acceptorparagraph._element.r_lst[<span class="number">0</span>].rPr.rFonts.set(qn(<span class="string">'w:eastAsia'</span>), <span class="string">u'仿宋_GB2312'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>表格的话是<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">row_cells[<span class="number">0</span>].paragraphs[<span class="number">0</span>].runs[<span class="number">0</span>].font.name = <span class="string">u'仿宋_GB2312'</span></span><br><span class="line">row_cells[<span class="number">0</span>].paragraphs[<span class="number">0</span>].runs[<span class="number">0</span>].font.element.rPr.rFonts.eastAsia = <span class="string">u'仿宋_GB2312'</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="0x04-心得"><a href="#0x04-心得" class="headerlink" title="0x04 心得"></a>0x04 心得</h1><p>其实整个程序开发还是费了不少劲，但是成效还是很明显了：</p>
+<ol>
+<li>给我数据的人可以通过访问网页来查看相关参会人员的是否已经被成功接受</li>
+<li>所有人都能通过网页得知当前的证卡制作情况</li>
+<li>我理直气壮的提交做好的证件，不会被人说做漏了，也不会发生移交了卡发生丢失还赖我</li>
+<li>我能在任何时间统计出已经做了多少卡的数量，毕竟是工作量啊，不然总是个模糊数，岂不是“葫芦僧盘葫芦案”</li>
+<li>移交证卡的数量和名单列表自动生成，就不用每次都重新数，还容易出错，不然还说不清楚交出去多少</li>
+<li>连报账材料都自动生成了，以后再也不用费时做这些体力活了，只要排版打印就好</li>
+<li>只要我能说清楚了我做了啥，那就意味着标准在我手里，获得了标准的制定权就是拿到了游戏规则</li>
+</ol>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.JPG" alt="Sylvain Mars YU 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Sylvain Mars YU 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+               <div id="needsharebutton-postbottom">
+                 <span class="btn">
+                    <i class="fa fa-share-alt" aria-hidden="true"></i>
+                 </span>
+               </div>
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/09/20170209_灯塔/" rel="next" title="灯塔--《别闹了，费曼先生》">
+                <i class="fa fa-chevron-left"></i> 灯塔--《别闹了，费曼先生》
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/15/20170215_自私的基因/" rel="prev" title="Evolution">
+                Evolution <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.JPG"
+                alt="Sylvain Mars YU" />
+            
+              <p class="site-author-name" itemprop="name">Sylvain Mars YU</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">398</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">99</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0x00-背景"><span class="nav-number">1.</span> <span class="nav-text">0x00 背景</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x001-未必是坑"><span class="nav-number">1.1.</span> <span class="nav-text">0x001 未必是坑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x002-要求不低"><span class="nav-number">1.2.</span> <span class="nav-text">0x002 要求不低</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x01-准备"><span class="nav-number">2.</span> <span class="nav-text">0x01 准备</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x011-配置环境"><span class="nav-number">2.1.</span> <span class="nav-text">0x011 配置环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#0x0111-选择Anaconda"><span class="nav-number">2.1.1.</span> <span class="nav-text">0x0111 选择Anaconda</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x0112-选择pycharm"><span class="nav-number">2.1.2.</span> <span class="nav-text">0x0112 选择pycharm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x0113"><span class="nav-number">2.1.3.</span> <span class="nav-text">0x0113</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x02-架构"><span class="nav-number">3.</span> <span class="nav-text">0x02 架构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x021-大致框架"><span class="nav-number">3.1.</span> <span class="nav-text">0x021 大致框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x022-简单的后台处理流程"><span class="nav-number">3.2.</span> <span class="nav-text">0x022 简单的后台处理流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x023-简单的页面前端实现"><span class="nav-number">3.3.</span> <span class="nav-text">0x023 简单的页面前端实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x024-数据对象持久化处理"><span class="nav-number">3.4.</span> <span class="nav-text">0x024 数据对象持久化处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x025-数据实体定义"><span class="nav-number">3.5.</span> <span class="nav-text">0x025 数据实体定义</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x03-开发"><span class="nav-number">4.</span> <span class="nav-text">0x03 开发</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x031-中文编码"><span class="nav-number">4.1.</span> <span class="nav-text">0x031 中文编码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#0x0311-mysql编码"><span class="nav-number">4.1.1.</span> <span class="nav-text">0x0311 mysql编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x0312-路径中文编码"><span class="nav-number">4.1.2.</span> <span class="nav-text">0x0312 路径中文编码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x032-word文档的仿宋字体设置"><span class="nav-number">4.2.</span> <span class="nav-text">0x032 word文档的仿宋字体设置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x04-心得"><span class="nav-number">5.</span> <span class="nav-text">0x04 心得</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sylvain Mars YU</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Pisces</a> v6.4.0</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.0"></script>
+
+
+
+  
+
+  
+    <script id="dsq-count-scr" src="https://nasamars.disqus.com/count.js" async></script>
+  
+
+  
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'https://nasamars.github.io/2017/02/14/20170214_flask小试牛刀之人员信息管理/';
+        this.page.identifier = '2017/02/14/20170214_flask小试牛刀之人员信息管理/';
+        this.page.title = 'flask小试牛刀之人员信息管理';
+        };
+      function loadComments () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://nasamars.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+      
+        loadComments();
+      
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=6.4.0"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+          flOptions.iconStyle = "box";
+      
+          flOptions.boxForm = "horizontal";
+      
+          flOptions.position = "middleRight";
+      
+          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
