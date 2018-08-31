@@ -1,3 +1,4 @@
 {
-    "editor.renderControlCharacters": true
+    "editor.renderControlCharacters": true,
+    "git.ignoreLimitWarning": true
 }
