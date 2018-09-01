@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8aad11dd-8039-4efa-884f-ab250ff037ed" name="Default" comment="" />
+    <list default="true" id="8aad11dd-8039-4efa-884f-ab250ff037ed" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/source/_posts/20180901_它山之石.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/next-reloaded/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next-reloaded/_config.yml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -13,7 +16,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="20180901_它山之石.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/_posts/20180901_它山之石.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="115">
+                <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -49,6 +65,7 @@
         <option value="$PROJECT_DIR$/source/_posts/20180821_折中.md" />
         <option value="$PROJECT_DIR$/source/_posts/20180109_for 2018.md" />
         <option value="$PROJECT_DIR$/source/_posts/20180829_过于舒服的世界美丽吗.md" />
+        <option value="$PROJECT_DIR$/source/_posts/20180901_它山之石.md" />
       </list>
     </option>
   </component>
@@ -184,6 +201,7 @@
       <workItem from="1534919706512" duration="4446000" />
       <workItem from="1535509339523" duration="7240000" />
       <workItem from="1535681608513" duration="790000" />
+      <workItem from="1535810121789" duration="245000" />
     </task>
     <task id="LOCAL-00001" summary="单车大战">
       <created>1523152461777</created>
@@ -336,21 +354,22 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101429000" />
+    <option name="totallyTimeSpent" value="101674000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="15" y="23" width="1260" height="691" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.26069412" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26069412" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="7" sideWeight="0.50443906" side_tool="true" visible="true" weight="0.32871974" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49556094" weight="0.32871974" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50443906" side_tool="true" visible="true" weight="0.32871974" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49556094" weight="0.32871974" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -368,25 +387,25 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26069412" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49556094" weight="0.32871974" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Python Console" order="8" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50443906" side_tool="true" weight="0.32871974" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49556094" weight="0.32871974" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="SciView" order="4" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Messages" order="12" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="8" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -783,19 +802,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/next-reloaded/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/next-reloaded/.gitattributes">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/next-reloaded/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next-reloaded/.travis.yml" />
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-77" />
@@ -816,6 +823,16 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="449">
             <caret line="109" column="51" selection-start-line="109" selection-start-column="51" selection-end-line="109" selection-end-column="51" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/20180901_它山之石.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="115">
+            <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
           </first_editor>
           <second_editor />
         </state>
