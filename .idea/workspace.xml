@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8aad11dd-8039-4efa-884f-ab250ff037ed" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/source/_posts/20180913_邂逅美人鱼.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20180930_何谓地道.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/_posts/20180109_for 2018.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20180109_for 2018.md" afterDir="false" />
     </list>
@@ -22,20 +22,20 @@
         <entry file="file://$PROJECT_DIR$/source/_posts/20180109_for 2018.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="1725">
-                <caret line="75" selection-start-line="75" selection-end-line="75" selection-end-column="29" />
+              <first_editor relative-caret-position="1748">
+                <caret line="76" column="18" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20180913_邂逅美人鱼.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/source/_posts/20180913_邂逅美人鱼.md">
+      <file leaf-file-name="20180930_何谓地道.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/_posts/20180930_何谓地道.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="382">
-                <caret line="109" column="97" selection-start-line="109" selection-start-column="97" selection-end-line="109" selection-end-column="97" />
+              <first_editor relative-caret-position="-1580">
+                <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               </first_editor>
               <second_editor />
             </state>
@@ -85,8 +85,9 @@
         <option value="$PROJECT_DIR$/source/_posts/20180901_它山之石.md" />
         <option value="$PROJECT_DIR$/source/_posts/20180902_基线.md" />
         <option value="$PROJECT_DIR$/source/_posts/20180911_结网.md" />
-        <option value="$PROJECT_DIR$/source/_posts/20180109_for 2018.md" />
         <option value="$PROJECT_DIR$/source/_posts/20180913_邂逅美人鱼.md" />
+        <option value="$PROJECT_DIR$/source/_posts/20180109_for 2018.md" />
+        <option value="$PROJECT_DIR$/source/_posts/20180930_何谓地道.md" />
       </list>
     </option>
   </component>
@@ -114,7 +115,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -148,6 +148,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -226,7 +227,9 @@
       <workItem from="1536633496269" duration="4441000" />
       <workItem from="1536822366439" duration="9300000" />
       <workItem from="1536850805919" duration="614000" />
-      <workItem from="1536851475883" duration="2411000" />
+      <workItem from="1536851475883" duration="2987000" />
+      <workItem from="1538299042508" duration="1875000" />
+      <workItem from="1538959399342" duration="14977000" />
     </task>
     <task id="LOCAL-00001" summary="单车大战">
       <created>1523152461777</created>
@@ -382,17 +385,24 @@
       <option name="project" value="LOCAL" />
       <updated>1536644045016</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="邂逅美人鱼">
+      <created>1536853926760</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1536853926760</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124077000" />
+    <option name="totallyTimeSpent" value="141505000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1260" height="691" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.26069412" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26069412" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50443906" side_tool="true" weight="0.32871974" />
@@ -490,19 +500,10 @@
     <MESSAGE value="生而为人" />
     <MESSAGE value="fix" />
     <MESSAGE value="退而结网" />
-    <option name="LAST_COMMIT_MESSAGE" value="退而结网" />
+    <MESSAGE value="邂逅美人鱼" />
+    <option name="LAST_COMMIT_MESSAGE" value="邂逅美人鱼" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/source/_posts/20180402_拥抱人工智能.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="713">
-            <caret line="31" column="176" selection-start-line="31" selection-start-column="176" selection-end-line="31" selection-end-column="176" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/20180408_摩拜的逝去.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -861,21 +862,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/20180109_for 2018.md">
+    <entry file="file://$PROJECT_DIR$/source/_posts/20180913_邂逅美人鱼.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1725">
-            <caret line="75" selection-start-line="75" selection-end-line="75" selection-end-column="29" />
+          <first_editor relative-caret-position="610">
+            <caret line="109" column="97" selection-start-line="109" selection-start-column="97" selection-end-line="109" selection-end-column="97" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/20180913_邂逅美人鱼.md">
+    <entry file="file://$PROJECT_DIR$/source/_posts/20180109_for 2018.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="382">
-            <caret line="109" column="97" selection-start-line="109" selection-start-column="97" selection-end-line="109" selection-end-column="97" />
+          <first_editor relative-caret-position="1748">
+            <caret line="76" column="18" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/20180930_何谓地道.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-1580">
+            <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           </first_editor>
           <second_editor />
         </state>
