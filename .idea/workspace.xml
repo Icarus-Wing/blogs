@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8aad11dd-8039-4efa-884f-ab250ff037ed" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/source/_posts/20181010_我所见过的最浪漫的人.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20181023_生命是计算机和混沌系统的产物.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20181024_寻访初心.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -71,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/source/_posts/20181024_寻访初心.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="46">
+              <first_editor relative-caret-position="-1861">
                 <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
               </first_editor>
               <second_editor />
@@ -272,7 +269,7 @@
       <workItem from="1538299042508" duration="1875000" />
       <workItem from="1538959399342" duration="15267000" />
       <workItem from="1539179244675" duration="4116000" />
-      <workItem from="1540280526437" duration="628000" />
+      <workItem from="1540280526437" duration="709000" />
     </task>
     <task id="LOCAL-00001" summary="单车大战">
       <created>1523152461777</created>
@@ -442,11 +439,18 @@
       <option name="project" value="LOCAL" />
       <updated>1539050139495</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="走出沉沦">
+      <created>1540288182434</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1540288182434</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146539000" />
+    <option name="totallyTimeSpent" value="146620000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="39" width="1260" height="691" extended-state="0" />
@@ -552,7 +556,8 @@
     <MESSAGE value="退而结网" />
     <MESSAGE value="邂逅美人鱼" />
     <MESSAGE value="地道的经济学" />
-    <option name="LAST_COMMIT_MESSAGE" value="地道的经济学" />
+    <MESSAGE value="走出沉沦" />
+    <option name="LAST_COMMIT_MESSAGE" value="走出沉沦" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/source/_posts/20180402_拥抱人工智能.md">
@@ -936,7 +941,7 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/20181024_寻访初心.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="46">
+          <first_editor relative-caret-position="-1861">
             <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
           </first_editor>
           <second_editor />
