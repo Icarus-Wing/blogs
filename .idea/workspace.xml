@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8aad11dd-8039-4efa-884f-ab250ff037ed" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/source/_posts/20190101_Restart.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/20150131_for 2015.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20150131_for 2015.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/20160125_for 2016.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20160125_for 2016.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/20180104_HoldOn_to2017.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20180104_HoldOn_to2017.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -76,24 +72,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20150131_for 2015.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="20150131_for 2015.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source/_posts/20150131_for 2015.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="380">
                 <caret line="58" selection-start-line="58" selection-end-line="58" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20190101_Restart.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/source/_posts/20190101_Restart.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="463">
-                <caret line="84" selection-start-line="84" selection-end-line="84" />
               </first_editor>
               <second_editor />
             </state>
@@ -352,7 +336,7 @@
       <workItem from="1545790848997" duration="245000" />
       <workItem from="1546161275539" duration="146000" />
       <workItem from="1546297141213" duration="55000" />
-      <workItem from="1546297259397" duration="11844000" />
+      <workItem from="1546297259397" duration="11999000" />
     </task>
     <task id="LOCAL-00001" summary="单车大战">
       <created>1523152461777</created>
@@ -536,15 +520,21 @@
       <option name="project" value="LOCAL" />
       <updated>1542460437115</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="to 2018">
+      <created>1546743230711</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1546743230712</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168025000" />
+    <option name="totallyTimeSpent" value="168180000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="23" width="1260" height="691" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26069412" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -648,7 +638,8 @@
     <MESSAGE value="地道的经济学" />
     <MESSAGE value="走出沉沦" />
     <MESSAGE value="关于疫苗我们应该知道的--《免疫》" />
-    <option name="LAST_COMMIT_MESSAGE" value="关于疫苗我们应该知道的--《免疫》" />
+    <MESSAGE value="to 2018" />
+    <option name="LAST_COMMIT_MESSAGE" value="to 2018" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/source/_posts/20180504_再游京津.md">
@@ -1094,21 +1085,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/20150131_for 2015.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="380">
-            <caret line="58" selection-start-line="58" selection-end-line="58" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/20190101_Restart.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="463">
             <caret line="84" selection-start-line="84" selection-end-line="84" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/20150131_for 2015.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="380">
+            <caret line="58" selection-start-line="58" selection-end-line="58" />
           </first_editor>
           <second_editor />
         </state>
