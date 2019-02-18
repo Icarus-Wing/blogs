@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8aad11dd-8039-4efa-884f-ab250ff037ed" name="Default" comment="分别相">
-      <change afterPath="$PROJECT_DIR$/source/_posts/20190213_助推.md" afterDir="false" />
+    <list default="true" id="8aad11dd-8039-4efa-884f-ab250ff037ed" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/source/_posts/20190218_恨铁不成钢.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/20190114_For 2019.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20190114_For 2019.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/20190130_自由七艺.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20190130_自由七艺.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -43,16 +41,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20170105_Frontier-To 2016.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/_posts/20170105_Frontier-To 2016.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="20160125_for 2016.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/_posts/20160125_for 2016.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -81,7 +69,7 @@
         <entry file="file://$PROJECT_DIR$/source/_posts/20190123_分别心.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="141">
+              <first_editor relative-caret-position="897">
                 <caret line="39" selection-start-line="39" selection-end-line="39" />
               </first_editor>
               <second_editor />
@@ -93,7 +81,7 @@
         <entry file="file://$PROJECT_DIR$/source/_posts/20190213_助推.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="449">
+              <first_editor relative-caret-position="1196">
                 <caret line="52" column="58" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="58" />
               </first_editor>
               <second_editor />
@@ -101,12 +89,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20190114_For 2019.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="20190114_For 2019.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/_posts/20190114_For 2019.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="463">
                 <caret line="65" column="12" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="12" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20190218_恨铁不成钢.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/_posts/20190218_恨铁不成钢.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="277">
+                <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
               </first_editor>
               <second_editor />
             </state>
@@ -200,6 +200,7 @@
         <option value="$PROJECT_DIR$/source/_posts/20190123_分别心.md" />
         <option value="$PROJECT_DIR$/source/_posts/20190213_助推.md" />
         <option value="$PROJECT_DIR$/source/_posts/20190114_For 2019.md" />
+        <option value="$PROJECT_DIR$/source/_posts/20190218_恨铁不成钢.md" />
       </list>
     </option>
   </component>
@@ -228,6 +229,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -261,7 +263,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -362,7 +363,8 @@
       <workItem from="1546297259397" duration="11999000" />
       <workItem from="1547429114687" duration="3510000" />
       <workItem from="1548209063376" duration="8728000" />
-      <workItem from="1550068677676" duration="9525000" />
+      <workItem from="1550068677676" duration="9565000" />
+      <workItem from="1550501023672" duration="3870000" />
     </task>
     <task id="LOCAL-00001" summary="单车大战">
       <created>1523152461777</created>
@@ -560,11 +562,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547432288869</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="助推">
+      <created>1550156680784</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1550156680784</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189943000" />
+    <option name="totallyTimeSpent" value="193853000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="23" width="1260" height="691" extended-state="0" />
@@ -597,25 +606,25 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26069412" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49556094" weight="0.32871974" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Python Console" order="9" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50443906" side_tool="true" visible="true" weight="0.32871974" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49556094" weight="0.32871974" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="SciView" order="4" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Messages" order="11" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="9" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -675,19 +684,10 @@
     <MESSAGE value="to 2018" />
     <MESSAGE value="for 2019" />
     <MESSAGE value="分别相" />
-    <option name="LAST_COMMIT_MESSAGE" value="分别相" />
+    <MESSAGE value="助推" />
+    <option name="LAST_COMMIT_MESSAGE" value="助推" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/source/_posts/20180523_家的容器.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="161">
-            <caret line="7" selection-start-line="7" selection-end-line="7" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/20180521_达摩克里斯之剑.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1093,7 +1093,7 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/20190123_分别心.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="141">
+          <first_editor relative-caret-position="897">
             <caret line="39" selection-start-line="39" selection-end-line="39" />
           </first_editor>
           <second_editor />
@@ -1113,7 +1113,7 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/20190213_助推.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="449">
+          <first_editor relative-caret-position="1196">
             <caret line="52" column="58" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="58" />
           </first_editor>
           <second_editor />
@@ -1125,6 +1125,16 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="463">
             <caret line="65" column="12" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="12" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/20190218_恨铁不成钢.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="277">
+            <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
           </first_editor>
           <second_editor />
         </state>
