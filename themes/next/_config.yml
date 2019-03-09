@@ -500,7 +500,7 @@ math:
 
 # Han Support
 # Dependencies: https://github.com/theme-next/theme-next-han
-han: true
+han: false
 
 # Pangu Support
 # Dependencies: https://github.com/theme-next/theme-next-pangu
