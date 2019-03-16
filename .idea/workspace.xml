@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8aad11dd-8039-4efa-884f-ab250ff037ed" name="Default" comment="助推">
+      <change afterPath="$PROJECT_DIR$/source/_posts/20190314_我真的有一头牛.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -22,18 +23,6 @@
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="598">
                 <caret line="26" column="36" selection-start-line="9" selection-end-line="30" selection-end-column="11" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20160125_for 2016.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/_posts/20160125_for 2016.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="2300">
-                <caret line="75" selection-start-line="75" selection-end-line="75" />
               </first_editor>
               <second_editor />
             </state>
@@ -88,12 +77,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20190305_用力工作好好生活.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="20190305_用力工作好好生活.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/_posts/20190305_用力工作好好生活.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="371">
-                <caret line="44" column="72" selection-start-line="44" selection-start-column="72" selection-end-line="44" selection-end-column="72" />
+              <first_editor relative-caret-position="361">
+                <caret line="38" column="59" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="59" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20190314_我真的有一头牛.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/_posts/20190314_我真的有一头牛.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="417">
+                <caret line="83" column="37" selection-start-line="83" selection-start-column="37" selection-end-line="83" selection-end-column="37" />
               </first_editor>
               <second_editor />
             </state>
@@ -201,6 +202,7 @@
         <option value="$PROJECT_DIR$/source/_posts/20190218_恨铁不成钢.md" />
         <option value="$PROJECT_DIR$/source/_posts/20190114_For 2019.md" />
         <option value="$PROJECT_DIR$/source/_posts/20190305_用力工作好好生活.md" />
+        <option value="$PROJECT_DIR$/source/_posts/20190314_我真的有一头牛.md" />
       </list>
     </option>
   </component>
@@ -209,9 +211,6 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
@@ -232,7 +231,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -266,6 +264,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -371,6 +370,7 @@
       <workItem from="1551797914669" duration="5252000" />
       <workItem from="1551804502179" duration="464000" />
       <workItem from="1551824331070" duration="32000" />
+      <workItem from="1552555908424" duration="11425000" />
     </task>
     <task id="LOCAL-00001" summary="单车大战">
       <created>1523152461777</created>
@@ -586,10 +586,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="199748000" />
+    <option name="totallyTimeSpent" value="211173000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="23" width="1260" height="691" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26069412" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -618,25 +619,25 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26069412" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49556094" weight="0.32871974" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Python Console" order="9" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50443906" side_tool="true" visible="true" weight="0.32871974" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49556094" weight="0.32871974" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="SciView" order="4" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Messages" order="11" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="9" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -700,16 +701,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="助推" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/source/_posts/20180606_你或许不懂怎么玩乐高.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="253">
-            <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/20180620_经济自信.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1145,8 +1136,18 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/20190305_用力工作好好生活.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="371">
-            <caret line="44" column="72" selection-start-line="44" selection-start-column="72" selection-end-line="44" selection-end-column="72" />
+          <first_editor relative-caret-position="361">
+            <caret line="38" column="59" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="59" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/20190314_我真的有一头牛.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="417">
+            <caret line="83" column="37" selection-start-line="83" selection-start-column="37" selection-end-line="83" selection-end-column="37" />
           </first_editor>
           <second_editor />
         </state>
