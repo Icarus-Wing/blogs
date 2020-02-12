@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8aad11dd-8039-4efa-884f-ab250ff037ed" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/source/_posts/20191203_先发影响力.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20191204_商业冒险.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20191208_我不是米开朗琪罗.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20191210_这是我读过的最好的关于商业的书.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20191225_出路.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20191228_to2019_攻坚.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20200101_For2020.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/20181219_21世纪应该焦虑啥.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20181219_21世纪应该焦虑啥.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/20190114_For 2019.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20190114_For 2019.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/20190717_寻访科学的初心.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20190717_寻访科学的初心.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/20200101_For2020.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20200101_For2020.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,8 +28,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20200101_For2020.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="20200101_For2020.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/_posts/20200101_For2020.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="138">
+                <caret line="6" selection-start-line="6" selection-end-line="6" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20200204_旷日持久的持久战.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/_posts/20200204_旷日持久的持久战.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="207">
+                <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20200208_生命是病毒的副产品.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/_posts/20200208_生命是病毒的副产品.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor />
@@ -78,7 +92,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/source/_posts/20180424_字里藏医.md" />
         <option value="$PROJECT_DIR$/source/_posts/20180504_再游京津.md" />
         <option value="$PROJECT_DIR$/source/_posts/20180517_两个世界.md" />
         <option value="$PROJECT_DIR$/source/_posts/20180523_家的容器.md" />
@@ -129,6 +142,7 @@
         <option value="$PROJECT_DIR$/source/_posts/20191031_家的颜值.md" />
         <option value="$PROJECT_DIR$/source/_posts/20191210_这是我读过的最好的关于商业的书.md" />
         <option value="$PROJECT_DIR$/source/_posts/20191228_to2019_攻坚.md" />
+        <option value="$PROJECT_DIR$/source/_posts/20200204_旷日持久的持久战.md" />
       </list>
     </option>
   </component>
@@ -324,6 +338,7 @@
       <workItem from="1577284839687" duration="509000" />
       <workItem from="1577543919485" duration="1232000" />
       <workItem from="1577807632081" duration="135000" />
+      <workItem from="1581132010944" duration="390000" />
     </task>
     <task id="LOCAL-00001" summary="单车大战">
       <created>1523152461777</created>
@@ -553,10 +568,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241026000" />
+    <option name="totallyTimeSpent" value="241416000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="23" width="1260" height="691" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19854721" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -585,25 +601,25 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26069412" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49556094" weight="0.32871974" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Python Console" order="9" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50443906" side_tool="true" visible="true" weight="0.32871974" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49556094" weight="0.32871974" />
       <window_info anchor="right" id="SciView" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="11" />
-      <window_info anchor="bottom" id="Python Console" order="9" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -667,22 +683,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="焦虑" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/source/_posts/20181226_麻木.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/20181230_折叠的北京.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/20170208_for 2017.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1091,6 +1091,26 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/20200101_For2020.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="138">
+            <caret line="6" selection-start-line="6" selection-end-line="6" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/20200204_旷日持久的持久战.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="207">
+            <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/20200208_生命是病毒的副产品.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor />
