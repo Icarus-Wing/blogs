@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8aad11dd-8039-4efa-884f-ab250ff037ed" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/source/_posts/20200328_人文是精致的.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20200329_隐藏的秩序.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/source/lib/Han" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/Han" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -174,6 +173,7 @@
       <workItem from="1584537650676" duration="23000" />
       <workItem from="1585320338585" duration="589000" />
       <workItem from="1585444360159" duration="78000" />
+      <workItem from="1585490610499" duration="96000" />
     </task>
     <task id="LOCAL-00001" summary="单车大战">
       <created>1523152461777</created>
