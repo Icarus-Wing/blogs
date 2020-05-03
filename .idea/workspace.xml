@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8aad11dd-8039-4efa-884f-ab250ff037ed" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/source/_posts/20200502_独立.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20200502_不可思议的教育.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/source/lib/Han" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/Han" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,6 +179,7 @@
       <workItem from="1587654356814" duration="392000" />
       <workItem from="1587790458705" duration="582000" />
       <workItem from="1588376581744" duration="137000" />
+      <workItem from="1588431000225" duration="139000" />
     </task>
     <task id="LOCAL-00001" summary="单车大战">
       <created>1523152461777</created>
