@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8aad11dd-8039-4efa-884f-ab250ff037ed" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/source/_posts/20200502_不可思议的教育.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20200520_我们都误解了睡眠.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/source/lib/Han" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/Han" afterDir="false" />
     </list>
@@ -180,6 +180,7 @@
       <workItem from="1587790458705" duration="582000" />
       <workItem from="1588376581744" duration="137000" />
       <workItem from="1588431000225" duration="139000" />
+      <workItem from="1589982966982" duration="170000" />
     </task>
     <task id="LOCAL-00001" summary="单车大战">
       <created>1523152461777</created>
@@ -454,6 +455,12 @@
     <MESSAGE value="一头牛" />
     <MESSAGE value="焦虑" />
     <option name="LAST_COMMIT_MESSAGE" value="焦虑" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="328" y="127" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1589983046350">
+      <screen x="0" y="23" width="1280" height="723" />
+    </state>
+    <state x="328" y="127" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1280.723@0.23.1280.723" timestamp="1589983046350" />
   </component>
   <component name="masterDetails">
     <states>
