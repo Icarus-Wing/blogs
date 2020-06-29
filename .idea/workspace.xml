@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8aad11dd-8039-4efa-884f-ab250ff037ed" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/source/_posts/20200617_一个人与一座城.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/20050911_海上钢琴师.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20050911_海上钢琴师.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/20200101_For2020.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20200101_For2020.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20200623_笔记0x4.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20200624_又见罗塞塔.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20200627_贫困的本质.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next/source/lib/Han" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/Han" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -187,6 +188,10 @@
       <workItem from="1591673891607" duration="145000" />
       <workItem from="1592222158833" duration="48000" />
       <workItem from="1592376978574" duration="365000" />
+      <workItem from="1592886039332" duration="230000" />
+      <workItem from="1592975360109" duration="269000" />
+      <workItem from="1593222075925" duration="840000" />
+      <workItem from="1593248092651" duration="139000" />
     </task>
     <task id="LOCAL-00001" summary="单车大战">
       <created>1523152461777</created>
