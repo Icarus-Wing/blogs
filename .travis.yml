@@ -9,7 +9,7 @@ before_script:
   
 script:
   - hexo clean
-  - hexo g
+  - hexo generate
 
 after_script:
   - cd ./public
