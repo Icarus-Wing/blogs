@@ -1,8 +1,9 @@
 
 # S: Build Lifecycle
 install:
-  - npm install hexo-cli -g
+ # - npm install hexo-cli -g
  # - npm install hexo
+  - npm install –unsafe-perm –verbose -g hexo
   - npm install
 
 before_script:
