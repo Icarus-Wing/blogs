@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8aad11dd-8039-4efa-884f-ab250ff037ed" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/source/_posts/20201007_愿者上钩.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20201008_弱者.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20201015_浴火重生.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20201022_一个没有答案的简单问题.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20201023_独立就是不怕被讨厌.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20201024_免疫系统一日游.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20201030_天火.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/20200101_For2020.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20200101_For2020.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next20200310fail/source/lib/Han" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next20200310fail/source/lib/Han" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,20 +31,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="161" />
-    <option name="y" value="101" />
-    <option name="width" value="1260" />
-    <option name="height" value="691" />
-  </component>
   <component name="ProjectId" id="1ZIrr6lwWFwBO5QdhOSpmbcaUVr" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.prettier" value="true" />
     <property name="node.js.path.for.package.prettier" value="project" />
@@ -51,6 +47,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="NodeJSConfigurationType" application-parameters="g" path-to-js-file="bin/hexo" working-dir="$PROJECT_DIR$/node_modules/hexo">
@@ -60,6 +57,7 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -203,6 +201,10 @@
       <workItem from="1601959055666" duration="86000" />
       <workItem from="1602134470718" duration="356000" />
       <workItem from="1602755296004" duration="791000" />
+      <workItem from="1603505548037" duration="836000" />
+      <workItem from="1604151257950" duration="657000" />
+      <workItem from="1604153434480" duration="497000" />
+      <workItem from="1604154102021" duration="66000" />
     </task>
     <task id="LOCAL-00001" summary="单车大战">
       <created>1523152461777</created>
@@ -432,24 +434,24 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$/.deploy_git" />
+      <path value="$PROJECT_DIR$/themes/next20200310fail/source/lib/Han" />
     </ignored-roots>
     <MESSAGE value="读懂汉字不容易--《字里藏医》" />
     <MESSAGE value="两个世界" />
@@ -479,10 +481,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="焦虑" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="328" y="127" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1589983046350">
-      <screen x="0" y="23" width="1280" height="723" />
+    <state x="318" y="150" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1604151305676">
+      <screen x="0" y="23" width="1280" height="730" />
     </state>
-    <state x="328" y="127" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1280.723@0.23.1280.723" timestamp="1589983046350" />
+    <state x="318" y="150" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1280.730@0.23.1280.730" timestamp="1604151305676" />
   </component>
   <component name="masterDetails">
     <states>
