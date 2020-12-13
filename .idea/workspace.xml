@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8aad11dd-8039-4efa-884f-ab250ff037ed" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/source/_posts/20201022_一个没有答案的简单问题.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20201023_独立就是不怕被讨厌.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20201024_免疫系统一日游.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20201030_天火.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20201108_海海.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20201122_笔记0x9.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/_posts/20200101_For2020.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20200101_For2020.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/20201031_玉碎.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20201031_玉碎.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next20200310fail/source/lib/Han" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next20200310fail/source/lib/Han" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -205,6 +204,9 @@
       <workItem from="1604151257950" duration="657000" />
       <workItem from="1604153434480" duration="497000" />
       <workItem from="1604154102021" duration="66000" />
+      <workItem from="1604827620446" duration="260000" />
+      <workItem from="1604912420805" duration="449000" />
+      <workItem from="1606013659410" duration="120000" />
     </task>
     <task id="LOCAL-00001" summary="单车大战">
       <created>1523152461777</created>
