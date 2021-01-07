@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8aad11dd-8039-4efa-884f-ab250ff037ed" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/source/_posts/20201214_隐藏在生活中的黑天鹅.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20201216_念佛的恶人.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20201222_为啥红酒要配牛扒.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20201231_To2020_离群.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20210105_For_2021.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/_posts/20200101_For2020.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20200101_For2020.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next20200310fail/source/lib/Han" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next20200310fail/source/lib/Han" afterDir="false" />
@@ -211,6 +210,9 @@
       <workItem from="1607945386047" duration="757000" />
       <workItem from="1608049163351" duration="1253000" />
       <workItem from="1608611245390" duration="227000" />
+      <workItem from="1609116052878" duration="646000" />
+      <workItem from="1609116771835" duration="47000" />
+      <workItem from="1609819614412" duration="176000" />
     </task>
     <task id="LOCAL-00001" summary="单车大战">
       <created>1523152461777</created>
@@ -487,11 +489,11 @@
     <option name="LAST_COMMIT_MESSAGE" value="焦虑" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="318" y="151" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1608050427264">
+    <state x="318" y="151" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1609116578184">
       <screen x="0" y="25" width="1280" height="722" />
     </state>
     <state x="318" y="150" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1280.730@0.23.1280.730" timestamp="1604151305676" />
-    <state x="318" y="151" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.25.1280.722@0.25.1280.722" timestamp="1608050427264" />
+    <state x="318" y="151" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.25.1280.722@0.25.1280.722" timestamp="1609116578184" />
   </component>
   <component name="masterDetails">
     <states>
