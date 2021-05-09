@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8aad11dd-8039-4efa-884f-ab250ff037ed" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/source/_posts/20210210_笔记0xB.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20210317_突围.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20210328_共生.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20210331_灵与欲的救赎.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20210411_没曾想到睡觉也门学问.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20210421_温室气体真的会引发气候灾难吗.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next20200310fail/source/lib/Han" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next20200310fail/source/lib/Han" afterDir="false" />
     </list>
@@ -38,9 +38,15 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.prettier" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.prettier" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.prettier" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -223,6 +229,11 @@
       <workItem from="1612977946616" duration="119000" />
       <workItem from="1615973047438" duration="370000" />
       <workItem from="1616923195113" duration="626000" />
+      <workItem from="1617184894753" duration="155000" />
+      <workItem from="1618100132258" duration="750000" />
+      <workItem from="1618100935432" duration="609000" />
+      <workItem from="1618149749140" duration="598000" />
+      <workItem from="1619011849684" duration="169000" />
     </task>
     <task id="LOCAL-00001" summary="单车大战">
       <created>1523152461777</created>
@@ -497,13 +508,6 @@
     <MESSAGE value="一头牛" />
     <MESSAGE value="焦虑" />
     <option name="LAST_COMMIT_MESSAGE" value="焦虑" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="318" y="151" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1609116578184">
-      <screen x="0" y="25" width="1280" height="722" />
-    </state>
-    <state x="318" y="150" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1280.730@0.23.1280.730" timestamp="1604151305676" />
-    <state x="318" y="151" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.25.1280.722@0.25.1280.722" timestamp="1609116578184" />
   </component>
   <component name="masterDetails">
     <states>
