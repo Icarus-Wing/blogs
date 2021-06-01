@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8aad11dd-8039-4efa-884f-ab250ff037ed" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/source/_posts/20210331_灵与欲的救赎.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20210411_没曾想到睡觉也门学问.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20210421_温室气体真的会引发气候灾难吗.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20210509_打理身体的后花园.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20210528_与死神同行.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20210531_人设.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/20210105_For_2021.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20210105_For_2021.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next20200310fail/source/lib/Han" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next20200310fail/source/lib/Han" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +51,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -234,6 +235,11 @@
       <workItem from="1618100935432" duration="609000" />
       <workItem from="1618149749140" duration="598000" />
       <workItem from="1619011849684" duration="169000" />
+      <workItem from="1620529813448" duration="198000" />
+      <workItem from="1620530091805" duration="12000" />
+      <workItem from="1621640718988" duration="1420000" />
+      <workItem from="1622254665082" duration="723000" />
+      <workItem from="1622472206807" duration="194000" />
     </task>
     <task id="LOCAL-00001" summary="单车大战">
       <created>1523152461777</created>
