@@ -22,7 +22,7 @@ after_script:
   - git config user.email "canghai.yu@gmail.com"
   - git add .
   - git commit -m "Update docs"
-  - git push --force "https://${GH_TOKEN}@${GH_REF}" master:master
+  - git push --force "https://nasamars:${GH_TOKEN}@${GH_REF}" master:master
 #  - git push --force "https://${GH_TOKEN}@${GH_REF}" master:master
 
 #  - hexo d
