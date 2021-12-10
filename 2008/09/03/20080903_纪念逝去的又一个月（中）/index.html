@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"nasamars.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="&amp;emsp;&amp;emsp;本文依然是技术文档，上次说完了LINQ，这回就是项目中的其他问题，首当其冲的是版本控制的TFS，TFS的版本管理的确是存在一些问题，比如加了一个aspx，签入的项目后，在其他机器拿一个最新的版本的时候，往往拿不到这个aspx，可能是没有将cspro这个项目文件的签入的缘故，所以解决办法就是，手工从源代码管理器拿文件，完后再到VS中添加已存在文件，这样做，虽然是治标不治本，但">
+<meta property="og:type" content="article">
+<meta property="og:title" content="纪念逝去的又一个月（中）">
+<meta property="og:url" content="https://nasamars.github.io/2008/09/03/20080903_%E7%BA%AA%E5%BF%B5%E9%80%9D%E5%8E%BB%E7%9A%84%E5%8F%88%E4%B8%80%E4%B8%AA%E6%9C%88%EF%BC%88%E4%B8%AD%EF%BC%89/index.html">
+<meta property="og:site_name" content="我心中的香格里拉">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;本文依然是技术文档，上次说完了LINQ，这回就是项目中的其他问题，首当其冲的是版本控制的TFS，TFS的版本管理的确是存在一些问题，比如加了一个aspx，签入的项目后，在其他机器拿一个最新的版本的时候，往往拿不到这个aspx，可能是没有将cspro这个项目文件的签入的缘故，所以解决办法就是，手工从源代码管理器拿文件，完后再到VS中添加已存在文件，这样做，虽然是治标不治本，但">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2008-09-03T00:45:00.000Z">
+<meta property="article:modified_time" content="2021-12-10T01:40:06.616Z">
+<meta property="article:author" content="Sylvain Mars YU">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://nasamars.github.io/2008/09/03/20080903_%E7%BA%AA%E5%BF%B5%E9%80%9D%E5%8E%BB%E7%9A%84%E5%8F%88%E4%B8%80%E4%B8%AA%E6%9C%88%EF%BC%88%E4%B8%AD%EF%BC%89/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-cn'
+  };
+</script>
+
+  <title>纪念逝去的又一个月（中） | 我心中的香格里拉</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我心中的香格里拉</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
+    <link itemprop="mainEntityOfPage" href="https://nasamars.github.io/2008/09/03/20080903_%E7%BA%AA%E5%BF%B5%E9%80%9D%E5%8E%BB%E7%9A%84%E5%8F%88%E4%B8%80%E4%B8%AA%E6%9C%88%EF%BC%88%E4%B8%AD%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sylvain Mars YU">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我心中的香格里拉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          纪念逝去的又一个月（中）
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2008-09-03 00:45:00" itemprop="dateCreated datePublished" datetime="2008-09-03T00:45:00+00:00">2008-09-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-10 01:40:06" itemprop="dateModified" datetime="2021-12-10T01:40:06+00:00">2021-12-10</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>&emsp;&emsp;本文依然是技术文档，上次说完了LINQ，这回就是项目中的其他问题，首当其冲的是版本控制的TFS，TFS的版本管理的确是存在一些问题，比如加了一个aspx，签入的项目后，在其他机器拿一个最新的版本的时候，往往拿不到这个aspx，可能是没有将cspro这个项目文件的签入的缘故，所以解决办法就是，手工从源代码管理器拿文件，完后再到VS中添加已存在文件，这样做，虽然是治标不治本，但是也能解决问题嘛，实话说，这次是我第三次用版本控制软件，以前都是一个使用者的身份，现在不仅是使用者而且还是管理者的身份，可能是在公司养成的习惯，每有一个阶段性的工作完成，马上签入，刚刚接触代码管理的同学，一开始不注意，往往到了一个上午的代码丢失后才记住要时时签入。感谢软件工程，若非学过软件工程，并且在品高工作过，我是不会注意这个东西的，后果不堪设想。接下来是Sybase的数据库，原IRP软件使用的是Sybase 5.5的数据库，中心说由于版权问题，密码不能给我，而且另外一个IRA软件，没有密码，我在研究IRA软件的时候，提出了一些自己的想法，设计了一个方案，后来遇到一些问题，觉得很有必要参考原来系统的数据库，于是花了九牛二虎之力，破解了sybase5.5的数据库文件，历时4个小时，肚子也饿得不行了，但是兴奋得不得了。这个适应于没有加密数据库存储文件的情况。使用UltraEdit等二进制编辑工具打开数据库文件，通过查找“DBA”（二进制使用“44 42 41”），定位到底一个位置，注意观察这个区域，前面一般有“dbo”、“PUBLIC”，后面有“SYS”。这个区域就是ASA保存用户口令的数据段。把“SYS”之前四个空字符“00 00 00 00”之前到“44 42 21”之间的所有二进制数据，改为如下二进制数（代表SQL):24 36 3B DF 7D B5 77 B282 45 67 6D C2 DB D6 E7 F2 64 28 C3 55 22 97 F56C F5 8C 0F 8C C5 71 BA 15 C9 5E BC 43 01 59 0159 01 59 01 4E 01 4E 01 4E 17 00 00 改好后，保存数据库，DBA密码就是“SQL”了。当然还可以先建立一个测试数据库TEST,输好自已 DBA密码后，按以上方法查找到密码区，把密码值写入到要更改的数据库文相关区，即可隨意更改成自已想要的密码了.以上方法 ASA5,ASA7通过。另外，成功的把在公司学习的那个基本框架搭起来了，用Sitemap来存储每个网页的路径，使用ASP.net的导航控件，结合两个用户控件，一个是UCTab，一个是UCMenu，一个是控制页眉的，一个是控制左边的二级菜单的，采用了页面主题，简化了页面的风格和样式表的工作，通过Skin的控制，将整个系统的各个主要控件的样式都写好了，能够大限度的统一风格，使用了masterpage来控制一级页面和弹出页面样式，添加UpdatePanel使得页面看起来更加友好。在大家通力合作下完成了很大部分的工作。此日志来自QQ邮箱！方便快捷写Qzone的新方式，详情请进&gt;&gt;</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2008/08/28/20080828_%E7%BA%AA%E5%BF%B5%E9%80%9D%E5%8E%BB%E7%9A%84%E5%8F%88%E4%B8%80%E4%B8%AA%E6%9C%88%EF%BC%88%E4%B8%8A%EF%BC%89/" rel="prev" title="纪念逝去的又一个月（上）">
+      <i class="fa fa-chevron-left"></i> 纪念逝去的又一个月（上）
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2008/10/20/20081020_%E8%BF%B7/" rel="next" title="迷">
+      迷 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Sylvain Mars YU</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">553</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">127</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sylvain Mars YU</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

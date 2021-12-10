@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"nasamars.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="序看完了《规模》一书，我对圣塔菲研究所肃然起敬，这个新时代下的”亚历山大图书馆”，是我向往的地方，更让我惊喜的是，我曾经的那些天真、被人誉为”发神经”的想法（”经济活动是动力学系统”、”我们的社会与城市都是分形的”），竟然是这帮天才科学家一直研究的内容，我很兴奋。只是由于自己的数学能力有限，没有勇气重新回到象牙塔，但圣塔菲研究所有网络课程，我可以把10年前在大连修过的课程，重新修一遍，偷偷的修，不">
+<meta property="og:type" content="article">
+<meta property="og:title" content="经济活动的“波粒二象性”--《复杂经济学》">
+<meta property="og:url" content="https://nasamars.github.io/2019/05/20/20190520_%E7%BB%8F%E6%B5%8E%E6%B4%BB%E5%8A%A8%E7%9A%84%E6%B3%A2%E7%B2%92%E4%BA%8C%E8%B1%A1%E6%80%A7/index.html">
+<meta property="og:site_name" content="我心中的香格里拉">
+<meta property="og:description" content="序看完了《规模》一书，我对圣塔菲研究所肃然起敬，这个新时代下的”亚历山大图书馆”，是我向往的地方，更让我惊喜的是，我曾经的那些天真、被人誉为”发神经”的想法（”经济活动是动力学系统”、”我们的社会与城市都是分形的”），竟然是这帮天才科学家一直研究的内容，我很兴奋。只是由于自己的数学能力有限，没有勇气重新回到象牙塔，但圣塔菲研究所有网络课程，我可以把10年前在大连修过的课程，重新修一遍，偷偷的修，不">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-05-20T15:42:31.000Z">
+<meta property="article:modified_time" content="2021-12-10T01:40:06.636Z">
+<meta property="article:author" content="Sylvain Mars YU">
+<meta property="article:tag" content="复杂性 混沌 分形">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://nasamars.github.io/2019/05/20/20190520_%E7%BB%8F%E6%B5%8E%E6%B4%BB%E5%8A%A8%E7%9A%84%E6%B3%A2%E7%B2%92%E4%BA%8C%E8%B1%A1%E6%80%A7/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-cn'
+  };
+</script>
+
+  <title>经济活动的“波粒二象性”--《复杂经济学》 | 我心中的香格里拉</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我心中的香格里拉</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
+    <link itemprop="mainEntityOfPage" href="https://nasamars.github.io/2019/05/20/20190520_%E7%BB%8F%E6%B5%8E%E6%B4%BB%E5%8A%A8%E7%9A%84%E6%B3%A2%E7%B2%92%E4%BA%8C%E8%B1%A1%E6%80%A7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sylvain Mars YU">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我心中的香格里拉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          经济活动的“波粒二象性”--《复杂经济学》
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-05-20 15:42:31" itemprop="dateCreated datePublished" datetime="2019-05-20T15:42:31+00:00">2019-05-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-10 01:40:06" itemprop="dateModified" datetime="2021-12-10T01:40:06+00:00">2021-12-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">读书笔记</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>看完了《规模》一书，我对圣塔菲研究所肃然起敬，这个新时代下的”亚历山大图书馆”，是我向往的地方，更让我惊喜的是，我曾经的那些天真、被人誉为”发神经”的想法（”经济活动是动力学系统”、”我们的社会与城市都是分形的”），竟然是这帮天才科学家一直研究的内容，我很兴奋。只是由于自己的数学能力有限，没有勇气重新回到象牙塔，但圣塔菲研究所有网络课程，我可以把10年前在大连修过的课程，重新修一遍，偷偷的修，不丢人。</p>
+<span id="more"></span>
+<p>把经济活动看做是一种拥有动力学特性的多元主体活动，是圣达菲研究所在1987年召集了主流的经济学家和顶级的物理学家一起开会，通过头脑风暴确定下来的定义。然后，在圣达菲研究所展开了跨学科、跨领域的研究，布莱恩·阿瑟正是为此持续研究了30多年的经济学家，从一个传统的关注博弈论、关注均衡的经济学家，转型到了复杂经济学的经济学家。</p>
+<h1 id="经济活动的”波粒二象性”–《复杂经济学》"><a href="#经济活动的”波粒二象性”–《复杂经济学》" class="headerlink" title="经济活动的”波粒二象性”–《复杂经济学》"></a>经济活动的”波粒二象性”–《复杂经济学》</h1><p>“波粒二象性”在20世纪初，是一个热门的词，谁能讲出这个词，仿佛就站在了物理学的前沿。百余年后的当下，”波粒二象性”极其普通，一名中学生就能比较准确的说出光的波粒二象性的内涵，这可是一个诺奖级别的发现啊！</p>
+<p>我以这个作为本文的题目，是希望我用一个大家相对熟悉的名词来给大家介绍《复杂经济学》这本书的内容。虽然我只能明白这本书80%的内容，毕竟一些主流经济学常用的模型与数学表达，我是不太懂的，以及涉类似遍历性这些物理学或数学的术语，我也是一知半解的，但这并不影响我理解作者的用意。要彻底理解这些名词，我真的需要重新修读，关于动力学系统与混沌的课程，这是我下一步会去做的事情。</p>
+<p>传统意义上的”光的波粒二象性”，指的是光既具有电磁波拥有的波动的特性，也具有微观粒子的性质。如果我把光替换成<strong>经济活动</strong>，电磁波的波动特性替换成<strong>“理性预期经济学”</strong>，微观粒子的性质替换成<strong>“复杂经济学”</strong>，这就是本书想要说明的观点了。</p>
+<p>到这里，大家还是会一头雾水，我简单的说，电磁波是一个周期性可计算、可预测的东西，而微观粒子则是不遵守传统数学的事物，一个微观粒子的能量与位置信息不可兼得，只能借助一大堆粒子出现的性质来描述。</p>
+<h2 id="传统经济学关注的是动态均衡"><a href="#传统经济学关注的是动态均衡" class="headerlink" title="传统经济学关注的是动态均衡"></a>传统经济学关注的是动态均衡</h2><p><strong>传统的经济学关注的是动态均衡，什么样的行为元素，即行动、策略和预期，是与这些行为元素共同创造的总体模式相一致的</strong>，比如：</p>
+<ul>
+<li><p>一般均衡理论问的是，在不会产生任何导致改变激励的情况下，生产出来和消费掉的商品的价格和数量，与经济中各市场的价格和数量的总体模式是否一致。</p>
+</li>
+<li><p>博弈论问的是，在给定的策略情境下，什么样的行动、选择或分配，与其他行为主体的行动、选择或分配相一致或是最优的。</p>
+</li>
+<li><p>理性预期经济学问的是，什么样的预测或预期与这些预测和预期共同创造的结果相一致，或能够被这些结果所验证。</p>
+</li>
+</ul>
+<p>因此，传统经济学研究的是各种“一致的模式”，即行为均衡中的模式，它们不会引发进一步的反应，探究何种模式不需要微观行为做出改变，何种模式将处于静止状态或均衡状态。新古典经济学之所以在现实世界中遭到失败，很大程度上是因为它把经济看成是均衡的。如果我们回头看看过去25年间发生的历次经济危机。</p>
+<p>传统经济学中假定的理性类型，是个完美的、合乎逻辑的、演绎的理性，这在对理论问题求解时非常有用，但是对人类行为的这种理性假设是有很大问题的，它带来的问题远远多于它通常能够解决的。如果我们把经济主体所面临的决策问题想象成一个大海，即简单的决策问题构成表层和浅层，复杂的决策问题构成深层和底层，越靠近海平面的决策问题越容易，那么演绎理性最多只能解决位于海平面及以下1～2米的那些问题。</p>
+<p>完美理性或演绎理性，在面对复杂情况时必定会“力不从心”，这有两个原因。</p>
+<ul>
+<li>第一个原因是显而易见的：当复杂性超过了一定程度时，人类的逻辑思维能力就无法应付了，这就是说，人类的理性是有限的。</li>
+<li>第二个原因是：在多个行为主体相互作用的复杂环境下，任何一个行为主体都不能假设与自己互动的其他行为主体的行为是完全理性的，因此每个行为主体都不得不猜测其他行为主体将如何行动。</li>
+</ul>
+<p>新古典经济学之所以在现实世界中遭到失败，很大程度上是因为它把经济看成是均衡的。如果我们回头看看过去25年间发生的历次经济危机，就会发现所有这些危机在很大程度上，都是：</p>
+<ul>
+<li>由于少数处于有利地位的“大玩家”利用经济系统中的漏洞而造成的，</li>
+<li>或者说是由失控的市场所导致的。</li>
+</ul>
+<p>例如：</p>
+<ul>
+<li>1990年，俄罗斯在放开市场之后的经济崩溃；</li>
+<li>2000年，美国政府放松监管之后，加利福尼亚能源市场危机爆发；</li>
+<li>2008年，冰岛银行倒闭、持续的欧元危机，以及华尔街危机等。</li>
+</ul>
+<p>受均衡思维所限，人们无法提前预见到这种情况。原因很简单：由定义可知，在均衡状态下，没有人有动力偏离当前的行为，所以“钻空子”行为不会发生。<strong>受限于均衡思维，人们也很难看到极端的市场行为，因为他们认为对均衡的偏离，很快就会被反向抗衡力量纠正过来</strong>。从均衡理论的基本假设就可以看出，研究经济的某些组成部分如何被钻空子、研究经济的系统性崩盘，本来就不是均衡经济学的主要目的。</p>
+<h2 id="好政策是怎么被玩坏的"><a href="#好政策是怎么被玩坏的" class="headerlink" title="好政策是怎么被玩坏的"></a>好政策是怎么被玩坏的</h2><p>社会和经济生活中有一个一般规则：<strong>给定任何一个系统，总会有人找到一种利用它、剥削它的方法。或者说得更简洁一些，所有系统都会被玩弄</strong>。一个有普遍意义的观察结果，即任何政府制度、任何法律制度、任何监管制度、任何企业制度、任何选举制度、任何政策组合、任何组织规则、任何国际协议，人们都能够以你意想不到的方式，利用它来谋取自己的私利。</p>
+<p>所以，<strong>任何时候、任何政策体系都会为相关各方提供某些激励，而且这些激励反过来可能会促使各相关方发现一些政策设计者没有想到的、能够用来增进自己私利的途径</strong>。这会促使人们为了实现自己的目的而操纵性地使用一个系统，通常会背弃他人对他们的信任，并会伤害他人。这也是公共政策失效，违背初衷的缘由。 </p>
+<p>美国在林登·约翰逊担任总统期间于1965年启动的医疗保险体系，目的是为老年人提供医疗保健、支付医疗服务费、补偿医院和医生的治疗费用。参加这个计划的医院和医生对它的反应是，购买昂贵的设备和提供不必要的医疗服务，因此在该计划推出后的短短5年之内，它的成本就几乎增加了3倍。12年后，美国向市场开放了医疗保健服务，目的是为了引入竞争和降低成本。但是事与愿违，结果却产生了这样一个系统：<strong>每个关键的参与者都能找到某种方法，来利用这个系统谋取自己的利益，从而有害于整个系统</strong>。</p>
+<p>系统被”玩弄”大概有4种形式：</p>
+<ol>
+<li><p><strong>利用不对称信息</strong>。在许多社会系统中，系统各相关方可以访问不同的信息。经常发生的一种情况是，某一方根据自己对可得信息的理解提供某种服务或某种机会，然后另一方以自己所拥有的更详尽的信息为基础做出回应、采取行动，并依靠其优势信息利用系统从中获益。</p>
+</li>
+<li><p><strong>“裁剪”行为以符合特定标准</strong>。在这里也许称之为“操纵”更好一些，发生在必须根据严格的评估标准对行为主体的行为进行评判、监控或测度时。行为主体会“裁剪自己的行为”，以便符合这些标准的狭隘的条文，而不去考虑制定这些标准的更广泛的意图。<strong>换句话说，行为主体“玩弄”了标准</strong>。</p>
+<p>在2008年金融危机之前，金融评级机构如穆迪或标准普尔等，多年来一直在对投资银行创设的各种金融工具所固有的风险进行评估。但是在金融危机爆发前几年，在一个以“增加透明度和信任感为名的行动中，它们将自己的评级模型提供给了华尔街各投资银行。对此，摩根森（Morgenson）指出：“华尔街的投资银行很快就学会了如何篡改这些模型，如改变一两个小小的输入项，然后得到更好的评级结果。也就是说，他<strong>们学会了如何利用评级机构的模型作弊，目的是保证在把质量更低的债券掺入投资组合后，仍然能够得到高评级</strong>，于是他们就可以把这些本来很可能卖不出去的垃圾卖出去了。</p>
+<p><strong>玩弄绩效标准的人</strong>绝对不限于华尔街那帮银行家。在一切需要评判性能或绩效的系统中，都存在这种行为：是否符合法律、能否通过教育考试、是否遵循人权标准、有无遵守环境标准、是否达到接受资助标准、工厂产量是否达产、金融会计是否公允、税务报告是否合规、行政官僚业绩是否出众、政府治理的绩效能不能令人满意等，涉及的标准都可能被“玩弄”。在所有这些情况下，受到监管或被关注的当事方会调整自己的行为，做出一副在规定的绩效措施下“表现良好”的样子”。</p>
+</li>
+<li><p><strong>获得系统的部分控制权</strong>。这发生在当由一些行为主体组成的小团伙控制了系统的部分重要资源，并将其用于满足自身的目的时。这类似于计算机系统中病毒对计算资源的剥削。这个小团伙实际上接管了一部分系统，并且利用它来为自己谋取利益。</p>
+</li>
+<li><p><strong>以政策设计者意图之外的方式利用系统的元素</strong>。当行为主体利用系统自身去操纵系统时，还会出现另一种类型的意外。一个例子是，利用网站的评级系统去操纵对他人的评级。又如，有关利益方会设法去搜寻某个规则，然后使它成为系统的一个漏洞，用来证明他们所做的超出了系统设计者意图之外的行为的合理性。这样一来，这条规则就会蜕变成一个管道，让金钱或能量滚滚流过，并对整个系统造成不利影响。  </p>
+</li>
+</ol>
+<h2 id="复杂经济学把经济看成是可进化的复杂系统"><a href="#复杂经济学把经济看成是可进化的复杂系统" class="headerlink" title="复杂经济学把经济看成是可进化的复杂系统"></a>复杂经济学把经济看成是可进化的复杂系统</h2><p>书中讲到了一个经典的例子：</p>
+<blockquote>
+<p>这是“爱尔法鲁酒吧”问题。假设有100个人，<strong>每个人每个星期都必须独立地做出决定，要不要去他们最喜爱的酒吧，即圣塔菲的爱尔法鲁酒吧去消遣</strong>。</p>
+<p>规则是：</p>
+<ul>
+<li>如果某个人预测同一天会有超过60个人去酒吧，那么他或她为了避免拥挤嘈杂就选择留在家里；</li>
+<li>如果预测不到60个人会去，那么他就选择去。</li>
+</ul>
+<p>我们想知道的是，这些酒吧客人怎么预测每个星期将会出现在酒吧的人数，以及由此导致的数字序列的动力学。</p>
+</blockquote>
+<p>这就是复杂经济学的开始，这个问题有两个特点。</p>
+<ul>
+<li>第一，我们的行为主体很快就会意识到，对有多少人会去酒吧的预测取决于其他人对多少人会去的预测，因为这决定了他们的“到场率”。其他人的预测又取决于他们对其他人预测的预测。运用这种演绎推理时，存在着一个无限的回归。没有任何一个“正确”预期模型可以被假定为共同知识，而且从行为主体个人的角度来看，这个问题无法明确界定。</li>
+<li>第二，更加令人讨厌的是，任何一个“共同预期”都会被打破或落空。如果所有人都运用预测只有少数人会去的预期模型，那么所有人都会去，从而证伪了这种模型。同样地，如果所有人都相信大多数人会去，那么没有人会去，这样会使这种信念归于无效。因此，各个人的预期将被迫变得不同。</li>
+</ul>
+<p>在“爱尔法鲁酒吧”问题中一样，我们的假设是，投资者无法直接提出或通过演绎推理的方法推定预期，而是必须自己去发现它们。而且它也是一个小型生态，在这个生态中，<strong>各种预期在一个由这些预期自身创造的世界中相互竞争</strong>。这种问题每天都在身边发生，或许是在证券市场，或许是在金融市场，越来越多的学者同意，传统经济学的思想框架和知识谱系，难以解释这个快速变化的世界。这个世界既不是市场失灵的问题，也不是政府失灵的问题，而是理论失灵。</p>
+<p>1999年，布莱恩·阿瑟在《科学》杂志上首先提出了这样的一种经济学：</p>
+<blockquote>
+<p>在复杂经济学看来，<strong>经济是运动着的、永远在“计算”自身的</strong>。或者说，经济无时无刻不在重新构建自身。均衡经济学强调秩序、确定性、演绎推理和静态分析，而复杂经济学则强调<strong>偶然性</strong>、<strong>不确定性</strong>、<strong>理解（即意义建构）</strong>和<strong>对变化的开放心态</strong>。</p>
+</blockquote>
+<p>复杂性科学研究系统中相互作用的要素如何生成整体模式，以及整体模式反过来又如何导致这些要素发生变化，或导致这些要素调整以适应整体模式。复杂性并不是一种理论，而是一种科学运动。例如，<strong>我们可以研究大量单个汽车在行驶中如何共同形成了某些交通模式，这些模式反过来又如何影响单个汽车的位置</strong>。复杂性是关于结构形成的：结构是如何形成的，这种结构形成又是如何影响和导致客体的生成的。</p>
+<p>复杂经济系统有6大特征：</p>
+<ol>
+<li><strong>分散的交互作用</strong>。经济中发生的几乎所有事情，都是由大量的行为主体的相互作用决定的，而这些行为主体是分散的且极可能是异质性的、并行采取行动的。</li>
+<li><strong>没有全局性的控制者</strong>。经济中没有全局性的、可以控制行为主体之间的交互作用的实体。如果说有控制，那也是通过行为主体之间的竞争和协调机制实现的。经济行为是由法律制度、行为主体承担的角色，以及相互之间不断变化的联结来实现调和的。同样地，经济中也不存在万能竞争者，即可以利用经济中的一切机会的一个行为主体。</li>
+<li><strong>交叉分层组织</strong>。在经济中，存在着很多层次的组织和互动。任何一个给定层级的“单元”，通常都要成为构建下一个更高层级的单元的“构件”，这就意味着经济系统下出现分形结构 。</li>
+<li><strong>连续适应</strong>。随着行为主体经验的不断积累，行为、行动、策略、产品等，全都不断地被修订、调整，或者说系统将不断地适应。</li>
+<li><strong>永恒的创新</strong>。随着新的市场、新的技术、新的行为模式、新的机构等不断涌现，新的“利基”不断地被创造出来。而且，填补一个利基的行动本身也可能会创造新的利基。这导致的结果是持续的、永恒的创新。</li>
+<li><strong>非均衡的动力学</strong>。由于新的利基、新的潜力、新的可能性等不断地被创造出来，经济的运行会远离任何最优或全局均衡。改进总是可能的，并且确实经常发生。 </li>
+</ol>
+<p>复杂经济学以一种全然不同的方式看待经济，给出了一个完全不同的图景。在这个图景中，行动和策略是不断进化的，时间变得至关重要，结构不断形成且不断重组，标准的均衡分析中不可见的现象将浮现出来并得到研究，<strong>介于微观层面和宏观层面之间的中观层面也是非常重要的</strong>。</p>
+<p>从复杂性的视角出发去研究经济或经济中的某些领域，就意味着要探究经济是如何进化的，也就意味着要深入详细地研究个体行为主体的行为，是如何共同形成某种结果的，以及这种结果反过来又是如何改变他们的行为的。</p>
+<h2 id="经济制度与技术的双螺旋发展"><a href="#经济制度与技术的双螺旋发展" class="headerlink" title="经济制度与技术的双螺旋发展"></a>经济制度与技术的双螺旋发展</h2><p>复杂经济学把<strong>经济</strong>定义为<strong>一整套安排和活动</strong>，社会需要借助这一整套安排和活动来满足自己的需求。包括了医院和外科手术、市场和定价系统、贸易安排、分配制度、组织和企业，还包括了金融体系、银行、监管系统和法律制度。所有这些，全都是我们用来满足我们的需求的安排；所有这些，都是实现人类目的的手段。</p>
+<p>作者把<strong>技术</strong>定义为<strong>实现人类目的的手段</strong>，因此所有这些都是“技术”或目的性系统。由此可见，如果我们承认纽约股票交易所和合同法的专门规定，与钢铁厂和纺织机械一样，都是实现人类目的的手段，那么我们就可以说，它们在广义上也都是技术。</p>
+<p>如果我们把所有这些“安排”都纳入技术的集合当中，我们就会看到，经济不是技术的容器，而是建构在技术之上的。经济是一系列活动、行为、商品和服务流，是以技术为中介或被技术所覆盖的。也就是说，一直在讨论的那些方法、过程和组织形式构成了经济。一方面，经济创造了技术；另一方面，同时也是更加重要的一方面是，<strong>技术即我们用来满足人类需求的技术集合创造了经济</strong>。<strong>经济不仅是技术的容器，而且还是技术的表达</strong>。</p>
+<p><strong>经济的结构是由它的技术形塑的</strong>，或者如果你喜欢的话，也可以说技术构成了经济的<strong>骨架</strong>。经济中的其他部分，如商业活动、博弈中各方参与者的策略和决策、商品和服务的流动，以及随之而来的投资等，则构成了经济体的肌肉、神经和血液。但是，所有这些“其他部分”都只是环绕在经济的外围部分，而且它们也是由技术，即目的性系统形塑而成的。思维方式转变了，结果也就不同了。这还意味着，<strong>经济不仅必须随着技术的进化而重新调整适应，而且还必定会随着技术的进化不断地形成和重构</strong>。这也意味着，经济的特征，即它的形式和结构必定会随着技术的变化而变化。</p>
+<p><strong>当一项新技术进入经济后，它就会召唤新的安排，即新技术和新的组织形式</strong>。新的技术或新的安排，反过来又可能引发一系列新问题。为了找到这些新问题的答案，又需要进一步的新安排，或通过修正现有技术来实现这个目的，而这就又打开了对更进一步的新技术的需求之门。</p>
+<h3 id="工业革命的例子"><a href="#工业革命的例子" class="headerlink" title="工业革命的例子"></a>工业革命的例子</h3><p>在18世纪60年代的英国，实用的、易操作的纺织机械出现了，这就提供了一种可以替代当时以手工作坊为基础的生产方式的途径。当时流行的生产方式是散工制或外放分工制（putting-out system）：羊毛和棉花的纺织都是在家里以手工方式完成。但是，新的纺织机械在刚开始时只取得了部分成功，因为它要求比家庭手工作坊规模更大的生产组织。这样一来，纺织机械就为更高级的组织安排，即纺织厂提供了机会，并使自己也成了更高级组织中的一个组成部分。工厂本身作为一种组织手段，这也是一种技术，反过来也要求另一种手段来实现机器生产，那就是工厂劳动力。劳动力当然早就已经存在于经济当中了，但是当时的劳动力数量并不足以支撑这种新的工厂生产体系。所需要的劳动力主要是从农业转移出来的，这种转移又反过来要求在工厂附近有居住的地方。因此工人宿舍和工“人住房的建设就开展起来了。而工厂、工人及工人住房的组合，就是工业城市。</p>
+<p>随着工业城市的增长，一整套新的社会组织方式，或者说一整套新的制度安排出现了。由此，维多利亚式的工业经济的结构就开始涌现出来。是的，一个时代的特征，即一整套与机械化工业生产的优越技术相匹配的制度安排，就是以这种方式逐渐呈现出来了。</p>
+<p>任何一个时代都不会就此终结。在当时的制造业工人中，有许多是童工，他们经常在狄更斯作品中所描述的那种条件下工作。这种情况引发了强烈的改革需求。人们不仅呼吁提升“下层阶级的道德水准”，而且要求保障他们的安全。[3]于是，到了时机成熟时，法律制度做出了进一步的调整，以回应这种呼声。例如，旨在防止最糟糕的情况发生的劳动法出台了。然后，新的工人阶级开始要求在工厂创造的财富中分享到更大的份额。为了改善自己的境况，他们找到了一种有效的手段，那就是组织工会。因此在短短的几十年内，工会就成了一支强大的政治力量。</p>
+<p>通过这种方式，纺织机械的到来，不仅替换了家庭小作坊的手工生产方式，而且还为更高一级的制度安排创造了机会，那就是工厂生产体系。<strong>在这个制度安排中，机械只是其中的一个组成部分。新的工厂系统反过来又生成了一个对劳动和住房需求的链条。而为了满足这些需求所提出的解决方案，又创造了进一步的需求。所有这些，到最后进化成了维多利亚式工业体系。</strong>整个过程用了100多年的时间才最终完成。</p>
+<h2 id="后拉普拉斯时代"><a href="#后拉普拉斯时代" class="headerlink" title="后拉普拉斯时代"></a>后拉普拉斯时代</h2><p>在传统经济学教科书中，定义经济的标准方式就是将它定义为：</p>
+<blockquote>
+<p> 一个“生产、分配和消费”商品和服务的“系统”。</p>
+</blockquote>
+<p>这样一来，经济就变成了一个巨大的容器，里面装载着它的技术，或者说，是一台包含着许多模块和零部件的巨大机器。这些<strong>模块</strong>和<strong>零部件</strong>就是经济的技术，或者是它的生产手段。当出现了一种新技术（如铁路交通）后，就为某个特定行业提供了一个新的模块，并使这个行业得到升级：</p>
+<blockquote>
+<p>新技术替换下来的旧的专用模块（在铁路交通的兴起这个例子中是运河）将会被舍弃，而新的升级模块则悄然到位。至于这台“机器”的其他部分，则会自动地重归平衡，而且它的张力和流量，即价格及生产和消费的商品和服务，都会相应地进行重新调整。</p>
+</blockquote>
+<p>传统的经济学对未来是<strong>确定的</strong>，因为它继承了经济就是一种<strong>艺术</strong>的观念，即经济是一台巨大的机器，只要我们理解了它的各个组成部分，我们就可以预测它的整体行为，继承的是牛顿与拉普拉斯的信念。从理性人类行为的公理出发，就可以构建出<strong>消费者理论</strong>；从消费者理论和相应的厂商理论出发，就可以构建出内在一致的<strong>微观经济学</strong>；而从微观经济学出发，就可以构建出关于<strong>经济总体</strong>的理论，即宏观经济学，所有这一切将构成一个关于经济的大统一理论。</p>
+<p>显然，复杂经济学的出现，重新定义了经济与技术，把经济看成是一种会进化的复杂系统。从这个角度来说，经济其实也是一种像生命一样的东西，不再像传统的笨重的大机械。复杂系统的未来不可预测，笼统的说不确定也不为过，而我也更坚定自己的观点，那就是把这种特性称为确定系统下的不可预测（Certain BUt Can’t Perdit），我把它称之为后拉普拉斯时代。</p>
+<p>布莱恩·阿瑟的构建了一个虚拟的人工股票市场。在推演的过程中，发现参与交易的”人”采取的交易策略与方式相对固定与持久，那么预期的多样性会迅速坍塌成为同质的理性预期（”技术分析准确性很高”）。原因是，如果大多数投资者的预期都接近理性预期，那么由此而得到的结果，即价格将验证这种预期，同时预期模型“种群”出现的偏差或突变预测都将被证明是不准确的。在这种特殊情况下，标准的金融理论仍然成立。但是，如果参与交易的”人”交易策略加入变化以及交易频率稍有增加，那么市场就会出现“相变”，转入“复杂体制”（”符合有效市场理论”），并呈现出我们在真实市场中观察到的那些“异常现象”，从而开启了一个丰富多彩的“心理世界”。</p>
+<p>从另一个角度来说，在后拉普拉斯时代，参与系统人员较少的行业，获利比较容易，也比较符合预期，一旦参与的人开始多了之后，复杂度上升到一个阈值后，获利就开始变得困难，而且常常出乎意料的糟糕，参与系统的主题多少，决定了这个系统是可预期的还是复杂的。这就是所谓的经济活动的”波粒二象性”，可预期的和不可预期的状况同时存在，正如研究光的双缝衍射实验一样，没有到小缝的时候它既是波又是粒子，通过了小缝之后就坍缩成波，经济活动是不是也有类似的现象？</p>
+<p>对于公共管理者来说，需要意识到政府施政必须避免两个极端：<strong>强制实现预期的结果，或者极端放任自由</strong>。应该设法将系统“轻轻地推到”能够生长和自然涌现出结构的那个方向上去，这不是一只“沉重的手”，也不是一只“看不见的手”，而是一只“轻推的手”，这就回到了理查德·塞勒构建的助推经济学上了。</p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>我不知道，我的解读是否能让人轻松的读懂，什么是复杂经济学，为什么说经济是一个不断进化的复杂系统。作为一个追求真理的人来说，最激动的莫过于找到了同路人，而且发现了你的想法并不是可笑的、天方夜谭的，聪明的他们已经研究了20年。对我来说，任务只有一个，跟上他们。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%A4%8D%E6%9D%82%E6%80%A7-%E6%B7%B7%E6%B2%8C-%E5%88%86%E5%BD%A2/" rel="tag"># 复杂性 混沌 分形</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/05/13/20190514_%E6%B3%95%E5%BC%8F%E6%B5%AA%E6%BC%AB/" rel="prev" title="法式浪漫--《巴黎风格小屋》">
+      <i class="fa fa-chevron-left"></i> 法式浪漫--《巴黎风格小屋》
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/05/23/20190523_%E7%8E%AB%E7%91%B0%E5%BE%88%E5%A5%BD%E5%8D%B4%E6%9C%89%E5%88%BA/" rel="next" title="玫瑰很好却有刺--《红玫瑰和白玫瑰》">
+      玫瑰很好却有刺--《红玫瑰和白玫瑰》 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%8F"><span class="nav-number">1.</span> <span class="nav-text">序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%8F%E6%B5%8E%E6%B4%BB%E5%8A%A8%E7%9A%84%E2%80%9D%E6%B3%A2%E7%B2%92%E4%BA%8C%E8%B1%A1%E6%80%A7%E2%80%9D%E2%80%93%E3%80%8A%E5%A4%8D%E6%9D%82%E7%BB%8F%E6%B5%8E%E5%AD%A6%E3%80%8B"><span class="nav-number">2.</span> <span class="nav-text">经济活动的”波粒二象性”–《复杂经济学》</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%A0%E7%BB%9F%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%85%B3%E6%B3%A8%E7%9A%84%E6%98%AF%E5%8A%A8%E6%80%81%E5%9D%87%E8%A1%A1"><span class="nav-number">2.1.</span> <span class="nav-text">传统经济学关注的是动态均衡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A5%BD%E6%94%BF%E7%AD%96%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E7%8E%A9%E5%9D%8F%E7%9A%84"><span class="nav-number">2.2.</span> <span class="nav-text">好政策是怎么被玩坏的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%8D%E6%9D%82%E7%BB%8F%E6%B5%8E%E5%AD%A6%E6%8A%8A%E7%BB%8F%E6%B5%8E%E7%9C%8B%E6%88%90%E6%98%AF%E5%8F%AF%E8%BF%9B%E5%8C%96%E7%9A%84%E5%A4%8D%E6%9D%82%E7%B3%BB%E7%BB%9F"><span class="nav-number">2.3.</span> <span class="nav-text">复杂经济学把经济看成是可进化的复杂系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%8F%E6%B5%8E%E5%88%B6%E5%BA%A6%E4%B8%8E%E6%8A%80%E6%9C%AF%E7%9A%84%E5%8F%8C%E8%9E%BA%E6%97%8B%E5%8F%91%E5%B1%95"><span class="nav-number">2.4.</span> <span class="nav-text">经济制度与技术的双螺旋发展</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A5%E4%B8%9A%E9%9D%A9%E5%91%BD%E7%9A%84%E4%BE%8B%E5%AD%90"><span class="nav-number">2.4.1.</span> <span class="nav-text">工业革命的例子</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E6%97%B6%E4%BB%A3"><span class="nav-number">2.5.</span> <span class="nav-text">后拉普拉斯时代</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">3.</span> <span class="nav-text">结语</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Sylvain Mars YU</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">553</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">127</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sylvain Mars YU</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

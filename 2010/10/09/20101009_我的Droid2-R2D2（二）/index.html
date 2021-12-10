@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"nasamars.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="&amp;emsp;&amp;emsp;改好了esn，写了akey和ismi码之后，打电话发短信就不成问题了，接下来到1X了，用到的软件有 HW VSP，QPST在in189里头看到不少人是通过开机按T，然后进入dial模式，通过wifi来连接电脑模拟串口，droid2没有这个diag模式，通过小弟对android的捣腾，发现不需要这个diag模式也能连上机器模拟串口。小弟是这样发现的：进入adb shell输入">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的Droid2-R2D2（二）">
+<meta property="og:url" content="https://nasamars.github.io/2010/10/09/20101009_%E6%88%91%E7%9A%84Droid2-R2D2%EF%BC%88%E4%BA%8C%EF%BC%89/index.html">
+<meta property="og:site_name" content="我心中的香格里拉">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;改好了esn，写了akey和ismi码之后，打电话发短信就不成问题了，接下来到1X了，用到的软件有 HW VSP，QPST在in189里头看到不少人是通过开机按T，然后进入dial模式，通过wifi来连接电脑模拟串口，droid2没有这个diag模式，通过小弟对android的捣腾，发现不需要这个diag模式也能连上机器模拟串口。小弟是这样发现的：进入adb shell输入">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2010-10-09T12:55:00.000Z">
+<meta property="article:modified_time" content="2021-12-10T01:40:06.616Z">
+<meta property="article:author" content="Sylvain Mars YU">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://nasamars.github.io/2010/10/09/20101009_%E6%88%91%E7%9A%84Droid2-R2D2%EF%BC%88%E4%BA%8C%EF%BC%89/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-cn'
+  };
+</script>
+
+  <title>我的Droid2-R2D2（二） | 我心中的香格里拉</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我心中的香格里拉</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
+    <link itemprop="mainEntityOfPage" href="https://nasamars.github.io/2010/10/09/20101009_%E6%88%91%E7%9A%84Droid2-R2D2%EF%BC%88%E4%BA%8C%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sylvain Mars YU">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我心中的香格里拉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          我的Droid2-R2D2（二）
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2010-10-09 12:55:00" itemprop="dateCreated datePublished" datetime="2010-10-09T12:55:00+00:00">2010-10-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-10 01:40:06" itemprop="dateModified" datetime="2021-12-10T01:40:06+00:00">2021-12-10</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>&emsp;&emsp;改好了esn，写了akey和ismi码之后，打电话发短信就不成问题了，接下来到1X了，用到的软件有 HW VSP，QPST在in189里头看到不少人是通过开机按T，然后进入dial模式，通过wifi来连接电脑模拟串口，droid2没有这个diag模式，通过小弟对android的捣腾，发现不需要这个diag模式也能连上机器模拟串口。小弟是这样发现的：进入adb shell输入命令 netcfg可以看到现在机器的ip包括其他连接获得的ip 192.168.16.2键入命令 netstat 可以看到现在的机器端口的情况 其中11000和11008都是在监听的在HW VSP中使用192.168.16.2与11008就可以创建虚拟端口，为此发现，我还是小高兴一把，后来在看DX的牛人教程里的参数也是这样的，以前看教程的时候自己以为还是dial的wifi连接，自己尝试一直不成功，直到在xda有人问如何用电脑连droid2，之前可以用dial模式现在没有了，人家回复说一直都可以连，只要是PC模式就好了。后来无意中发现网络连接的那里多了一个usb网络连接，忽然想起其实arm的机器和电脑本来就是用http或者ftp通讯的。接着将etc\ppp\peers\pppd-ril.options中的<a href="mailto:userNotUsed@nobody.compassword">userNotUsed@nobody.compassword</a> NotUsed修改为<a href="mailto:userctnet@mycdma.cnpassword">userctnet@mycdma.cnpassword</a> vnet.mobi可以使用rootExplorer的文本编辑功能来实现然后使用HW VSP创建COM口，选COM10吧，打开qpst，最好是新版2.7.348以上的否则不认机器，运行qpst configuration，添加一个COM10成功后，可以看到手机的flash型号，接着运行service programming，然后点击 read from phone ，在M.ip一项的Mobile IP里头选择Simple IP only，然后点击write to phone等机器重启就能看到可爱的1X标志了1X和EV比起来就如拨号和宽带一样。本来很简单的路，我却走了将近一个星期，每天都是想我的D2怎么上3G，不过奋斗还是有回报的，分部的朋友帮我确认了几件事情，甚是关键，直接让我有坚持的信心，就是广东是有MD5的方式上EV的，不如js说的广东绝对没有MD5。顺便发泄一下，现在的商家太令人讨厌了，自己不懂得东西，直接就说没有，还鄙视一把。想当年我去问，有没有cdma的milestone，有的商家直接说，cdma的去营业厅啦，来这里干嘛，火滚得我啊。关于查码，商家说现在没有码可查了，买插卡的吧，所有人都查不到码，再次火滚到我呀！不懂就说不知道，没有就好了，真不厚道，这些后生真是不学无术了！我把以前沧海云帆的教程尝试了一遍又一遍，写NV，改MDN，然后用pst来写AAA。最后在有一天很无聊的时候，我刷了一次ct202的prl，原来是211，因此早就怀疑是prl的问题，刷了最新的211，而且还发短信到电信自动更新prl，觉得最新的，不会错了吧。刷了ct202后，重启的时候忽然冒出个3g标志的时候，泪流满面啊，那时是晚上11点，这个兴奋啊，无与伦比。后来发现202的信号不是很好，于是刷了201,3g标志消失，最后刷了0008的prl感觉还算稳定。到这里，D2的基本功能已经能用了，电话，短信，1X，3G。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2010/10/09/20101009_%E6%88%91%E7%9A%84Droid2-R2D2%EF%BC%88%E4%B8%80%EF%BC%89/" rel="prev" title="我的Droid2-R2D2（一）">
+      <i class="fa fa-chevron-left"></i> 我的Droid2-R2D2（一）
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2010/10/10/20101010_%E6%88%91%E7%9A%84Droid2-R2D2/" rel="next" title="我的Droid2-R2D2">
+      我的Droid2-R2D2 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Sylvain Mars YU</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">553</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">127</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sylvain Mars YU</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"nasamars.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="序苹果在前两天的开发者大会上宣布了一个爆炸性的新闻，准备用自己设计的ARM芯片替代INTEL的，虽然小道消息此前已经传疯了，但是从库克口里说出来，这分量完全不同。 X86的辉煌，是罗伯特·诺伊斯、戈登·摩尔离开仙童半导体，自立门户创立Intel的时候创下的。作为一个计算机人，不应该忘记计算机的老历史，因为相似的故事一次又一次的上演，基本上没有大而不倒的公司，IBM除外，然而当下的IBM也不是以前那">
+<meta property="og:type" content="article">
+<meta property="og:title" content="又见罗塞塔--写在苹果用ARM进军PC行业时">
+<meta property="og:url" content="https://nasamars.github.io/2020/06/24/20200624_%E5%8F%88%E8%A7%81%E7%BD%97%E5%A1%9E%E5%A1%94/index.html">
+<meta property="og:site_name" content="我心中的香格里拉">
+<meta property="og:description" content="序苹果在前两天的开发者大会上宣布了一个爆炸性的新闻，准备用自己设计的ARM芯片替代INTEL的，虽然小道消息此前已经传疯了，但是从库克口里说出来，这分量完全不同。 X86的辉煌，是罗伯特·诺伊斯、戈登·摩尔离开仙童半导体，自立门户创立Intel的时候创下的。作为一个计算机人，不应该忘记计算机的老历史，因为相似的故事一次又一次的上演，基本上没有大而不倒的公司，IBM除外，然而当下的IBM也不是以前那">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-06-24T13:12:31.000Z">
+<meta property="article:modified_time" content="2021-12-10T01:40:06.640Z">
+<meta property="article:author" content="Sylvain Mars YU">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://nasamars.github.io/2020/06/24/20200624_%E5%8F%88%E8%A7%81%E7%BD%97%E5%A1%9E%E5%A1%94/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-cn'
+  };
+</script>
+
+  <title>又见罗塞塔--写在苹果用ARM进军PC行业时 | 我心中的香格里拉</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我心中的香格里拉</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
+    <link itemprop="mainEntityOfPage" href="https://nasamars.github.io/2020/06/24/20200624_%E5%8F%88%E8%A7%81%E7%BD%97%E5%A1%9E%E5%A1%94/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sylvain Mars YU">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我心中的香格里拉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          又见罗塞塔--写在苹果用ARM进军PC行业时
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-06-24 13:12:31" itemprop="dateCreated datePublished" datetime="2020-06-24T13:12:31+00:00">2020-06-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-10 01:40:06" itemprop="dateModified" datetime="2021-12-10T01:40:06+00:00">2021-12-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>苹果在前两天的开发者大会上宣布了一个爆炸性的新闻，准备用自己设计的ARM芯片替代INTEL的，虽然小道消息此前已经传疯了，但是从库克口里说出来，这分量完全不同。</p>
+<p>X86的辉煌，是罗伯特·诺伊斯、戈登·摩尔离开仙童半导体，自立门户创立Intel的时候创下的。作为一个计算机人，不应该忘记计算机的老历史，因为相似的故事一次又一次的上演，基本上没有大而不倒的公司，IBM除外，然而当下的IBM也不是以前那个叱咤风云的IBM了。</p>
+<span id="more"></span>
+<h1 id="又见罗塞塔–写在苹果用ARM进军PC行业时"><a href="#又见罗塞塔–写在苹果用ARM进军PC行业时" class="headerlink" title="又见罗塞塔–写在苹果用ARM进军PC行业时"></a>又见罗塞塔–写在苹果用ARM进军PC行业时</h1><p>相比起前30年信息产业的风起云涌，这三十年其实大家过得很安稳，几大巨头慢慢登顶，共同瓜分整个市场，而不像以前的零和博弈，必须拼个你死我活。wintel的联合，算是把IBM的私生子，个人电脑（PC）推上了王座，估计现在没有几个人知道PC的全称叫做IBM-PC，兼容机。毕竟windows和intel给这个世界创造了太多美好的东西，神雕侠侣wintel成为了一代的屠龙者，然而慢慢身上也长出了龙的鳞片。</p>
+<p>IBM的创始人老沃森，曾经是这样评价计算机的，这个世界其实不需要太多计算机，几台IBM的大型机就够了。软件工程的灵魂人物，《人月神话》的作者布鲁克林，就曾经是IBM360大型机的核心研发人员，那是上个世纪60年代的事情。到了80年代，intel一度进入了泥潭，原本想买软件给IBM的比尔盖茨，被IBM婉拒，于是出现了windows。其实Android的出现，不也是走的IBM-PC的策略，系统与硬件分离各自优化，成就了如今二分天下的伟业，但是产品出现了严重碎片化现象。</p>
+<p>当年做个人电脑的不止这么一家，还有著名的DEC、康柏等等，他们都曾经是计算机行业里程碑式王者，可他们都变成了历史，当然搞软件的也不止微软一家，至少还有相当有分量的Borland，lotus等等，他们也依然变成了历史。Apple是一个奇迹，因为濒临破产的时候，是比尔盖茨救了它，让他东山再起，直到今天，反过来开始挤压Windows的存在了。</p>
+<h2 id="分久必合合久必分"><a href="#分久必合合久必分" class="headerlink" title="分久必合合久必分"></a>分久必合合久必分</h2><p>还记得以前的计算机吗？一台主机连着若干个伪终端，计算资源是高度集中的。出现了小型机，微型机后，甚至移动终端后，计算资源是高度分散的，这样才能满足不同人群的不同需求，看片、打游戏各得其乐。慢慢的计算资源由开始集中了，首先是云计算或者是各种web服务和app程序，把存储与大量业务逻辑计算集中起来，味道还是那个味道，然而世界已经不一样了。</p>
+<p>当年软硬件一起做的年代，大家靠的蛮荒之力，没法分工。当软件和硬件分离，软件可以运行在一个标准的系统的时候，计算机业出现了爆炸式的增长；一开始，这种增长并不会威胁到软硬件一体化的IBM，慢慢的当造价降低的时候，现在的云计算的能力早已经超过了大型机，由intel芯片组成的超算中心已经把IBM大型机远远抛到了脑后。</p>
+<p>而如今又到了一个新的历史时刻，因为软硬件分离的红利已经不多了，大家高度分离之后，硬件不可能为某一种运算优化，必须要考虑共性，这样卖出去的芯片才多；软件必须受制于硬件，不能为所欲为。然而，当乔布斯希望Intel为其生产9美元一片的手机芯片时，intel把他嘲讽了一顿，然后关上了门。正如当年的比尔盖茨一样，乔布斯开始自己的造芯之路，投入了巨资打造了实验室，源源不断的烧钱，一直烧到了iphone4s。这是第一款，用苹果自己设计的芯片，推出的产品，硬件为软件做了非常多的优化，这也是苹果手机的开始大卖的开始。</p>
+<p>如今的智能终端，只有苹果一家是具有软硬件全技术栈通吃的企业。硬件设计为软件服务，不然就必须采购高通他们的芯片，而高通是不会为了某一个企业做特定的优化的。华为有追随苹果的脚步，然而还很原始。苹果的操作系统是自己一手一脚研发出来的，里面估计还有不少乔布斯的代码，苹果的芯片是自己研发出来的，当积累了将近40年的时候，苹果终于要开始绝地反击了，用ARM芯片挑战Intel的地位，毕竟MAC系统是个UNIX，经过了多次的重写，而IOS系统也创造了IPhone和Ipad的辉煌。掌上智能终端的大部分利润都在苹果，虽然华为的手机的出货量大，但利润比苹果要少多了。</p>
+<p>曾经微软想过做低配版的Windows，做arm版的windows，想坐大一统的平台。至少手机端，微软失败了，低配版的windows平板失败了，arm的windows很鸡肋，兼容性太差。比起unix来说，windows是个急功近利的产物，在最短的时间推出了windows，用低价击败了苹果电脑。然而，当windows现在想重新拥抱开源，重新兼容unix的时候，用户的抱怨太大，承受的包袱太多，真的是尾大难调。</p>
+<p>作为android的老爹，google也推过基于arm的Chromebook，当我那天为苹果欢呼的时候，我在google的朋友就说google也推了基于arm的笔记本，能运行linux。然而，google的技术公认的好，但是产品的生命周期太短，市场效应太差。google是先驱者，绝对不是先行者。至少，在Android系统的把控上，我认为google是不够负责任的（Andy rubin的离职，后续接任者的相继离职等等），毕竟对google来说，手机系统夹带广告才是他们的初衷，其他都不重要。Chromebook的用户群太小，基本上想复制Android的生态，很难。想用微软的老办法，套路用户，不好意思啊，用户在windows上的体验比Chromebook好多了，怎么可能回到简单的Chrome上呢？骨灰级用户，反正都是命令行，根本不在乎体系结构。所以，google是一位先驱者，而不是一位先行者。</p>
+<p>苹果是希望把在iPad和iPhone的用户迁移到它的arm计算机上，毕竟对苹果产品有好感的用户，会带着这份友善和宽容，对待新鲜事物，这是用户心理使然。但如果让windows用户迁移到mac机器上，估计这个很难。虽然mac系统有各种艺术般的设计，但是如果用户对这份美没有欣赏能力，一切都是徒劳。</p>
+<p>苹果专门推出一个名叫罗塞塔的程序，使得以前在老系统运行的程序能在在新的系统上运行。罗塞塔基本上就是一个图腾，基本上对西方文化有一定了解的人，对知道罗塞塔背后的含义。因为这意味着翻译，对于不同体系结构的计算机来说，同样需要将计算机语言进行翻译，这就是为什么手机程序在个人电脑打不开、Android程序和IOs程序不能兼容的道理。 </p>
+<h2 id="打破达芬奇诅咒"><a href="#打破达芬奇诅咒" class="headerlink" title="打破达芬奇诅咒"></a>打破达芬奇诅咒</h2><p>达•芬奇是一位画家，还是一位建筑师，他擅长人体解剖，在科学上有很多成就，还搞了很多技术上的发明创造。达•芬奇，是个全才。而“达•芬奇诅咒”的意思则是一个人也像达•芬奇一样对什么东西都感兴趣，也像是个全才，结果却一事无成。</p>
+<p>所以作者的建议是，<strong>如果你有达•芬奇人格，最好寻找一个能综合利用你的各项技能的活动。这个活动一定要复杂，因为聪明人喜欢复杂的东西，也只有复杂的东西才能体现你的能力</strong>。</p>
+<p>但选择领域要考虑三个标准：</p>
+<ul>
+<li>第一，你得确实喜欢这个领域；</li>
+<li>第二，你得在这个领域中有天赋；</li>
+<li>第三，这个领域必须能让你挣到钱。</li>
+</ul>
+<p>不过还有两个性格方面的建议，</p>
+<ul>
+<li>一个是聪明人都喜欢拖延，达•芬奇本人就非常爱拖延，<strong>而你想做事就得把拖延的毛病给治好</strong>。</li>
+<li>另一个是你得<strong>克服自恋情绪</strong>。很多聪明人都自恋，适度的自恋可以给你自信，但自恋过度，就会在极度的兴奋和抑郁之间摇摆。今天觉得这个事情有意思就特别想干，热情一旦没了就感到挫败和郁闷——干事儿的人最好情绪不要这么波动。</li>
+</ul>
+<p><strong>我觉得要投身进这个信息产业发生大变局的时代，重新回到技术的一线上去，将x86程序移植到新平台，通过跨平台的技术做一些好的软件。</strong>前两年，我看好了STEM，然后资源不足，无法成行，不过也成功的找到了童行学院这个app，因为我发现自己和童行学院的创始人（获得了第74届雨果奖最佳中短篇小说奖，科幻小说的大奖）的看法极度的一致，既然我做不来，那找到认可的方式与平台也是我的收获。</p>
+<p>这是一个老计算机人的兴奋，接下来有非常多的x86程序，要移植到各个体系的操作系统上，而这就到了考验计算机人功底扎实不扎实的时候了，遇到问题到底是编译的问题还是链接的问题，还是系统内核的问题；倘若不能移植，那就是需要重新开发，如何高效的使用跨平台语言（Java、.Net、Python）就成为了考验各个软件开发商的首要难题了。不过我相信，一开始相当混乱。很多人说，我们不是有BAT，华为中兴吗？其实正是因为这些公司的存在，我们的基础软件行业发展得很困难，因为那边工资都高，而基础软件研发门槛高、难度大、见效慢，最关键市场人员也差。</p>
+<p>根据倪光南院士最近的公开讲话，看起来国产的计算机也要开始推出市场了，几个体系结构，相对而言我看好华为的鲲鹏。比起苹果来说，华为的差距还有很远很远，但是就这个新体系结构的计算机而言，他们算是在同一起跑线。远方的苹果的经验，完全可以借鉴到鲲鹏上。我想要重新回到一个开发者的状态了，因为我从来没有放下对计算机的热爱，从来没有放下过技术，从来不是因为做不来技术才转行的。</p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>我希望，自己做一个尽早吃螃蟹的人，尽早的拿到苹果的arm开发机，开始计算机人的新历程。</p>
+<p>不管前浪，还是后浪，这个浪，我跟定了。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/06/23/20200623_%E7%AC%94%E8%AE%B00x4/" rel="prev" title="笔记0x4">
+      <i class="fa fa-chevron-left"></i> 笔记0x4
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/06/27/20200627_%E8%B4%AB%E5%9B%B0%E7%9A%84%E6%9C%AC%E8%B4%A8/" rel="next" title="生在城市的我们是幸福的--《贫困的本质》">
+      生在城市的我们是幸福的--《贫困的本质》 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%8F"><span class="nav-number">1.</span> <span class="nav-text">序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%88%E8%A7%81%E7%BD%97%E5%A1%9E%E5%A1%94%E2%80%93%E5%86%99%E5%9C%A8%E8%8B%B9%E6%9E%9C%E7%94%A8ARM%E8%BF%9B%E5%86%9BPC%E8%A1%8C%E4%B8%9A%E6%97%B6"><span class="nav-number">2.</span> <span class="nav-text">又见罗塞塔–写在苹果用ARM进军PC行业时</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E4%B9%85%E5%BF%85%E5%90%88%E5%90%88%E4%B9%85%E5%BF%85%E5%88%86"><span class="nav-number">2.1.</span> <span class="nav-text">分久必合合久必分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%93%E7%A0%B4%E8%BE%BE%E8%8A%AC%E5%A5%87%E8%AF%85%E5%92%92"><span class="nav-number">2.2.</span> <span class="nav-text">打破达芬奇诅咒</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">3.</span> <span class="nav-text">结语</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Sylvain Mars YU</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">553</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">127</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sylvain Mars YU</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"nasamars.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="序神经网络和遗传算法的大概原理，在上大学的时候，我的同学和我饶有兴致的讲过，生动形象，通俗易懂。多年后的今天，我把遗传算法之父的作品看完了，讲述的就是关于遗传算法的构思以及哲学理念。可以说，著名的算法背后一定有深深的哲学理念，并非只是一堆简单的公式和代码。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="隐藏的秩序--《隐秩序，适应性造就复杂性》">
+<meta property="og:url" content="https://nasamars.github.io/2020/03/29/20200329_%E9%9A%90%E8%97%8F%E7%9A%84%E7%A7%A9%E5%BA%8F/index.html">
+<meta property="og:site_name" content="我心中的香格里拉">
+<meta property="og:description" content="序神经网络和遗传算法的大概原理，在上大学的时候，我的同学和我饶有兴致的讲过，生动形象，通俗易懂。多年后的今天，我把遗传算法之父的作品看完了，讲述的就是关于遗传算法的构思以及哲学理念。可以说，著名的算法背后一定有深深的哲学理念，并非只是一堆简单的公式和代码。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-03-29T22:03:31.000Z">
+<meta property="article:modified_time" content="2021-12-10T01:40:06.640Z">
+<meta property="article:author" content="Sylvain Mars YU">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://nasamars.github.io/2020/03/29/20200329_%E9%9A%90%E8%97%8F%E7%9A%84%E7%A7%A9%E5%BA%8F/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-cn'
+  };
+</script>
+
+  <title>隐藏的秩序--《隐秩序，适应性造就复杂性》 | 我心中的香格里拉</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我心中的香格里拉</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
+    <link itemprop="mainEntityOfPage" href="https://nasamars.github.io/2020/03/29/20200329_%E9%9A%90%E8%97%8F%E7%9A%84%E7%A7%A9%E5%BA%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sylvain Mars YU">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我心中的香格里拉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          隐藏的秩序--《隐秩序，适应性造就复杂性》
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-03-29 22:03:31" itemprop="dateCreated datePublished" datetime="2020-03-29T22:03:31+00:00">2020-03-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-10 01:40:06" itemprop="dateModified" datetime="2021-12-10T01:40:06+00:00">2021-12-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">读书笔记</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>神经网络和遗传算法的大概原理，在上大学的时候，我的同学和我饶有兴致的讲过，生动形象，通俗易懂。多年后的今天，我把遗传算法之父的作品看完了，讲述的就是关于遗传算法的构思以及哲学理念。可以说，著名的算法背后一定有深深的哲学理念，并非只是一堆简单的公式和代码。</p>
+<span id="more"></span>
+<h1 id="隐藏的秩序–《隐秩序，适应性造就复杂性》"><a href="#隐藏的秩序–《隐秩序，适应性造就复杂性》" class="headerlink" title="隐藏的秩序–《隐秩序，适应性造就复杂性》"></a>隐藏的秩序–《隐秩序，适应性造就复杂性》</h1><p>遗传算法之父霍兰，也是圣塔菲学院的一员，从事复杂动力学网络系统的研究。书的第一章写得引人入胜：</p>
+<blockquote>
+<p>我们观察大城市千变万化的本性时，就会陷入更深的困惑。买者、卖者、管理机构、街道、桥梁和建筑物都在不停的变化着。一个城市的协调运作，似乎是与人们永不停止的流动和他们形成的种种结构分不开的。正如急流中一块礁石前的驻波，城市是一种动态模式。没有哪个部门能够独立保存不变，但城市本身却延续下来了。是什么使得城市能够在灾害不断而缺乏中央规划的情况下还能协调运行的呢？</p>
+</blockquote>
+<p>城市的运行时一个复杂系统，而人类的免疫系统更是一个复杂系统，它由大量快速活动着的被称为抗体的单位组成，这些抗体不断的抵抗活摧毁不断变化的被称为抗原的入侵者，可能是生物化学物质、细菌或病毒。形态各异，变化多端，免疫系统没有可能通过简单列举所有可能的入侵者的方式来抵御攻击。随着新的入侵者的出现，免疫系统必须使抗体自身发生改变从而去适应新的入侵者，从不固定成某种特定的形态。</p>
+<p>圣塔菲研究所针对这类在变化中表现出适应协调性的复杂系统提出了复杂适应系统（CAS）的概念，城市的辉煌与衰败、人体的免疫系统、传染病的传染模型等等都是这种系统。然而CAS系统是非线性的，非线性意味着我们通常使用的从一般观察归纳出理论的工具，如趋势分析、均衡测定、样本均值等方法都不适用。</p>
+<p>看完这本书，我继续在网上查询遗传算法的资料，发现莫凡的Python教程（<a target="_blank" rel="noopener" href="https://morvanzhou.github.io）的确很不错，用精简的python语句，做了一个简单的遗传算法模型，即便完全不懂遗传算法的人，也能从示例中了解个5-6成。看完霍兰的书，再看这个精简的代码，忽然有种醍醐灌顶的感觉。我猜大部分的书，只会简单的介绍这个算法的实现方法，以及一些背景，不会像霍兰自己这样建立一个理论体系，然后讲述他的落地方法，从地基到高楼。">https://morvanzhou.github.io）的确很不错，用精简的python语句，做了一个简单的遗传算法模型，即便完全不懂遗传算法的人，也能从示例中了解个5-6成。看完霍兰的书，再看这个精简的代码，忽然有种醍醐灌顶的感觉。我猜大部分的书，只会简单的介绍这个算法的实现方法，以及一些背景，不会像霍兰自己这样建立一个理论体系，然后讲述他的落地方法，从地基到高楼。</a></p>
+<p>理论是道，算法是术。但凡一个普通人，都能针对道和术发表自己深入浅出的见解，然而遇到事情的时候，他并非会先寻道，直接先做了再说。精于术疏于道，是我对当下大部分计算机人的评价，毕竟术可以很快变现，道不可以。因此很多时候，理论都是舶来品，然后实现中国智造。在某个意义上说，我们这里是大试验场，好坏不说，只是我不认同这样的做法，然而并没有什么卵用。</p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>最近，有朋友委托我给他热爱编程的小朋友一点建议和引导。我的确花了不少心思，对自己能通过代码控制计算机，小朋友很有成就感。</p>
+<p>一心想钻入计算机的比赛，这莫不是一种舍本逐末的做法，这就是我和大部分做STEM教育以及青少年计算机培训的人的最大分歧。我是热爱计算机的，并希望在传递正道的时候有一定的回报；而外界的培训机构，是热爱名利的，计算机只是他们实现获得名利的一种途径，所谓情怀只是看中了家长的荷包。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/03/29/20200328_%E4%BA%BA%E6%96%87%E6%98%AF%E7%B2%BE%E8%87%B4%E7%9A%84/" rel="prev" title="人文是精致的--《蒋勋说红楼梦第六辑》">
+      <i class="fa fa-chevron-left"></i> 人文是精致的--《蒋勋说红楼梦第六辑》
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/04/10/20200410_%E8%BF%B7%E8%8C%AB/" rel="next" title="迷茫--《变量2：推演中国经济的基本盘》">
+      迷茫--《变量2：推演中国经济的基本盘》 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%8F"><span class="nav-number">1.</span> <span class="nav-text">序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9A%90%E8%97%8F%E7%9A%84%E7%A7%A9%E5%BA%8F%E2%80%93%E3%80%8A%E9%9A%90%E7%A7%A9%E5%BA%8F%EF%BC%8C%E9%80%82%E5%BA%94%E6%80%A7%E9%80%A0%E5%B0%B1%E5%A4%8D%E6%9D%82%E6%80%A7%E3%80%8B"><span class="nav-number">2.</span> <span class="nav-text">隐藏的秩序–《隐秩序，适应性造就复杂性》</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">3.</span> <span class="nav-text">结语</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Sylvain Mars YU</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">553</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">127</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sylvain Mars YU</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"nasamars.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="序小朋友已经到了上少年宫的年龄，看到各个课程的报价，发现最贵的莫过于乐器类课程与机器人类课程。前者我是无能为力，而后者我是当仁不让。我可以很有信心的说，无论在学科的高度上与对学科的理解上，我都可以脱颖而出。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="编程之路--《动手玩转ScratchJr编程》">
+<meta property="og:url" content="https://nasamars.github.io/2018/03/29/20180329_%E7%BC%96%E7%A8%8B%E4%B9%8B%E8%B7%AF/index.html">
+<meta property="og:site_name" content="我心中的香格里拉">
+<meta property="og:description" content="序小朋友已经到了上少年宫的年龄，看到各个课程的报价，发现最贵的莫过于乐器类课程与机器人类课程。前者我是无能为力，而后者我是当仁不让。我可以很有信心的说，无论在学科的高度上与对学科的理解上，我都可以脱颖而出。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-03-29T00:00:00.000Z">
+<meta property="article:modified_time" content="2021-12-10T01:40:06.632Z">
+<meta property="article:author" content="Sylvain Mars YU">
+<meta property="article:tag" content="动手玩转ScratchJr编程">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://nasamars.github.io/2018/03/29/20180329_%E7%BC%96%E7%A8%8B%E4%B9%8B%E8%B7%AF/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-cn'
+  };
+</script>
+
+  <title>编程之路--《动手玩转ScratchJr编程》 | 我心中的香格里拉</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我心中的香格里拉</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
+    <link itemprop="mainEntityOfPage" href="https://nasamars.github.io/2018/03/29/20180329_%E7%BC%96%E7%A8%8B%E4%B9%8B%E8%B7%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sylvain Mars YU">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我心中的香格里拉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          编程之路--《动手玩转ScratchJr编程》
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-03-29 00:00:00" itemprop="dateCreated datePublished" datetime="2018-03-29T00:00:00+00:00">2018-03-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-10 01:40:06" itemprop="dateModified" datetime="2021-12-10T01:40:06+00:00">2021-12-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">读书笔记</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>小朋友已经到了上少年宫的年龄，看到各个课程的报价，发现最贵的莫过于乐器类课程与机器人类课程。前者我是无能为力，而后者我是当仁不让。我可以很有信心的说，无论在学科的高度上与对学科的理解上，我都可以脱颖而出。<br><span id="more"></span></p>
+<h1 id="备好行囊，踏马上路"><a href="#备好行囊，踏马上路" class="headerlink" title="备好行囊，踏马上路"></a>备好行囊，踏马上路</h1><p>看起来，市面上的机器人课程无非下面几种：</p>
+<ul>
+<li>使用积木类的玩具拼装</li>
+<li>使用Arduino之类简单的开发板来做实验</li>
+<li>使用一些可以编程的拼装积木</li>
+</ul>
+<p>其实上面几种似乎都不太能令我满意，第一种，其实就是玩游戏，觉得家里也可以啊，甚至是lego的拼装，其实都可以在家里完成啊；第二种，太像物理实验了，小朋友提前的上物理课，提前几年似乎也没什么帮助；第三种，大部分用的都是些杂牌的教具，如果用的是Lego机器人套件MindstormEV3，我也就认了，杂牌的教具涂料什么的会不会超标不说，从小就丧失了版权的概念，也不是什么好事。</p>
+<p>这当然是我，一个软件开发类科班背景的家长的真实想法，而且我是一个不忘初心的人，我一直坚持认为计算机是一匹千里马，我们应该做一个骑士，而不是做一个饮马的仆人。策马奔腾，当然能领略更秀美的风光，让人在自己的工作与生活得效率更高，然而，饮马的仆人只会觉得千里马是一匹不好伺候的牲口，打死也不让下一代再走近马厩。是马的问题吗？当然是思维模式的问题，如果不激发小朋友热爱科学、遇到问题积极想办法解决的习惯，学习知识只会是一种负担，学习计算机更是一个大负担。</p>
+<p>看完这本书，我决定这学期的机器人课程，就由我自己来教了，使用这本书做教材，在Ipad上下载ScratchJr程序，让小朋友用虚拟积木的方式，理解编程的初等概念，包括程序的开始与结束、过程的流程控制、变量与对象的赋值、程序的中断与触发，说白了几乎所有的语言的基础都一样，只要用直观的方式理解了基本的概念，用游戏的方式来完成交互体验，教学任务就完成了。不得不说，市面上很多的所谓编程入门的系统与游戏，都是抄袭MIT媒体实验室开发的Scratch。赤裸裸的抄袭，这是作为一个软件从业者所不齿的。不但要有好的初心，也要有一个尊重知识的环境，要有所谓的职业操守，你自己不尊重知识产权，也不要怪别人不尊重你的知识产权。</p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>我不懂乐器，教不了娃音乐；我不会画画，教不了娃美术；我体育不好，教不了体育项目。然而我只能通过我的专业，我的科学素养，教会他我擅长的领域，引导孩子走上科学的道路，让他们向往科学与艺术。</p>
+<p>对了，不要以为数学就是枯燥无味的，别忘了“鸟巢”与“小蛮腰”，都是钢铁与线条的融合，让我们回到毕达哥拉斯的年代，重新燃起对“自由七艺”的火炬，找回科学的初心，然后徐阔步前行。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%8A%A8%E6%89%8B%E7%8E%A9%E8%BD%ACScratchJr%E7%BC%96%E7%A8%8B/" rel="tag"># 动手玩转ScratchJr编程</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2018/03/27/20180327_%E5%91%BD%E8%BF%90%E7%9A%84%E5%92%BD%E5%96%89/" rel="prev" title="命运的咽喉--《贝多芬传》">
+      <i class="fa fa-chevron-left"></i> 命运的咽喉--《贝多芬传》
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2018/04/01/20180401_%E8%BD%AF%E5%BC%80%E6%B2%89%E6%80%9D/" rel="next" title="软开沉思--《软件开发沉思录》">
+      软开沉思--《软件开发沉思录》 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%8F"><span class="nav-number">1.</span> <span class="nav-text">序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%87%E5%A5%BD%E8%A1%8C%E5%9B%8A%EF%BC%8C%E8%B8%8F%E9%A9%AC%E4%B8%8A%E8%B7%AF"><span class="nav-number">2.</span> <span class="nav-text">备好行囊，踏马上路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">3.</span> <span class="nav-text">结语</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Sylvain Mars YU</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">553</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">127</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sylvain Mars YU</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"nasamars.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="turtle — Turtle graphics for Tk引言Turtle图形库是一个极好的向小朋友们普及编程知识的方法。这是伟大的计算机大师Wally Feurzig和Seymour Papert在1966年创造的LOGO编程语言的一部分。 画图的机器乌龟，一开始是停留在画布二维x-y平面上（0，0）点上。看看下面的代码：123import turtleturtle.forward(15)t">
+<meta property="og:type" content="article">
+<meta property="og:title" content="turtle文档">
+<meta property="og:url" content="https://nasamars.github.io/2017/05/16/20170517_turtle%E6%96%87%E6%A1%A3/index.html">
+<meta property="og:site_name" content="我心中的香格里拉">
+<meta property="og:description" content="turtle — Turtle graphics for Tk引言Turtle图形库是一个极好的向小朋友们普及编程知识的方法。这是伟大的计算机大师Wally Feurzig和Seymour Papert在1966年创造的LOGO编程语言的一部分。 画图的机器乌龟，一开始是停留在画布二维x-y平面上（0，0）点上。看看下面的代码：123import turtleturtle.forward(15)t">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2017-05-16T00:00:00.000Z">
+<meta property="article:modified_time" content="2021-12-10T01:40:06.628Z">
+<meta property="article:author" content="Sylvain Mars YU">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://nasamars.github.io/2017/05/16/20170517_turtle%E6%96%87%E6%A1%A3/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-cn'
+  };
+</script>
+
+  <title>turtle文档 | 我心中的香格里拉</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我心中的香格里拉</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
+    <link itemprop="mainEntityOfPage" href="https://nasamars.github.io/2017/05/16/20170517_turtle%E6%96%87%E6%A1%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sylvain Mars YU">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我心中的香格里拉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          turtle文档
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-05-16 00:00:00" itemprop="dateCreated datePublished" datetime="2017-05-16T00:00:00+00:00">2017-05-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-10 01:40:06" itemprop="dateModified" datetime="2021-12-10T01:40:06+00:00">2021-12-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/" itemprop="url" rel="index"><span itemprop="name">技术文档</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="turtle-—-Turtle-graphics-for-Tk"><a href="#turtle-—-Turtle-graphics-for-Tk" class="headerlink" title="turtle — Turtle graphics for Tk"></a>turtle — Turtle graphics for Tk</h1><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>Turtle图形库是一个极好的向小朋友们普及编程知识的方法。这是伟大的计算机大师Wally Feurzig和Seymour Papert在1966年创造的LOGO编程语言的一部分。</p>
+<p>画图的机器乌龟，一开始是停留在画布二维x-y平面上（0，0）点上。看看下面的代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line">turtle.forward(<span class="number">15</span>)</span><br><span class="line">turtle.right(<span class="number">25</span>)</span><br></pre></td></tr></table></figure><br>第一句代码是引用这个库。第二句代码是机器乌龟径直的往前移动15个像素，留下一条直线。第三句的代码是机器乌龟沿着顺时针扭转25度。</p>
+<p>通过使用这些简单的命令，我们可以轻易的画出复杂的图形和漂亮的图片。</p>
+<p>从Python2.5开始，turtle库就是python的一个标准库了，当前是这个库的重新实现版。</p>
+<p>我们尝试把老的Turtle库全部重写了一次，确保几乎能100%兼容。这就意味着尝试学习使用这个库编程的同仁，在IDLE下通过运行<code>-n</code>参数，就可以使用这个库的所有命令（command），类库（class）以及方法（method）。</p>
+<p>turtle模块提供了turtle图形绘制原语（primitive），不管是你使用面向对象（object-oriented）还是面向过程的编程方法（procedure-oriented）。因为turtle库是基于<code>Tkinter</code>库的图形模块编写的，所以要运行turtle库的前提是安装了Tk库。</p>
+<p>面向对象的编程接口使用two+two的方式来命名：</p>
+<ol>
+<li><code>TurtleScreen</code>类定义了一个图形的窗口（不管是windows，还是mac，或者是其他linux的桌面发行版），让用户驰骋其中。它的构造函数（constructor）需要传入<code>Tkinter.Canvas</code>或<code>ScrolledCanvas</code>的类作为参数。当程序调用了<code>turtle</code>的时候，会调用到这个窗口类。<br/><br/><br>函数<code>Screen()</code>会返回一个单例（singleton）对象，这是<code>TurtleScreen</code>的子类。在<code>turtle</code>库被单独调用来画图的时候，就会用到了。作为一个单例对象，要继承它是做不到的。<br/><br/><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">2. &#96;&#96;&#96;RawTurtle&#96;&#96;&#96;（别名&#96;&#96;&#96;RawPen&#96;&#96;&#96;）定义了一个turtle对象，用来在&#96;&#96;&#96;TurtleScreen&#96;&#96;&#96;上画图。因此它的构造函数需要&#96;&#96;&#96;Canvas&#96;&#96;&#96;、&#96;&#96;&#96;ScrolledCanvas&#96;&#96;&#96;或&#96;&#96;&#96;TurtleScreen&#96;&#96;&#96;类的对象作为参数，以确保&#96;&#96;&#96;RawTurtle&#96;&#96;&#96;对象知道在哪画图。&lt;br&#x2F;&gt;&lt;br&#x2F;&gt;</span><br><span class="line">&#96;&#96;&#96;Turtle&#96;&#96;&#96;是&#96;&#96;&#96;RawTurtle&#96;&#96;&#96;的派生类，大部分的时候会被用来在屏幕上画图。它的实例会被自动创建，如果发现它还没创建的话。&lt;br&#x2F;&gt;&lt;br&#x2F;&gt;</span><br><span class="line">&#96;&#96;&#96;RawTurtle&#96;&#96;&#96;&#x2F;&#96;&#96;&#96;Turtle&#96;&#96;&#96;的类函数（method）也提供了对应的函数（function），供面向过程的编程方法使用。</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;Screen&#96;&#96;&#96;和&#96;&#96;&#96;Turtle&#96;&#96;&#96;类的所有类函数（method）都有对应的函数（function）实现。意味着在没有构造&#96;&#96;&#96;Screen&#96;&#96;&#96;和&#96;&#96;&#96;Turtle&#96;&#96;&#96;对象的时候，可以直接调用它的函数，因为在这个时候，&#96;&#96;&#96;Screen&#96;&#96;&#96;和&#96;&#96;&#96;Turtle&#96;&#96;&#96;的匿名对象在后台被悄悄的实例化了。</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;&#96;&#96;&#96;</span><br><span class="line">如果一个屏幕上需要用到多个turtle对象的时候，那就必须采用面向对象的方式来调用接口了。</span><br><span class="line"></span><br><span class="line">## Turtle与Screen可以使用的类函数</span><br><span class="line"></span><br><span class="line">### 光标（Turtle）函数</span><br><span class="line"></span><br><span class="line">####  光标（Turtle）的动作</span><br><span class="line">##### 移动和画图</span><br><span class="line">&#96;&#96;&#96;Python</span><br><span class="line">向前并留下线条</span><br><span class="line">forward() | fd()</span><br><span class="line"></span><br><span class="line">退后并留下线条</span><br><span class="line">backward() | bk() | back()</span><br><span class="line"></span><br><span class="line">右转</span><br><span class="line">right() | rt()</span><br><span class="line"></span><br><span class="line">左转</span><br><span class="line">left() | lt()</span><br><span class="line"></span><br><span class="line">直接跳跃到某个位置</span><br><span class="line">goto() | setpos() | setposition()</span><br><span class="line"></span><br><span class="line">横轴跳到某个位置，竖轴不动</span><br><span class="line">setx()</span><br><span class="line"></span><br><span class="line">竖轴跳到某个位置，横轴不动</span><br><span class="line">sety()</span><br><span class="line"></span><br><span class="line">光标角度调整</span><br><span class="line">setheading() | seth()</span><br><span class="line"></span><br><span class="line">重回开始的点</span><br><span class="line">home()</span><br><span class="line"></span><br><span class="line">画一个圆</span><br><span class="line">circle()</span><br><span class="line"></span><br><span class="line">画一个点</span><br><span class="line">dot()</span><br><span class="line"></span><br><span class="line">拷贝一个图形</span><br><span class="line">stamp()</span><br><span class="line"></span><br><span class="line">根据id删掉一个复制的图形</span><br><span class="line">clearstamp()</span><br><span class="line"></span><br><span class="line">根据id删掉一堆复制的图形</span><br><span class="line">clearstamps()</span><br><span class="line"></span><br><span class="line">撤销一个绘图动作</span><br><span class="line">undo()</span><br><span class="line"></span><br><span class="line">设置画图的速度</span><br><span class="line">speed()</span><br></pre></td></tr></table></figure>
+<h5 id="获取光标（Turtle）的状态"><a href="#获取光标（Turtle）的状态" class="headerlink" title="获取光标（Turtle）的状态"></a>获取光标（Turtle）的状态</h5><figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">获取光标的位置信息</span><br><span class="line"><span class="function"><span class="title">position</span><span class="params">()</span> | <span class="title">pos</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">获得当前位置相对于某个点的角度</span></span><br><span class="line"><span class="function"><span class="title">towards</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">获得光标的横坐标</span></span><br><span class="line"><span class="function"><span class="title">xcor</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">获得光标的纵坐标</span></span><br><span class="line"><span class="function"><span class="title">ycor</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">获得当前光标的角度信息</span></span><br><span class="line"><span class="function"><span class="title">heading</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">distance</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h5 id="Setting-and-measurement"><a href="#Setting-and-measurement" class="headerlink" title="Setting and measurement"></a>Setting and measurement</h5><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">degrees</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">radians</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+<h4 id="Pen-control"><a href="#Pen-control" class="headerlink" title="Pen control"></a>Pen control</h4><h5 id="Drawing-state"><a href="#Drawing-state" class="headerlink" title="Drawing state"></a>Drawing state</h5><figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">pendown</span><span class="params">()</span> | <span class="title">pd</span><span class="params">()</span> | <span class="title">down</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">penup</span><span class="params">()</span> | <span class="title">pu</span><span class="params">()</span> | <span class="title">up</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">pensize</span><span class="params">()</span> | <span class="title">width</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">pen</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">isdown</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+<h5 id="Color-control"><a href="#Color-control" class="headerlink" title="Color control"></a>Color control</h5><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">color</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">pencolor</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">fillcolor</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+<h5 id="Filling"><a href="#Filling" class="headerlink" title="Filling"></a>Filling</h5><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">fill</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">begin_fill</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">end_fill</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+<h4 id="More-drawing-control"><a href="#More-drawing-control" class="headerlink" title="More drawing control"></a>More drawing control</h4><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">reset</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">clear</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">write</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="Turtle-state"><a href="#Turtle-state" class="headerlink" title="Turtle state"></a>Turtle state</h3><h4 id="Visibility"><a href="#Visibility" class="headerlink" title="Visibility"></a>Visibility</h4><figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">showturtle</span><span class="params">()</span> | <span class="title">st</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">hideturtle</span><span class="params">()</span> | <span class="title">ht</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">isvisible</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+<h4 id="Appearance"><a href="#Appearance" class="headerlink" title="Appearance"></a>Appearance</h4><figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">shape</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">resizemode</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">shapesize</span><span class="params">()</span> | <span class="title">turtlesize</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">settiltangle</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">tiltangle</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">tilt</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="Using-events"><a href="#Using-events" class="headerlink" title="Using events"></a>Using events</h3><figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">onclick</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">onrelease</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">ondrag</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">mainloop</span><span class="params">()</span> | <span class="title">done</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="Special-Turtle-methods"><a href="#Special-Turtle-methods" class="headerlink" title="Special Turtle methods"></a>Special Turtle methods</h3><figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">begin_poly</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">end_poly</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">get_poly</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">clone</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">getturtle</span><span class="params">()</span> | <span class="title">getpen</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">getscreen</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">setundobuffer</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">undobufferentries</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">tracer</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">window_width</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">window_height</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="TurtleScreen-Screen-画布可用的函数"><a href="#TurtleScreen-Screen-画布可用的函数" class="headerlink" title="TurtleScreen/Screen 画布可用的函数"></a>TurtleScreen/Screen 画布可用的函数</h3><h4 id="Window-control"><a href="#Window-control" class="headerlink" title="Window control"></a>Window control</h4><figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">bgcolor</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">bgpic</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">clear</span><span class="params">()</span> | <span class="title">clearscreen</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">reset</span><span class="params">()</span> | <span class="title">resetscreen</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">screensize</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">setworldcoordinates</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+<h4 id="Animation-control"><a href="#Animation-control" class="headerlink" title="Animation control"></a>Animation control</h4><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">delay</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">tracer</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">update</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+<h4 id="Using-screen-events"><a href="#Using-screen-events" class="headerlink" title="Using screen events"></a>Using screen events</h4><figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">listen</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">onkey</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">onclick</span><span class="params">()</span> | <span class="title">onscreenclick</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">ontimer</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+<h4 id="Settings-and-special-methods"><a href="#Settings-and-special-methods" class="headerlink" title="Settings and special methods"></a>Settings and special methods</h4><figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">mode</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">colormode</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">getcanvas</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">getshapes</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">register_shape</span><span class="params">()</span> | <span class="title">addshape</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">turtles</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">window_height</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">window_width</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+<h4 id="Methods-specific-to-Screen"><a href="#Methods-specific-to-Screen" class="headerlink" title="Methods specific to Screen"></a>Methods specific to Screen</h4><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">bye</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">exitonclick</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">setup</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">title</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2017/05/15/20170515_%E6%8F%92%E6%9B%B2/" rel="prev" title="智慧的觉醒--《2061太空漫游》">
+      <i class="fa fa-chevron-left"></i> 智慧的觉醒--《2061太空漫游》
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2017/05/16/20170516_%E8%BF%87%E6%B0%94/" rel="next" title="过气">
+      过气 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#turtle-%E2%80%94-Turtle-graphics-for-Tk"><span class="nav-number">1.</span> <span class="nav-text">turtle — Turtle graphics for Tk</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E8%A8%80"><span class="nav-number">1.1.</span> <span class="nav-text">引言</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E5%85%89%E6%A0%87%EF%BC%88Turtle%EF%BC%89%E7%9A%84%E7%8A%B6%E6%80%81"><span class="nav-number">1.1.0.0.1.</span> <span class="nav-text">获取光标（Turtle）的状态</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Setting-and-measurement"><span class="nav-number">1.1.0.0.2.</span> <span class="nav-text">Setting and measurement</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Pen-control"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">Pen control</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Drawing-state"><span class="nav-number">1.1.0.1.1.</span> <span class="nav-text">Drawing state</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Color-control"><span class="nav-number">1.1.0.1.2.</span> <span class="nav-text">Color control</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Filling"><span class="nav-number">1.1.0.1.3.</span> <span class="nav-text">Filling</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#More-drawing-control"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">More drawing control</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Turtle-state"><span class="nav-number">1.1.1.</span> <span class="nav-text">Turtle state</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Visibility"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">Visibility</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Appearance"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">Appearance</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-events"><span class="nav-number">1.1.2.</span> <span class="nav-text">Using events</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Special-Turtle-methods"><span class="nav-number">1.1.3.</span> <span class="nav-text">Special Turtle methods</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TurtleScreen-Screen-%E7%94%BB%E5%B8%83%E5%8F%AF%E7%94%A8%E7%9A%84%E5%87%BD%E6%95%B0"><span class="nav-number">1.1.4.</span> <span class="nav-text">TurtleScreen&#x2F;Screen 画布可用的函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Window-control"><span class="nav-number">1.1.4.1.</span> <span class="nav-text">Window control</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Animation-control"><span class="nav-number">1.1.4.2.</span> <span class="nav-text">Animation control</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Using-screen-events"><span class="nav-number">1.1.4.3.</span> <span class="nav-text">Using screen events</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Settings-and-special-methods"><span class="nav-number">1.1.4.4.</span> <span class="nav-text">Settings and special methods</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Methods-specific-to-Screen"><span class="nav-number">1.1.4.5.</span> <span class="nav-text">Methods specific to Screen</span></a></li></ol></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Sylvain Mars YU</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">553</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">127</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sylvain Mars YU</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

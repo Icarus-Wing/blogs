@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"nasamars.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="序其实这本书的翻译不算太好，有点虎头蛇尾的感觉。比尔盖茨在2016年的夏天向读者推荐的5本书，其中就有这本《How Not to Be Wrong》，中文翻译为《魔鬼数学》，台湾翻译为《数学教你如何不犯错》，我当时有点纠结买台办还是简体版，看了看京东和亚马逊的读者评价，评价还不错呢，于是我又犯了一个错误，买了这本《魔鬼数学》，当然我应该能看出，《如何教你不犯错》更符合雅信达的原则，但是我还是不够理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="润物细无声--《魔鬼数学》">
+<meta property="og:url" content="https://nasamars.github.io/2017/05/11/20170511_%E6%95%B0%E5%AD%A6%E6%98%AF%E6%80%8E%E4%B9%88%E7%A7%98%E5%AF%86%E7%9A%84%E5%BD%B1%E5%93%8D%E6%88%91%E4%BB%AC%E7%9A%84%E7%94%9F%E6%B4%BB/index.html">
+<meta property="og:site_name" content="我心中的香格里拉">
+<meta property="og:description" content="序其实这本书的翻译不算太好，有点虎头蛇尾的感觉。比尔盖茨在2016年的夏天向读者推荐的5本书，其中就有这本《How Not to Be Wrong》，中文翻译为《魔鬼数学》，台湾翻译为《数学教你如何不犯错》，我当时有点纠结买台办还是简体版，看了看京东和亚马逊的读者评价，评价还不错呢，于是我又犯了一个错误，买了这本《魔鬼数学》，当然我应该能看出，《如何教你不犯错》更符合雅信达的原则，但是我还是不够理">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2017-05-11T00:00:00.000Z">
+<meta property="article:modified_time" content="2021-12-10T01:40:06.628Z">
+<meta property="article:author" content="Sylvain Mars YU">
+<meta property="article:tag" content="魔鬼数学">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://nasamars.github.io/2017/05/11/20170511_%E6%95%B0%E5%AD%A6%E6%98%AF%E6%80%8E%E4%B9%88%E7%A7%98%E5%AF%86%E7%9A%84%E5%BD%B1%E5%93%8D%E6%88%91%E4%BB%AC%E7%9A%84%E7%94%9F%E6%B4%BB/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-cn'
+  };
+</script>
+
+  <title>润物细无声--《魔鬼数学》 | 我心中的香格里拉</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我心中的香格里拉</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
+    <link itemprop="mainEntityOfPage" href="https://nasamars.github.io/2017/05/11/20170511_%E6%95%B0%E5%AD%A6%E6%98%AF%E6%80%8E%E4%B9%88%E7%A7%98%E5%AF%86%E7%9A%84%E5%BD%B1%E5%93%8D%E6%88%91%E4%BB%AC%E7%9A%84%E7%94%9F%E6%B4%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sylvain Mars YU">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我心中的香格里拉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          润物细无声--《魔鬼数学》
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-05-11 00:00:00" itemprop="dateCreated datePublished" datetime="2017-05-11T00:00:00+00:00">2017-05-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-10 01:40:06" itemprop="dateModified" datetime="2021-12-10T01:40:06+00:00">2021-12-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">读书笔记</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>其实这本书的翻译不算太好，有点虎头蛇尾的感觉。比尔盖茨在2016年的夏天向读者推荐的5本书，其中就有这本《How Not to Be Wrong》，中文翻译为《魔鬼数学》，台湾翻译为《数学教你如何不犯错》，我当时有点纠结买台办还是简体版，看了看京东和亚马逊的读者评价，评价还不错呢，于是我又犯了一个错误，买了这本《魔鬼数学》，当然我应该能看出，《如何教你不犯错》更符合雅信达的原则，但是我还是不够理性的买了简体版，所以这就是很理智的做了错误决策的表现了。</p>
+<span id="more"></span>
+<h1 id="数学很重要，翻译也是"><a href="#数学很重要，翻译也是" class="headerlink" title="数学很重要，翻译也是"></a>数学很重要，翻译也是</h1><p>本文的标题我是抄盖茨的，在他的博客发表了一篇题为《How Math Secretly Affects Your Life》的读书笔记，所以其实我翻译得水平也不咋地。不过我想，总比翻译成魔鬼数学的要好些。</p>
+<blockquote>
+<p><strong>How Not to be Wrong, by Jordan Ellenberg.</strong> Ellenberg, a mathematician and writer, explains how math plays into our daily lives without our even knowing it. Each chapter starts with a subject that seems fairly straightforward—electoral politics, say, or the Massachusetts lottery—and then uses it as a jumping-off point to talk about the math involved. In some places the math gets quite complicated, but he always wraps things up by making sure you’re still with him. The book’s larger point is that, as Ellenberg writes, “to do mathematics is to be, at once, touched by fire and bound by reason”—and that there are ways in which we’re all doing math, all the time.</p>
+</blockquote>
+<p>我的翻译版本：</p>
+<blockquote>
+<p><strong>数学教你如何不犯错</strong>。作为一名数学家兼作家，Ellenberg向我们展示了数学是怎么样悄悄的影响着我们普通人的生活的。每个章节都以一个看起无关的生活细节开头，比如选举制度，麻省彩票，然后告诉我们这些故事后面用到的数学知识。有时候提到的数学知识还很复杂，但是作者有这样的能力让你一直跟着他的念头走。这本书最重要的观点就是，“跟着数学走，立马就能发现，你的理性让你远离火焰”，这就是我们为什么总是要和数学打交道的缘故了。</p>
+</blockquote>
+<p>google的机器翻译：</p>
+<blockquote>
+<p><strong>如何不会错，约旦·埃伦伯格</strong>。 数学家和作家埃伦伯格（Ellenberg）解释了数学如何在我们的日常生活中不经过我们的了解。 每章开始于一个似乎相当简单的选举政治或马萨诸塞州彩票的主题，然后将其用作一个跳跃点来谈论涉及的数学。 在某些地方，数学变得相当复杂，但他总是把事情放在一起，确保你还在他身边。 这本书的更大的一点是，正如埃伦伯格写道：“做数学就是立刻被火触动而被理性所束缚”，而且我们都有办法在数学上一直在做数学。</p>
+</blockquote>
+<p>微软的bing：</p>
+<blockquote>
+<p><strong>怎么不错, 由乔丹 Ellenberg</strong>。Ellenberg, 一个数学家和作家, 解释了数学如何在我们的日常生活中, 没有我们甚至知道它。每个章节都从一个看似简单明了的话题开始–选举政治, 比如说, 或者马萨诸塞州彩票–然后用它作为一个 jumping-off 点来谈论所涉及的数学。在一些地方, 数学变得相当复杂, 但他总是通过确保你仍然和他在一起, 把事情包裹起来。这本书的更大的一点是, 正如 Ellenberg 写道, “做数学是, 立刻, 被火和受理性束缚”-而且有方法, 我们都在做算术, 一直。</p>
+</blockquote>
+<p>百度的机器翻译：</p>
+<blockquote>
+<p><strong>如何不被错误的，Jordan Ellenberg</strong>。Ellenberg，数学家，作家，说明数学在我们的日常生活而我们甚至都不知道它。每章一个主题，似乎是相当简单的选举政治，或说，马萨诸塞州彩票，然后使用它作为一个起点，谈论涉及数学。在一些地方数学变得相当复杂，但他总是通过确保你仍然和他在一起。这本书是更重要的一点是，Ellenberg在书中写道，“做数学是，一次，感动的火灾原因”，有办法，我们都是做数学的约束，所有的时间。</p>
+</blockquote>
+<p>原本我还想找IBM的与科大讯飞的机器翻译，没找到，算了，这已经能说明问题了。前两天，我刚看到一个新闻，说google翻译引入了深度学习技术，翻译的可读性大大提高，属世界最先进的水平，不过就看这个例子，似乎也是。但是还是比不过人，我比他们翻译得都好。</p>
+<h2 id="读得抓狂"><a href="#读得抓狂" class="headerlink" title="读得抓狂"></a>读得抓狂</h2><p>一开始读的还是很引人入胜的，毕竟用了一个很生动的例子，就是牛人瓦尔德为美国军方服务，用数学以论文的形式为美军提供决策依据，其中有一次美国空军在统计战斗机的弹孔数量的时候发现，引擎弹孔最少，机身、油箱以及其他位置都很多，于是美军向老瓦请教，是在机身增加装甲好呢，还是油箱，还是机翼？</p>
+<p>头也不回的老瓦说，你们瓦特了，当然是引擎！这纯粹属于我瞎编的。真实的瓦尔德真的用了很多公式，计算，然后说，引擎！因为别的地方有弹孔，飞机还能回来，但是引擎一旦打到了，就飞不回来了，你统计的都是飞回来的飞机！</p>
+<p>你看懂了吗？这就是问题没问对，当然数学家不会上当，我指的是数学家，他们能马上发现这个假设不成立，不合理，统计的数据有偏差，又称作“幸存者偏差”。可能你又感觉到了什么，嗯，是的，就是很多人通过自己选择过的样本来提供数据数据以支撑自己的观点，比如很多论文以及生物技术公司，当然Nature和FDA都不会轻易上当的，不过其他人就未必了。</p>
+<h2 id="并没有错"><a href="#并没有错" class="headerlink" title="并没有错"></a>并没有错</h2><p>虽然这本书的很多数学描述，我是真没看懂，甚至找了学霸帮忙，也看到一头雾水，我简单的判断这应该是翻译的问题，毕竟我对我的数学的能力并不是这么的自信，尤其是进入到了统计学与概率的范畴。不过，如果早十多年多到这本书，我的很多疑问应该会被打消的。</p>
+<p>可是我又是那种非得去想这到底是怎么一回事，比如我扔一次硬币，只有确定的一个答案，统计还能理解，概率呢？这本书的答案是，一定要到一定量才会出现所谓的统计学特征，各种分布。问题是扔那么多次硬币，手累了会不会影响结果？嘿嘿，肯定会有。期望值又是一个神马玩意？为什么是个概率？虽然我考试分数还不错，但是带着这些问题进入了研究生阶段后，我研究了确定性混沌，于是我开始深刻的不认同概率这个东西，但是我也很清楚的认识到，这也有可能是我认识的误区。即便现在我知道了从经济学借用的效用（比如边际效用），来表征期望值，就是一种假设，然后借用了很多数学方法来定义。</p>
+<p>而概率是和事件（event）相关的，陈希孺先生很谨慎的说到。作为概率的发明者，菲舍尔对概率对使用有着谨慎与严格的前提条件，期望值并不代表我们期望发生的结果，而指的是多次做了该决定之后的平均结果，包括公共卫生在内的决策与抛硬币不同，因为我们只能选一次。wow，到这里，我的决定论并没错，我把单次事件与前提条件做了限定，然后的理解与概率的本质并不冲突。</p>
+<h2 id="心存疑问再上路"><a href="#心存疑问再上路" class="headerlink" title="心存疑问再上路"></a>心存疑问再上路</h2><p>当书看到一半的时候，我发现这书的翻译质量直线下降，尤其在某些关键的数学描述，当然我和学霸也反复看了多次，后来宣布放弃，有机会碰到相关的材料的时候，再细看。其中包括麻省彩票的漏洞通过用法诺平面（一个叫做投射平面的理论），这恰好与海明码是有着同样的几何属性的；哥德尔当年移民美国的时候，和美国移民官讨论民主体制的时候，说美国的民主有漏洞可以引致独裁，此前爱因斯坦等人强烈建议他不要讲，不过移民官并没有过激反应，而是回避了问题，自然哥德尔也拿到了移民资格；书中还降到统计学上是无法反应民意的，总统大选其实也不能反映民主；风险可以用数学来定量分析，但是不确定性是不可能的，数学不是万能的；统计学规律是调查员，而不是审判员，严谨的科学论文会通过这个显著性差异然后说研究有价值值得深入，一旦下结论的话，这论文就不用看了。</p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>数学很重要，但是如果数学走向了唯美的“为了艺术而艺术”的时候，正是当前概率和计量模型大行其道的描述，冯诺伊曼大师说，数学面临堕落的危险。选录了冯诺伊曼的这篇《数学家》的冯诺伊曼文集，竟然由大连理工大学出版社整理出版了，这是一个惊喜。</p>
+<p>如若人们学习数学只是为了名声和名誉，那么他们在数学研究的道理是走不远的。</p>
+<p><strong>我忽然觉得在大连学习混沌科学是我一生中最偶然却有最不可或缺的事情，让我在应用大潮中有机会去触碰一下计算机的本质，这是喧哗的广州不可能做到的。</strong></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E9%AD%94%E9%AC%BC%E6%95%B0%E5%AD%A6/" rel="tag"># 魔鬼数学</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2017/05/09/20170509_%E6%83%85%E5%95%86%E6%98%AF%E7%A1%AC%E4%BC%A4/" rel="prev" title="不会说话就是情商低--《如何说孩子才肯听，怎么听孩子才肯说》">
+      <i class="fa fa-chevron-left"></i> 不会说话就是情商低--《如何说孩子才肯听，怎么听孩子才肯说》
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2017/05/15/20170515_%E6%8F%92%E6%9B%B2/" rel="next" title="智慧的觉醒--《2061太空漫游》">
+      智慧的觉醒--《2061太空漫游》 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%8F"><span class="nav-number">1.</span> <span class="nav-text">序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6%E5%BE%88%E9%87%8D%E8%A6%81%EF%BC%8C%E7%BF%BB%E8%AF%91%E4%B9%9F%E6%98%AF"><span class="nav-number">2.</span> <span class="nav-text">数学很重要，翻译也是</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BB%E5%BE%97%E6%8A%93%E7%8B%82"><span class="nav-number">2.1.</span> <span class="nav-text">读得抓狂</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%B6%E6%B2%A1%E6%9C%89%E9%94%99"><span class="nav-number">2.2.</span> <span class="nav-text">并没有错</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%83%E5%AD%98%E7%96%91%E9%97%AE%E5%86%8D%E4%B8%8A%E8%B7%AF"><span class="nav-number">2.3.</span> <span class="nav-text">心存疑问再上路</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">3.</span> <span class="nav-text">结语</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Sylvain Mars YU</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">553</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">127</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sylvain Mars YU</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

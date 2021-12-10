@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"nasamars.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="序上个星期发了一场高烧，整个人挺难受。烧退了，整个人的状态也没见好转，总也没什么食欲，心情也是闷闷不乐。 发烧的原因，或许是跟电信的项目经理理论了一小时后无果后，上火所致。细节不想多说了，重点就是我实锤找到了他们的问题，让他们去修复，他们死活耍无赖的说厂家说这不是他们的问题。我想，我没有办法拼过这些拿着企业工资到我这耍无赖的人，面对我手上确凿的证据（PID，LOG中的日志，事件查看器的记录），人家">
+<meta property="og:type" content="article">
+<meta property="og:title" content="焦虑">
+<meta property="og:url" content="https://nasamars.github.io/2019/03/29/20190329_%E5%BE%88%E7%84%A6%E8%99%91/index.html">
+<meta property="og:site_name" content="我心中的香格里拉">
+<meta property="og:description" content="序上个星期发了一场高烧，整个人挺难受。烧退了，整个人的状态也没见好转，总也没什么食欲，心情也是闷闷不乐。 发烧的原因，或许是跟电信的项目经理理论了一小时后无果后，上火所致。细节不想多说了，重点就是我实锤找到了他们的问题，让他们去修复，他们死活耍无赖的说厂家说这不是他们的问题。我想，我没有办法拼过这些拿着企业工资到我这耍无赖的人，面对我手上确凿的证据（PID，LOG中的日志，事件查看器的记录），人家">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-03-29T15:38:31.000Z">
+<meta property="article:modified_time" content="2021-12-10T01:40:06.636Z">
+<meta property="article:author" content="Sylvain Mars YU">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://nasamars.github.io/2019/03/29/20190329_%E5%BE%88%E7%84%A6%E8%99%91/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-cn'
+  };
+</script>
+
+  <title>焦虑 | 我心中的香格里拉</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我心中的香格里拉</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
+    <link itemprop="mainEntityOfPage" href="https://nasamars.github.io/2019/03/29/20190329_%E5%BE%88%E7%84%A6%E8%99%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sylvain Mars YU">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我心中的香格里拉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          焦虑
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-03-29 15:38:31" itemprop="dateCreated datePublished" datetime="2019-03-29T15:38:31+00:00">2019-03-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-10 01:40:06" itemprop="dateModified" datetime="2021-12-10T01:40:06+00:00">2021-12-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>上个星期发了一场高烧，整个人挺难受。烧退了，整个人的状态也没见好转，总也没什么食欲，心情也是闷闷不乐。</p>
+<p>发烧的原因，或许是跟电信的项目经理理论了一小时后无果后，上火所致。细节不想多说了，重点就是我实锤找到了他们的问题，让他们去修复，他们死活耍无赖的说厂家说这不是他们的问题。我想，我没有办法拼过这些拿着企业工资到我这耍无赖的人，面对我手上确凿的证据（PID，LOG中的日志，事件查看器的记录），人家只是用口说说问题不是这样的。我气坏了，加上这一周老人家和小朋友都不舒服，肝火一起，第二天便发起了高烧以及剧烈的头疼。<br><span id="more"></span></p>
+<h1 id="焦虑"><a href="#焦虑" class="headerlink" title="焦虑"></a>焦虑</h1><p>或许人到中年，缺乏运动和必要的休息，这次生病后的一个多星期，我的状态都不好。一方面是没有了食欲，快到饭点的时候，肚子很饿，然而面对丰盛的饭菜，我只能挑一些清淡的青菜，扒上几口米饭；另一方面是，精神很差，虽然我已经尽可能的卧床休息，可是整个人总是感觉到困乏无力，而且必须穿上厚厚的衣服，不然就会感觉到丝丝凉意。</p>
+<p>我一度想过，我不应坚持我在计算机这个专业上的操守了，别和这些不厚道的从业者理论了，尽量的躲避开吧。然而，这么想，已经把我拖到了一个焦虑的深渊，我才发现我的焦虑似乎充斥了我的每一个毛孔，每一次的呼吸。</p>
+<p>纵然我已经不再从事第一线的计算机系统的研发工作，可是我没有什么能力让我感到自信满满，除了和大伙聊聊计算机，本质上，和对计算机并不是太了解的大伙讲讲计算机也不是什么能耐。每个人之所以是以当下这个状态现于世上，一定是有原因的，而且过往的很多的经验和教训，让他只能用这张面孔来和大家打交道，每个人都有自己的做人的支柱，一旦抽调，或许人就会进入知觉失调，无法找到自己的定位，找到评判自己对错的准绳。</p>
+<p>恢复的这段时间，我听不进任何得到APP的音频，知道自己不知道，在某个程度来说，也是一个让人焦虑的事情。因为焦虑，所以我们要不断学习新的认知，在不断的学习过程中，发现了自己更多的不知道，怎么办呢？对于我们来说，即便收听完这些课程，我们真的能变成更好的自己吗？还是说为了降低焦虑，我们踏上了征途，发现一路下来我们并没有减少焦虑，而是让我们徒增了不少焦虑呢？</p>
+<p>同样的，在这段时间，我也几乎难以看下任何一本书。理由和之前听音频的差不多，看书的出发点也是因为对自己的无能为力，期待一个更好的未来，这个未来饱含着对更好的收入、更好的工作的想象。因为这个大饼，我疯狂的看书与撰写读书笔记，的确在这过程中，我也一度学会了调节心情，控制焦虑。这次生病让我认识到一个情况，那些焦虑我并没有排解，只是挖了个深坑，把焦虑埋了起来，不断用更多的知识压在坑的上面。在自己生病的时候，那些焦虑从深坑跑出来，对自己的反噬让自己的痛苦会更上一个台阶。</p>
+<p>有了孩子，其实我们的焦虑又多了一个来源。虽然我们言必称不要逼孩子，让孩子欢乐成长，不论以后能不能读得好书，只要做一个对社会有意义的人就可以了。实际上并不是这样的，比如，掏钱上了培训班后，孩子不专心，家庭作业完成得不理想的时候，我们做家长的就开始紧张了，别人做得多好，开始指责孩子不认真，不珍惜机会，浪费钱和精力。看到了别人的孩子对课程很有兴趣，很快的上了高阶的课程，自己的孩子在在初级班里游荡，来自”别人家孩子”的焦虑，又爬上了自己的心头。</p>
+<p>走到大街上，看到了各式的人群，各种的豪车，琳琅满目的商品。不经意间，焦虑又爬上了心头，为什么自己的不懈努力，为什么不能让自己恣意在商场里购物，让自己开车无拘束的飞驰，为什么不能去巴黎喂鸽子排解一些郁闷呢？这个繁华的世界，和我们有什么关系呢？一种可怕的孤独感，一种偌大焦虑油然而生，一种无能为力的痛苦应运而生。因为，走在这热闹喧嚣大街上的我们，根本不知道我们要达成这些想法应该做些什么，如果这仅仅是梦，醒来后人就好了，可是这是一个让人越发越清醒的梦魇，永远无法摆脱。</p>
+<p>都说教育是一个很好的方法，让自己脱离挣扎的生活，原以为，在这个行业工作几年，应该能有机会接受一个在职博士教育的，发现自己太天真了，此路不通。后来觉得，自己作为一个硕士，再考取一个在职的管理硕士，应该不是难事，结果出来，自己还是未能考上。我开始越发的珍惜自己的学位，因为发现我可能再也不可能有新的学位了，而且以自己的能力，也没有办法再回到象牙塔去了。</p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>这就是我，一个中年的人的走投无路。未来看似万千种可能，对于他来说永远只有一个可能，维持现状，日复一日的过活。</p>
+<p>记录大时代下的无奈的小人物，这是我想做的，记录不了别人，只能刻画自己，这一年，我34岁。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/03/14/20190314_%E6%88%91%E7%9C%9F%E7%9A%84%E6%9C%89%E4%B8%80%E5%A4%B4%E7%89%9B/" rel="prev" title="我真的有一头牛--《非对称风险》">
+      <i class="fa fa-chevron-left"></i> 我真的有一头牛--《非对称风险》
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/04/04/20190403_%E4%BB%B0%E6%9C%9B%E6%98%9F%E7%A9%BA/" rel="next" title="仰望星空--《宇宙》">
+      仰望星空--《宇宙》 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%8F"><span class="nav-number">1.</span> <span class="nav-text">序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%84%A6%E8%99%91"><span class="nav-number">2.</span> <span class="nav-text">焦虑</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">3.</span> <span class="nav-text">结语</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Sylvain Mars YU</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">553</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">127</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sylvain Mars YU</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

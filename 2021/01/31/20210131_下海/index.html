@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"nasamars.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="序当了解到孩子喜欢乐高机器人的时候，我想这个课程完全可以自己教，依老父亲多年对计算机的认识，绝对不比外面的老师差，外面的课400块一节，我上一节是不是就挣回来了。说得虽然是笑话，但是教孩子上STEM课程的构思，我已经准备了好几年。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="下海--《乐高机器人EV3程序设计艺术》">
+<meta property="og:url" content="https://nasamars.github.io/2021/01/31/20210131_%E4%B8%8B%E6%B5%B7/index.html">
+<meta property="og:site_name" content="我心中的香格里拉">
+<meta property="og:description" content="序当了解到孩子喜欢乐高机器人的时候，我想这个课程完全可以自己教，依老父亲多年对计算机的认识，绝对不比外面的老师差，外面的课400块一节，我上一节是不是就挣回来了。说得虽然是笑话，但是教孩子上STEM课程的构思，我已经准备了好几年。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-01-31T10:45:31.000Z">
+<meta property="article:modified_time" content="2021-12-10T01:40:06.644Z">
+<meta property="article:author" content="Sylvain Mars YU">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://nasamars.github.io/2021/01/31/20210131_%E4%B8%8B%E6%B5%B7/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-cn'
+  };
+</script>
+
+  <title>下海--《乐高机器人EV3程序设计艺术》 | 我心中的香格里拉</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我心中的香格里拉</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
+    <link itemprop="mainEntityOfPage" href="https://nasamars.github.io/2021/01/31/20210131_%E4%B8%8B%E6%B5%B7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sylvain Mars YU">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我心中的香格里拉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          下海--《乐高机器人EV3程序设计艺术》
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-01-31 10:45:31" itemprop="dateCreated datePublished" datetime="2021-01-31T10:45:31+00:00">2021-01-31</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-10 01:40:06" itemprop="dateModified" datetime="2021-12-10T01:40:06+00:00">2021-12-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">读书笔记</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>当了解到孩子喜欢乐高机器人的时候，我想这个课程完全可以自己教，依老父亲多年对计算机的认识，绝对不比外面的老师差，外面的课400块一节，我上一节是不是就挣回来了。说得虽然是笑话，但是教孩子上STEM课程的构思，我已经准备了好几年。</p>
+<span id="more"></span>
+<h1 id="下海–《乐高机器人EV3程序设计艺术》"><a href="#下海–《乐高机器人EV3程序设计艺术》" class="headerlink" title="下海–《乐高机器人EV3程序设计艺术》"></a>下海–《乐高机器人EV3程序设计艺术》</h1><p>之所以起了一个叫下海的标题，那是因为“临渊羡鱼，不如退而结网”。我已经拿好渔网，马上就要下海了，作为一名躬身入局的人，不能光说不干。这么多年的读书与学习经历，对挑选书籍还是有点经验的，包括选择LEGO教材。有一类书叫做“the art of XXX”，一般都是有深度，有内涵的，比如唐纳德的“the art of algorithm”，又比如“the art of  unix programming”，所以今天这本书的英文名也是“the art of LEGO Mindstroms EV3 Programming”。</p>
+<p>我钟情于乐高编程，是有原因的。一方面是已故的西蒙教授关于让小朋友学习编程会让他们找到新天地的论述触动了我；另一方面是LEGO Mindstroms就是西蒙教授带领MIT媒体实验室和Lego共同开发出来的产品，让我感受到了工程届的美。</p>
+<p>机器人不是活物，所以有各家仿冒EV3的机器人产品，会吸引了各路家长的眼球，让他们纷纷掏钱。然而有西蒙教授的理论加持的LEGO Mindstroms却一直不冷不热的摆在货架上，不过我想，即便是计算机科班的人群，能够静下心来思考计算机哲学理论的，并不会太多。因此，当与人讨论到计算机哲学范畴的时候，我会很谨慎，毕竟不太理解的人会觉得你矫情和教条。然而，让一个对计算机理论木有独立见解的老师来教自己的孩子，我是不放心的，然而这几年我又不在广州，万般无奈之下只能让孩子去报班。</p>
+<p>当我看完这本书的时候，我觉得作者的确很用心，毕竟计算机是一个科学、技术与工程交叉融合的学科，回到计算机的上古时代，如果没有图灵的自动机理论、没有冯诺伊的架构设计、没有德福雷斯特发明的电子管、肖克利的晶体管技术以及莫克利和艾克特工程能力，计算机是做不出来的。当我们从计算机科班毕业的时候，让我们独立的去做一个机器人，相信很多人都无从下手，更不要说让几岁的小朋友了。Lego Mindstroms EV3的过人之处在于，用精密的制造技术将一个个零件模块化，并采用了当时性能较高的ARM处理器，通过linux对机器人设备进行控制，并且用图形化的界面引导孩子做程序设计的工作。</p>
+<p>一开始，我们可能会认为这只是一个玩具，但是当我看完这本书的时候，发现这只不过是Project-Base Learning的一个了不起的产品。不然，我们根本不知道学了编程能做什么？难道只是写一句“Hello World”？难道只是一张文凭？只是一个认证？当我们为了要完成书本上的游戏任务的时候，我们学习了系统环境、学习了编译环境、变量、条件语句、控制语句、函数、模块，学习了计算机算法，学习了单元测试、冒泡测试、V&amp;V测试，学习了基于原型的迭代过程模式。如果把这个变成科班的课程，或许就是相对晦涩的C语言设计、面向对象设计、linux系统管理、算法设计、软件测试、软件工程、嵌入式系统设计的课程。然而当我们上完这些课程的时候，依然没有办法独立的做一个机器人，让机器人完成我们教他的任务，虽然是从最简单的寻道，自主的走迷宫，依托传感器对外部做出反馈。当孩子们完成了这个项目，当遇到一个新挑战的时候，他们一定会调用他们学过的知识，通过计算机来完成，学习是为了解决问题，而不是显摆“茴香豆的茴字有几种写法”。</p>
+<p>作为老父亲，工作遇到的觉得可以用程序优化的事情，毫不犹豫的选择了自己敲代码，无论是值班室的业务系统，还是全会的证卡管理系统，抑或是核对上传国扶办的数据与电子台账的差异。但是我不会告诉你，我一直都在使用python，使用django，使用node.js，使用vue，使用sqite，使用anaconda等等。很多计算机人，在毕业之后才发现，自己并不喜欢计算机，想着办法抹除自己身上的计算机味道。可我不是，专业搞机20年，以后将坚持一直搞下去，带着娃一起前行。</p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>我是一个非典型的计算机工程师，自从考入华工的那一刻起，便注定了我这辈子离不开计算机了。这也是我人生的支柱，如果有哪天，我放弃了计算机，估计那就不再是我了。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/01/31/20210130_%E7%A0%B4%E5%9C%9F/" rel="prev" title="破土--《Electron跨平台开发实战》">
+      <i class="fa fa-chevron-left"></i> 破土--《Electron跨平台开发实战》
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/02/11/20210210_%E7%AC%94%E8%AE%B00xB/" rel="next" title="笔记0xB">
+      笔记0xB <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%8F"><span class="nav-number">1.</span> <span class="nav-text">序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8B%E6%B5%B7%E2%80%93%E3%80%8A%E4%B9%90%E9%AB%98%E6%9C%BA%E5%99%A8%E4%BA%BAEV3%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%89%BA%E6%9C%AF%E3%80%8B"><span class="nav-number">2.</span> <span class="nav-text">下海–《乐高机器人EV3程序设计艺术》</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">3.</span> <span class="nav-text">结语</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Sylvain Mars YU</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">553</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">127</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sylvain Mars YU</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

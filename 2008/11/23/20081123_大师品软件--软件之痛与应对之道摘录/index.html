@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"nasamars.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="&amp;emsp;&amp;emsp;3.1 为什么现在还如此糟糕现代计算机行业的安全问题来值两个主要的方面。首先，跟平常一样，因为在处理安全问题的时候大多数程序员不知道最近在做什么。安全是一个高度专业化的领域，而这些程序员则是“通才”。其次，更为严重的问题是，即使程序员了解安全技术，他仍然从该技术的角度来思考问题，而不是从使用该技术的用户来考虑问题3.4 人类操作布鲁斯·施奈尔写过一本关于密码学的书《应用密码">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大师品软件--软件之痛与应对之道摘录">
+<meta property="og:url" content="https://nasamars.github.io/2008/11/23/20081123_%E5%A4%A7%E5%B8%88%E5%93%81%E8%BD%AF%E4%BB%B6--%E8%BD%AF%E4%BB%B6%E4%B9%8B%E7%97%9B%E4%B8%8E%E5%BA%94%E5%AF%B9%E4%B9%8B%E9%81%93%E6%91%98%E5%BD%95/index.html">
+<meta property="og:site_name" content="我心中的香格里拉">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;3.1 为什么现在还如此糟糕现代计算机行业的安全问题来值两个主要的方面。首先，跟平常一样，因为在处理安全问题的时候大多数程序员不知道最近在做什么。安全是一个高度专业化的领域，而这些程序员则是“通才”。其次，更为严重的问题是，即使程序员了解安全技术，他仍然从该技术的角度来思考问题，而不是从使用该技术的用户来考虑问题3.4 人类操作布鲁斯·施奈尔写过一本关于密码学的书《应用密码">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2008-11-23T12:58:00.000Z">
+<meta property="article:modified_time" content="2021-12-10T01:40:06.616Z">
+<meta property="article:author" content="Sylvain Mars YU">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://nasamars.github.io/2008/11/23/20081123_%E5%A4%A7%E5%B8%88%E5%93%81%E8%BD%AF%E4%BB%B6--%E8%BD%AF%E4%BB%B6%E4%B9%8B%E7%97%9B%E4%B8%8E%E5%BA%94%E5%AF%B9%E4%B9%8B%E9%81%93%E6%91%98%E5%BD%95/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-cn'
+  };
+</script>
+
+  <title>大师品软件--软件之痛与应对之道摘录 | 我心中的香格里拉</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我心中的香格里拉</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
+    <link itemprop="mainEntityOfPage" href="https://nasamars.github.io/2008/11/23/20081123_%E5%A4%A7%E5%B8%88%E5%93%81%E8%BD%AF%E4%BB%B6--%E8%BD%AF%E4%BB%B6%E4%B9%8B%E7%97%9B%E4%B8%8E%E5%BA%94%E5%AF%B9%E4%B9%8B%E9%81%93%E6%91%98%E5%BD%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sylvain Mars YU">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我心中的香格里拉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          大师品软件--软件之痛与应对之道摘录
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2008-11-23 12:58:00" itemprop="dateCreated datePublished" datetime="2008-11-23T12:58:00+00:00">2008-11-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-10 01:40:06" itemprop="dateModified" datetime="2021-12-10T01:40:06+00:00">2021-12-10</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>&emsp;&emsp;3.1 为什么现在还如此糟糕现代计算机行业的安全问题来值两个主要的方面。首先，跟平常一样，因为在处理安全问题的时候大多数程序员不知道最近在做什么。安全是一个高度专业化的领域，而这些程序员则是“通才”。其次，更为严重的问题是，即使程序员了解安全技术，他仍然从该技术的角度来思考问题，而不是从使用该技术的用户来考虑问题3.4 人类操作布鲁斯·施奈尔写过一本关于密码学的书《应用密码学》。这本书受到了他所在领域的高度重视。但是时隔7年之后，他在另外一本书《网络信息安全的真相》中公开地承认错误，他在该书的开头写道：“我写作这本书的目的是为了纠正一个错误。《应用密码学》一书中曾经描述了一个数学乌托邦。我曾经认为密码学就是回答所有问题的终极答案。”“结果并没有我所想象的那么好。读者相信密码学就是一种安全魔法，只需要将其应用在软件上，就能让软件安全起来。。。”一位同事曾经告诉我，“世界上有好多糟糕的安全系统，他们均由看过《应用密码学》这本书的人说设计”。当他为客户设计和分析安全系统的时候，他“发现这些弱点跟数学毫无关系。他们存在于硬件、软件、网络和人中间。糟糕的程序设计、糟糕的操作系统或者某人糟糕的口令的选择，都使得漂亮的数学理论变得无关紧要。”他又补充道，“如果您认为技术能够解决您的安全问题，那就表明您还没有理解这些问题，并且您也没有理解这些技术。”我完全赞同上述的观点。8微软，听好了，我在这本书中已经重复了多少次了？你的用户并不是你！无论如何炒作都不能让一款糟糕的产品变好火车变得不是那么的差。但是如果你不能够理解自己的用户，如果你解决了错误的问题，或者解决了正确的问题，但是你的用户不能从中受益，那么即使是世界上最好的技术产品终究是无用的东西。这不是你认为你的用户怎么想的问题，也不是你希望的他们怎么想的问题。你必须真正了解他们的想法。9软件行业因用户而存在。David S.Platt<a target="_blank" rel="noopener" href="http://www.rollthunder.comhttp://www.whysoftwaresucks.com/">www.rollthunder.comhttp://www.whysoftwaresucks.com/</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2008/11/18/20081118_%E7%8B%82%E8%BA%81/" rel="prev" title="狂躁">
+      <i class="fa fa-chevron-left"></i> 狂躁
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2008/12/11/20081211_%E9%97%AE%E9%A2%98%E4%B8%8E%E4%B8%BB%E4%B9%89/" rel="next" title="问题与主义">
+      问题与主义 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Sylvain Mars YU</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">553</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">127</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sylvain Mars YU</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

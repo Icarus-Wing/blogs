@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"nasamars.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="序最近这几年随着深度学习与AlphaGo的大热，人工智能成为当下最具热度的词语，李开复先生写了一本《人工智能》，阐述了在他眼中的人工智能。作为一名严谨的科学家，他编著的这本《人工智能》，具备了科学性与科普性，是一本适合大众科普入门的好书，即便是计算机专业的读者，也能从中汲取到知识。 毕竟，李开复从介绍我们身边耳熟能详的标榜为人工智能的产品，从alphaGo到特斯拉的辅助驾驶，从机器视觉到机器翻译，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="拥抱人工智能--《人工智能》">
+<meta property="og:url" content="https://nasamars.github.io/2018/04/02/20180402_%E6%8B%A5%E6%8A%B1%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/index.html">
+<meta property="og:site_name" content="我心中的香格里拉">
+<meta property="og:description" content="序最近这几年随着深度学习与AlphaGo的大热，人工智能成为当下最具热度的词语，李开复先生写了一本《人工智能》，阐述了在他眼中的人工智能。作为一名严谨的科学家，他编著的这本《人工智能》，具备了科学性与科普性，是一本适合大众科普入门的好书，即便是计算机专业的读者，也能从中汲取到知识。 毕竟，李开复从介绍我们身边耳熟能详的标榜为人工智能的产品，从alphaGo到特斯拉的辅助驾驶，从机器视觉到机器翻译，">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-04-02T16:32:31.000Z">
+<meta property="article:modified_time" content="2021-12-10T01:40:06.632Z">
+<meta property="article:author" content="Sylvain Mars YU">
+<meta property="article:tag" content="人工智能">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://nasamars.github.io/2018/04/02/20180402_%E6%8B%A5%E6%8A%B1%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-cn'
+  };
+</script>
+
+  <title>拥抱人工智能--《人工智能》 | 我心中的香格里拉</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我心中的香格里拉</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
+    <link itemprop="mainEntityOfPage" href="https://nasamars.github.io/2018/04/02/20180402_%E6%8B%A5%E6%8A%B1%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sylvain Mars YU">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我心中的香格里拉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          拥抱人工智能--《人工智能》
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-04-02 16:32:31" itemprop="dateCreated datePublished" datetime="2018-04-02T16:32:31+00:00">2018-04-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-10 01:40:06" itemprop="dateModified" datetime="2021-12-10T01:40:06+00:00">2021-12-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">读书笔记</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>最近这几年随着深度学习与AlphaGo的大热，人工智能成为当下最具热度的词语，李开复先生写了一本《人工智能》，阐述了在他眼中的人工智能。作为一名严谨的科学家，他编著的这本《人工智能》，具备了科学性与科普性，是一本适合大众科普入门的好书，即便是计算机专业的读者，也能从中汲取到知识。</p>
+<p>毕竟，李开复从介绍我们身边耳熟能详的标榜为人工智能的产品，从alphaGo到特斯拉的辅助驾驶，从机器视觉到机器翻译，我们的身边其实充斥这好多这样的科技感十足的软硬件产品。究竟人工智能对人类有威胁吗？人工智能会让许多人失业吗？人工智能未来的发展究竟是怎么样的景象？本书的答案很中肯，我也非常认同，而不像某些书籍那些危言耸听，也不像某些书籍那样打造美丽天堂。</p>
+<span id="more"></span>
+<h1 id="拥抱人工智能"><a href="#拥抱人工智能" class="headerlink" title="拥抱人工智能"></a>拥抱人工智能</h1><p>看完本书后，我的第一反应是要拥抱这个发展迅猛的技术，人工智能。本书的前半部分介绍了人工智能的历史，近段时间热门的技术，以及这些技术的本质，大部分都在我的知识储备里。比如说到了人工智能最早是在达特茅斯大学的会议室里，明斯基等几位大科学家提出了人工智能的设想，随着生物学发展与大脑功能的新认识，计算机科学提出了遗传算法、神经网络等等具有迭代与自我调整的算法，后来这些算法因为效果不太好被打入冷宫，知道最近辛顿等计算机学家使用了大规模计算以及卷积等计算方式，让多层神经网络大放异彩，催生了AlphaGo的出现。</p>
+<h2 id="消失了的工作机会"><a href="#消失了的工作机会" class="headerlink" title="消失了的工作机会"></a>消失了的工作机会</h2><p>让我陷入深思的是书的后半本，关于人工智能与人类的关系，人工智能对我们生活会产生怎样的影响，我们应该如何面对这个可能会引发科技革命的技术。技术不仅仅是技术，技术的未来必然与社会、经济、文学、艺术以及人类全球化的未来紧紧相连，我们的今天与文艺复兴是何其的相似。每次工业革命都会让相当数量的职业消失，同时又产生许多新的就业岗位，而那些被迫下岗，又无奈继续上岗的产业工人，无疑是被动的，也是无奈的，更是可怜的。然而，我们必须坚信机器给人类带来的不是失业，而是更大的自有和更加个性化的人生体验，而中国是最有可能在这场产业变革中获得先机，弯道超车的。这不是一厢情愿的假想，而是我们有这样大体量的经济与工业，有这样大体量的拥有扎实的基础教育的学生，有这样大体量的计算机与相关专业的人才，非常少的科学伦理的束缚，以及国家投入了相当规模的政策与行政力量推动，技术与科学的发展就需要这样的契机。</p>
+<p>李开复说：</p>
+<blockquote>
+<p>一项本来由人从事的工作，如果人可以在5秒内对工作中需要思考和决策的问题作出相应的决定，那么这项工作就有非常大的可能被人工智能技术全部或部分的取代。</p>
+</blockquote>
+<p>反之，如果你的工作涉及缜密的思考，周全的推理与复杂的决策，每个具体的判断并非人脑在5秒钟内能完成的，那么目前的技术对你的工作还是无法撼动的。因此从事<strong>翻译、新闻报道、助理、保安、销售、客服、金融交易、会计、司机与家政</strong>工作的人，未来10年有90%的机会会被人工智能技术取代。如果就全人类的工作而言，会有50%的人类工作会受到人工智能技术的影响。李开复预言，无人驾驶应该是最快最直接一个落地的项目，对人类社会的冲击也是非常巨大的，直接改变了人类的出行、消费以及思维模式。</p>
+<h2 id="“定制化”教育"><a href="#“定制化”教育" class="headerlink" title="“定制化”教育"></a>“定制化”教育</h2><p>人工智能时代会冲击传统的教育与就业理念，至少不会存在“稳定的”工作，一旦稳定，机器人就会取代你。对于大部分的行业来说，AI不是一种新的业务流程或商业模式，而是对现有的业务流程、商业模式的根本性的改造。2013年，包括前哈佛大学的校长在内的一群教育家组建了一所名为密涅瓦大学（Minerwa School at KGI），录取率低达3%，远低于哈佛大学。这所神秘的大学颠覆了传统的模式，大一采用形势分析、实证分析、多元模式焦虑与复杂系统结合的课程，大二跟随导师学习，大三开始专注某一领域，大四培养综合能力，除大一在旧金山学习，其余三年会到世界上不同的地方学习。</p>
+<p><strong>人工智能时代，程式化的、重复性的、仅靠记忆与联系就可以掌握的技能之最没有价值的技能，几乎可以由机器来完成；那些最能体现人的综合素质的技能，如人对于复杂系统的分析、决策能力，对于艺术和文化的审美能力和创造性思维，由生活经验及文化熏陶产生的直觉、常识，基于人自身的情感（爱、恨、热情、冷漠等）与他人互动的能力等等都是人工智能时代最有代价，最值得培养与学习的技能。而且这种技能中，大多数都是因人而异，需要“定制化”培养或教育，不能从传统的“批量”教育中获取。</strong></p>
+<p>同是学习计算机科学，李开复表示那些满足于学习某一门热门技术或编程语言的人，也会失去价值，只有去专注计算机、人工智能与程序设计的思想本质人，才会有创造性的设计下一代人工智能，或者知道人工智能系统编写更复杂、更有创造力的软件。</p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>人之所为人，正是因为我们有情感、会思考、懂生死。“感情”、“思考”、“自我意识”与“生死意识”等这些人类特质，正是我们要全力培养、发展与珍惜的东西。</p>
+<p>AI来了，有思想的人生并不会因此而黯然失色，因为我们的全部尊严就在于思想。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" rel="tag"># 人工智能</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2018/04/01/20180401_%E8%BD%AF%E5%BC%80%E6%B2%89%E6%80%9D/" rel="prev" title="软开沉思--《软件开发沉思录》">
+      <i class="fa fa-chevron-left"></i> 软开沉思--《软件开发沉思录》
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2018/04/08/20180408_%E6%91%A9%E6%8B%9C%E7%9A%84%E9%80%9D%E5%8E%BB/" rel="next" title="单车大战">
+      单车大战 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%8F"><span class="nav-number">1.</span> <span class="nav-text">序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8B%A5%E6%8A%B1%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD"><span class="nav-number">2.</span> <span class="nav-text">拥抱人工智能</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B6%88%E5%A4%B1%E4%BA%86%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%9C%BA%E4%BC%9A"><span class="nav-number">2.1.</span> <span class="nav-text">消失了的工作机会</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%80%9C%E5%AE%9A%E5%88%B6%E5%8C%96%E2%80%9D%E6%95%99%E8%82%B2"><span class="nav-number">2.2.</span> <span class="nav-text">“定制化”教育</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">3.</span> <span class="nav-text">结语</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Sylvain Mars YU</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">553</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">127</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sylvain Mars YU</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

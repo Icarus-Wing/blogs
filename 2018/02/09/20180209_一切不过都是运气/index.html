@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"nasamars.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="我们处于一个确定但无法预测的世界。如果一开始你就不太理解我说的话，尝试看看下文，如果真的无法理解，可能你真的对确定性或者不确定性是比较模糊的。  序塔勒布是个知名的金融从业者，可能大部分人不太了解，但是如果提起《黑天鹅》，或许大家就会恍然大悟了。虽然《黑天鹅》很出名，尤其是提出了不能简单的相信归纳法，通过总结过去的经验，就能信誓旦旦的预测未来发生的事情；再者，传统的高斯分布，是不适用于预测金融事">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一切不过都是运气--《随机漫步的傻瓜》">
+<meta property="og:url" content="https://nasamars.github.io/2018/02/09/20180209_%E4%B8%80%E5%88%87%E4%B8%8D%E8%BF%87%E9%83%BD%E6%98%AF%E8%BF%90%E6%B0%94/index.html">
+<meta property="og:site_name" content="我心中的香格里拉">
+<meta property="og:description" content="我们处于一个确定但无法预测的世界。如果一开始你就不太理解我说的话，尝试看看下文，如果真的无法理解，可能你真的对确定性或者不确定性是比较模糊的。  序塔勒布是个知名的金融从业者，可能大部分人不太了解，但是如果提起《黑天鹅》，或许大家就会恍然大悟了。虽然《黑天鹅》很出名，尤其是提出了不能简单的相信归纳法，通过总结过去的经验，就能信誓旦旦的预测未来发生的事情；再者，传统的高斯分布，是不适用于预测金融事">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-02-09T00:00:00.000Z">
+<meta property="article:modified_time" content="2021-12-10T01:40:06.632Z">
+<meta property="article:author" content="Sylvain Mars YU">
+<meta property="article:tag" content="随机漫步的傻瓜">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://nasamars.github.io/2018/02/09/20180209_%E4%B8%80%E5%88%87%E4%B8%8D%E8%BF%87%E9%83%BD%E6%98%AF%E8%BF%90%E6%B0%94/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-cn'
+  };
+</script>
+
+  <title>一切不过都是运气--《随机漫步的傻瓜》 | 我心中的香格里拉</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我心中的香格里拉</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
+    <link itemprop="mainEntityOfPage" href="https://nasamars.github.io/2018/02/09/20180209_%E4%B8%80%E5%88%87%E4%B8%8D%E8%BF%87%E9%83%BD%E6%98%AF%E8%BF%90%E6%B0%94/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sylvain Mars YU">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我心中的香格里拉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          一切不过都是运气--《随机漫步的傻瓜》
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-02-09 00:00:00" itemprop="dateCreated datePublished" datetime="2018-02-09T00:00:00+00:00">2018-02-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-10 01:40:06" itemprop="dateModified" datetime="2021-12-10T01:40:06+00:00">2021-12-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">读书笔记</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <blockquote>
+<p>我们处于一个<strong>确定但无法预测的世界</strong>。如果一开始你就不太理解我说的话，尝试看看下文，如果真的无法理解，可能你真的对确定性或者不确定性是比较模糊的。</p>
+</blockquote>
+<h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>塔勒布是个知名的金融从业者，可能大部分人不太了解，但是如果提起《黑天鹅》，或许大家就会恍然大悟了。虽然《黑天鹅》很出名，尤其是提出了不能简单的相信归纳法，通过总结过去的经验，就能信誓旦旦的预测未来发生的事情；再者，传统的高斯分布，是不适用于预测金融事件与财富分布的，分形分布会更符合现实情况。</p>
+<p>然而，我猜大部分《黑天鹅》的读者都会一头雾水，我其实也是其中的一份子。主要是翻译太差劲了，严重的影响了大家的阅读体验，而那些封面写推荐词的名人，我很是怀疑他们到底看完了么？看懂了么？懂多少？</p>
+<p>所以我很早就知道塔勒布写过这本《随机漫步的傻瓜》，但是一直都没下定决心买，就是因为怕翻译得大跌眼镜。恰逢一朋友看完这本书后评价很低，觉得没什么留下的价值，因此我就把这书接过来了。<br><span id="more"></span></p>
+<h1 id="运气"><a href="#运气" class="headerlink" title="运气"></a>运气</h1><p>书不太厚，写得有点像散文，还是蛮对我的胃口的。毕竟他对概率的看法与对混沌系统的理解，我是认同的，自己也是这么想的。</p>
+<h2 id="噪声与信号"><a href="#噪声与信号" class="headerlink" title="噪声与信号"></a>噪声与信号</h2><p>这两个词对有信号处理背景的人会比较熟悉，对文科生可能就会晦涩一些，简单的说大部分时候，我们觉得有用的信息就是信号，而那些充斥在我们身边的大量的没用的信息就是噪声。塔勒布会认为，艺术不是人类探索真相的工具，只不过是逃避事实或者让真相变得更称心愉快的方法。</p>
+<p>我们低估了很多事情中的随机成分，可用信息的增长程度远不如噪声膨胀的速度。概率论是一门年轻的数学理论，把概率用到实物分析上，似乎还没有发展出任何定理。</p>
+<h2 id="概率与期望值"><a href="#概率与期望值" class="headerlink" title="概率与期望值"></a>概率与期望值</h2><p>实话说，这两个看起来不需要思考的名词还是困扰了我很久，以至于有一年我在面试腾讯的实习生的时候，抗拒回答关于一个关于概率的提问。那个时候的面试官一脸诧异，我没发很好的整理我的头绪，如果是今天，我一定会把他反问得说不出话来的，直到怀疑人生。</p>
+<p>把别人问到怀疑人生只是我现在马后炮的想法，因为我已经找到了答案，而塔勒布的观点和我寻找的答案是一致的，对于已经发生的事，通过数理统计方法，可以计算出一个概率；对于没有发生事情，通过概率论出来的其实是事件的期望值，在计算中基本一致的东西，背后的含义是不一样的。</p>
+<p>简单的说，只要问一个成年人，向上抛起一个硬币，头像朝上的可能性事多少？一半一半，这种弱智的问题根本不值得问。如果我换个问法，我这个时候用这个力度这个方向扔出的硬币，头像究竟是朝上还是朝下，答案只能是二选一的时候，你会怎么回答。正常来说你一定会懵的，然后瞬间偷换概念，一半一半的机会。</p>
+<p>期望值是一个不可能描述事件本质的事情，它只能描述一件事物的外部表征，即便是在微观世界也是一样的。所以你如果认为概率可以说明一切问题的时候，我认为你是无知的。</p>
+<h2 id="存活者偏差"><a href="#存活者偏差" class="headerlink" title="存活者偏差"></a>存活者偏差</h2><p>由于平时，我们只看到了成功者，所以形成了对机遇的歪曲看法。比如，如果说概率，让计算机随机生成音乐，总会有一个可能生成一部贝多芬的“命运交响曲”，关键是这个随机生成了多少部音乐，才有可能生成“命运交响曲”，如果是5部就能生成，了不起！如果是数不清的数量，生成了一部，只能说这就是凑巧。</p>
+<p>大部分的时候，我们看到了一件事情，就会主动的思考它的因果关系，通常会把凑巧的事情，与某些外部因素，俗话说就是原因，联系起来，用大数据的方式还是别的方式计算相关性。我们可以这么想，有因果关系的事物一定会存在相关性，可是存在相关性的事物不一定会有因果关系。比如，正常的来说结婚的男女会住在一起，反过来说，住在一起的男女一定就结婚了吗？</p>
+<p>而且如果你的朋友都是喜欢同居而不喜欢领证结婚的，通过你的观察你会发现，现在的人都喜欢同居而厌恶结婚。如果说出这样的话，只能说你看到的人群太少，参与统计的样本存在了重大的偏差。同理，看到人家投资挣钱，自己也觉得去投资能挣钱，这是同样的偏误。或许你会说，你不懂，我是有方法的，有各种模拟的，有内部消息的，你的认知偏差，不会因为你套多了几个漂亮的外套就会发生变化的。</p>
+<p>数理统计中，对于相关性，还有一个回归率，表征的是很多时候，我们做事都会在一个平均状态上的，偶尔因为运气的问题变好了或变差了，大部分时候都会回到一个正常的区间中。好比热恋的男女，总会在不同的时候做出让对方难以忘怀的事情，然而大部分时候，大家的交往总会趋于一个比较平淡的状态。</p>
+<h2 id="一叶障目"><a href="#一叶障目" class="headerlink" title="一叶障目"></a>一叶障目</h2><p>说了这么多，我只想引出作者的经典表述：</p>
+<blockquote>
+<p>我们经历的现实只是所有可能出现的随机历史中的一个，我们却把他当作最具有代表性的，忘了还有其他的可能性。好的时候，我们归于自己能力强，不好的时候，我们归结于运气差。</p>
+</blockquote>
+<p>为此，作者顿悟，了解自己不够聪明，不够坚强，不必奢望去对抗自己的情绪反应，选择优雅的去面对，不忘初心，方得始终。</p>
+<p>我们在一个确定的世界，但是我们却无法预测未来。在我看来，这是我们生而为人的永恒缺憾，一切皆有因，上帝不掷骰子这是我一直坚信的，而人类的计算能力与计算精度，让我们距离真相在某一个时候很近然后会迅速与之背离。很多的记者，文学工作者，是会难以明白所谓的不确定性，到底是如何的不确定，而到底什么才是确定。想知道？问我啊！</p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>或许醉心于探索自然与人，是我的基因使然，让我不但甘心情愿，而且还能从中获得快乐。其实，很多都迷信，这个时候迷信已经不是传统意义下对神明的执着，而是笃信自己找到了某个事物的真相，比如算出了下一期彩票，能够从股票数据中找到了神秘的规律，科学说的一定就是对的，大家做的事情就是对的，等等。</p>
+<p>再次，我只是希望传达一种简单的想法，千万别觉得自己太聪明了，有太多的过人之处，一切不过都是运气。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E9%9A%8F%E6%9C%BA%E6%BC%AB%E6%AD%A5%E7%9A%84%E5%82%BB%E7%93%9C/" rel="tag"># 随机漫步的傻瓜</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2018/02/01/20180201_%E5%A4%A9%E7%81%AB/" rel="prev" title="天火--《基因传之众生之源》">
+      <i class="fa fa-chevron-left"></i> 天火--《基因传之众生之源》
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2018/02/12/20180212_%E5%B9%B3%E8%A1%8C%E4%B8%96%E7%95%8C/" rel="next" title="平行世界--《反社会的人》">
+      平行世界--《反社会的人》 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%8F"><span class="nav-number">1.</span> <span class="nav-text">序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%90%E6%B0%94"><span class="nav-number">2.</span> <span class="nav-text">运气</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%99%AA%E5%A3%B0%E4%B8%8E%E4%BF%A1%E5%8F%B7"><span class="nav-number">2.1.</span> <span class="nav-text">噪声与信号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E7%8E%87%E4%B8%8E%E6%9C%9F%E6%9C%9B%E5%80%BC"><span class="nav-number">2.2.</span> <span class="nav-text">概率与期望值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%98%E6%B4%BB%E8%80%85%E5%81%8F%E5%B7%AE"><span class="nav-number">2.3.</span> <span class="nav-text">存活者偏差</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E5%8F%B6%E9%9A%9C%E7%9B%AE"><span class="nav-number">2.4.</span> <span class="nav-text">一叶障目</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">3.</span> <span class="nav-text">结语</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Sylvain Mars YU</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">553</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">127</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sylvain Mars YU</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"nasamars.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="&amp;emsp;&amp;emsp;48.《凤凰项目－－一个IT运维的传奇故事》2016.11.20 这是一本软件工程中关于过程模式的故事书。将近10年了，竟然没有再阅读过关于软件工程的小说了。我还清楚的记得，上一本关于软件工程项目管理类的小说是《最后期限》 。过程模式指的是，整个软件从需求到验收维护过程的模式，模式就是可以抽象出来一次又一次重复的东西，简单的说就是套路。这十年八年，我不断的验证着软工的这些所">
+<meta property="og:type" content="article">
+<meta property="og:title" content="凤凰项目－－一个IT运维的传奇故事">
+<meta property="og:url" content="https://nasamars.github.io/2016/11/20/20161120_%E5%87%A4%E5%87%B0%E9%A1%B9%E7%9B%AE%EF%BC%8D%EF%BC%8D%E4%B8%80%E4%B8%AAIT%E8%BF%90%E7%BB%B4%E7%9A%84%E4%BC%A0%E5%A5%87%E6%95%85%E4%BA%8B/index.html">
+<meta property="og:site_name" content="我心中的香格里拉">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;48.《凤凰项目－－一个IT运维的传奇故事》2016.11.20 这是一本软件工程中关于过程模式的故事书。将近10年了，竟然没有再阅读过关于软件工程的小说了。我还清楚的记得，上一本关于软件工程项目管理类的小说是《最后期限》 。过程模式指的是，整个软件从需求到验收维护过程的模式，模式就是可以抽象出来一次又一次重复的东西，简单的说就是套路。这十年八年，我不断的验证着软工的这些所">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2016-11-20T00:00:00.000Z">
+<meta property="article:modified_time" content="2021-12-10T01:40:06.624Z">
+<meta property="article:author" content="Sylvain Mars YU">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://nasamars.github.io/2016/11/20/20161120_%E5%87%A4%E5%87%B0%E9%A1%B9%E7%9B%AE%EF%BC%8D%EF%BC%8D%E4%B8%80%E4%B8%AAIT%E8%BF%90%E7%BB%B4%E7%9A%84%E4%BC%A0%E5%A5%87%E6%95%85%E4%BA%8B/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-cn'
+  };
+</script>
+
+  <title>凤凰项目－－一个IT运维的传奇故事 | 我心中的香格里拉</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我心中的香格里拉</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
+    <link itemprop="mainEntityOfPage" href="https://nasamars.github.io/2016/11/20/20161120_%E5%87%A4%E5%87%B0%E9%A1%B9%E7%9B%AE%EF%BC%8D%EF%BC%8D%E4%B8%80%E4%B8%AAIT%E8%BF%90%E7%BB%B4%E7%9A%84%E4%BC%A0%E5%A5%87%E6%95%85%E4%BA%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sylvain Mars YU">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我心中的香格里拉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          凤凰项目－－一个IT运维的传奇故事
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2016-11-20 00:00:00" itemprop="dateCreated datePublished" datetime="2016-11-20T00:00:00+00:00">2016-11-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-10 01:40:06" itemprop="dateModified" datetime="2021-12-10T01:40:06+00:00">2021-12-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">读书笔记</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>&emsp;&emsp;48.《凤凰项目－－一个IT运维的传奇故事》2016.11.20 这是一本软件工程中关于过程模式的故事书。将近10年了，竟然没有再阅读过关于软件工程的小说了。我还清楚的记得，上一本关于软件工程项目管理类的小说是《最后期限》 。过程模式指的是，整个软件从需求到验收维护过程的模式，模式就是可以抽象出来一次又一次重复的东西，简单的说就是套路。这十年八年，我不断的验证着软工的这些所谓的理论的可行性，怕是没几个人像我这样教条的。相对而言，越大的公司，在过程模式这一块做得越好，我去过的最大的公司就是亲爱的26公司，中兴，而26公司这个讽刺的说法，其实是华为的朋友说的，不过这个高级黑还是蛮有意思的。后来去的亿迅，广东电信的信息化集成商，不论是内部管控还是开发流程模式，都要比中兴差很多，能有个CMM2级就不错了。当我变成甲方的时候，基本上就不要执着于软件工程的东西了，而接触到的号称过了CMM5的乙方公司，还不如亿迅，无论是需求管理还是过程模式，错了还是没有过程模式，只能用CMM1来形容这些外强中干的公司。我想，无论如何，甲方乙方是个相互映证的角色，乙方的能力从侧面来说也反映了甲方的水平，所以并不能单方面的过多的指责乙方。项目建设已经不是我当前工作的重心，所以我更关注运维。 无论是《人月神话》，《人件》，还是《最终期限》或者《凤凰项目》，老美的工程师们总能把大道理放入一个个引人入胜的故事情节里头，让我能够通过从语言描述重现一个大企业的业务场景，结合自身的经验（这很重要），来体会这些被提炼出来的模式到底是为了解决什么问题的。小说总是比死板的大部头来得生动，按道理我应该先看完《持续交付》这本获得jolt大奖的软工类书籍，这本书正是《凤凰项目》的理论依据。书中说到，通常软件产品太不稳定，太不可用，连那些曾经强烈要求这些产品的人最终也会说它不值得上市，到最后总是IT运维部在通宵达旦的胃那些糟糕的代码买单，每小时重启一次服务器，尽可能的向世人隐瞒糟糕的真相。我管着一些业务系统，糟糕的质量让我在晚上11点接到业务处室的电话，连夜折腾开发公司，解决一些看起来很不必要的问题。在我眼中，这些问题都是可以提前解决的，但由于没有按照过程模式的要求来做，大大降低了产品的质量，增加了运维的工作量。运维在很多IT公司总是被轻视的，而从管理上说，一点不比业务流程，开发工作简单，虽然大家都说懂管理，但是能够找到瓶颈资源，并釜底抽薪的解决问题的人总是少数。书中提到管理业务项目、内部项目、变更和计划外救火工作的三步工作法，对我实际工作是有借鉴意义的，因为当前的计划外救火任务占据了我太多的时间，然而业务部门有抱怨，内部运维人员也忙疯了，变更来得太简单。第一步，理解工作从开发移向IT运维时候该如何建立快速工作流，因为那是业务部门的业务运作的关键，对业务而言，重要的是结果，而不是过程或管理；第二步，要缩短及放大反馈环路，找到约束点，在源头上解决问题，防止问题再次发生；第三步，要建立相关机制，既能鼓励探索、从错误中吸取经验，又能理解反复实践是精通工作的先觉条件。书中也提到，程序员们、项目经理每隔几年要学的东西都几近疯狂，有时候完全是全新的数据库技术，全新的编程或者项目管理方法，或者全新的技术交付模型。一个人可以有几次做到把自己原有的知识全部抛下，去迎合最新的趋势？我以前的javascript的概念，已经完全应付不了Typescript的技术了，简单的代码编辑看页面效果已经没法迎合gulp的前端整合技术了，熟悉的html已经无法支撑angular的MVVM开发模式了，不能不说，学得很辛苦，原因是我已经有了定式思维，觉得数据应该是这么走的，交互流程应该是那样处理的，反而一张白纸的小鲜肉们，不需要应付技术负载，对他们来说一切都是新的，走出自己思维模式的舒适区是需要很大的勇气的，我正在痛苦挣扎中。信息化不是一个部门，而是在整个机构中需要发展的一种能力。必须跳出IT领域才能弄清楚业务人员需要依靠IT的哪些工作来完成目标。有效的管理IT不只是一种关键的能力，也是考评一个机构业务运行的重要预测指标。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2016/11/17/20161117_%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%8D%97%EF%BC%9A%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E7%9A%84%E5%B7%A5%E5%85%B7%E4%B8%8E%E6%96%B9%E6%B3%95/" rel="prev" title="渗透测试实践指南：必知必会的工具与方法">
+      <i class="fa fa-chevron-left"></i> 渗透测试实践指南：必知必会的工具与方法
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2016/11/24/20161124_%E6%99%BA%E8%83%BD%E8%B7%AF%E7%94%B1%E5%99%A8%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/" rel="next" title="智能路由器开发指南">
+      智能路由器开发指南 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Sylvain Mars YU</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">553</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">127</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sylvain Mars YU</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

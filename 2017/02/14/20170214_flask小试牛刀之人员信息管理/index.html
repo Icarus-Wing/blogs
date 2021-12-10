@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"nasamars.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="在情人节这天写技术文档，太没有情调了。不过有情人的话，哪天不是情人节，哈哈。 0x00 背景在流程不太明确，每个人的责任边界比较模糊的时候，软件需求与产品都是个深坑。 0x001 未必是坑对于在这个工作的经办人而言，这个时候的需求与产品会是：  一个关键的流程梳理工具 划分管理责任的重要依据 项目工作流程实时可见的重要手段 问题追溯定位的重要来源  0x002 要求不低理想很丰满，毕竟在一片混沌之">
+<meta property="og:type" content="article">
+<meta property="og:title" content="flask小试牛刀之人员信息管理">
+<meta property="og:url" content="https://nasamars.github.io/2017/02/14/20170214_flask%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80%E4%B9%8B%E4%BA%BA%E5%91%98%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86/index.html">
+<meta property="og:site_name" content="我心中的香格里拉">
+<meta property="og:description" content="在情人节这天写技术文档，太没有情调了。不过有情人的话，哪天不是情人节，哈哈。 0x00 背景在流程不太明确，每个人的责任边界比较模糊的时候，软件需求与产品都是个深坑。 0x001 未必是坑对于在这个工作的经办人而言，这个时候的需求与产品会是：  一个关键的流程梳理工具 划分管理责任的重要依据 项目工作流程实时可见的重要手段 问题追溯定位的重要来源  0x002 要求不低理想很丰满，毕竟在一片混沌之">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2017-02-14T00:00:00.000Z">
+<meta property="article:modified_time" content="2021-12-10T01:40:06.624Z">
+<meta property="article:author" content="Sylvain Mars YU">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://nasamars.github.io/2017/02/14/20170214_flask%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80%E4%B9%8B%E4%BA%BA%E5%91%98%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-cn'
+  };
+</script>
+
+  <title>flask小试牛刀之人员信息管理 | 我心中的香格里拉</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我心中的香格里拉</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
+    <link itemprop="mainEntityOfPage" href="https://nasamars.github.io/2017/02/14/20170214_flask%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80%E4%B9%8B%E4%BA%BA%E5%91%98%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sylvain Mars YU">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我心中的香格里拉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          flask小试牛刀之人员信息管理
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-02-14 00:00:00" itemprop="dateCreated datePublished" datetime="2017-02-14T00:00:00+00:00">2017-02-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-10 01:40:06" itemprop="dateModified" datetime="2021-12-10T01:40:06+00:00">2021-12-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/" itemprop="url" rel="index"><span itemprop="name">技术文档</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>在情人节这天写技术文档，太没有情调了。不过有情人的话，哪天不是情人节，哈哈。</p>
+<h1 id="0x00-背景"><a href="#0x00-背景" class="headerlink" title="0x00 背景"></a>0x00 背景</h1><p>在流程不太明确，每个人的责任边界比较模糊的时候，软件需求与产品都是个深坑。</p>
+<h2 id="0x001-未必是坑"><a href="#0x001-未必是坑" class="headerlink" title="0x001 未必是坑"></a>0x001 未必是坑</h2><p>对于在这个工作的经办人而言，这个时候的需求与产品会是：</p>
+<ol>
+<li>一个关键的流程梳理工具</li>
+<li><strong>划分管理责任的重要依据</strong></li>
+<li>项目工作流程实时可见的重要手段</li>
+<li><strong>问题追溯定位的重要来源</strong></li>
+</ol>
+<h2 id="0x002-要求不低"><a href="#0x002-要求不低" class="headerlink" title="0x002 要求不低"></a>0x002 要求不低</h2><p>理想很丰满，毕竟在一片混沌之中，有个人杀出一条路之后，此后也就有路了。所以，为了完成这个目标，系统应该要具备：</p>
+<ol>
+<li>有一个可以快速开发的框架，至少包括数据持久化，后台处理与前台交互</li>
+<li>需要一个随需应变（On Demand）的设计架构，因为业务会随时的改，包括原来起初为一个会议参会人员设计的功能要变成多个会议同时进行的功能</li>
+<li>开发起来时间一定要短，效果一定不能太差，而且必须通过网络访问</li>
+</ol>
+<p>严格来说，上面那些需求都是非功能需求，那功能需求是：</p>
+<ol>
+<li>能够通过处理相片的规则化命名，新建参会人员的姓名、单位、证卡类型、参加会议的种类</li>
+<li>保留那些命名错误的照片，等待手工处理，总有一部分人提交的数据每次都有问题</li>
+<li>整理完一个批次的入库资料后，会打包并新建一个excel表格，经校验完之后生成一个zip压缩包，同时将证件的状态变成“送打印”</li>
+<li>每次打包的资料都是当前证件类型中未打印的资料</li>
+<li>卡证制作完毕后对每张证件进行校验，核校数据，通过点击“核校”按钮，将证件状态变成“已核校”</li>
+<li>对成产完成的证卡信息自动生成移交文档，通过选择批次数来选定数据，并合并同类证卡的人员名单</li>
+<li>会议结束后，整理出每种证件制作的数量，并打印名单</li>
+</ol>
+<p>在功能需求中提到的工作，就是我实际工作的内容，数据提交很零散，要汇总成一个大表，耗费的时间比较长，没有一个确切的统计数据和列表，核对制作证卡的时候就容易出错，上面的活不是很难，就是很反锁，很容易错，而且时候要做统计的时候又要花去不少的时间，此外还可能有多次提交制卡信息的单位，一个人实在是hold不住啊。</p>
+<p>事情做久了，自己对业务熟悉了，别人就不清楚了，所以到头来重担还得自己挑。所以拿起武器，开干，核心程序写了三个晚上，白天在真实数据与环境下调试了几天，主要是那些不按照规定乱命名的文件名，让我写了很多异常处理的语句。<br><span id="more"></span></p>
+<h1 id="0x01-准备"><a href="#0x01-准备" class="headerlink" title="0x01 准备"></a>0x01 准备</h1><p>我能拿起来的开发语言无非就是asp.net、java、php、python，至于javascript的什么Node.js，什么angularJs，什么TypeScript，今年应该就没问题了。备选的框架有：</p>
+<ol>
+<li>asp.net MVC5</li>
+<li>java Spring</li>
+<li>php thinkPhp</li>
+<li>python django／flask</li>
+</ol>
+<p>为了保持技术的连贯性，我选择python，框架的选择是一个难题，选熟悉的django还是选更流行的flask，看了一下午的文档之后最终选择，挑战自己，选择从未碰过的flask。</p>
+<h2 id="0x011-配置环境"><a href="#0x011-配置环境" class="headerlink" title="0x011 配置环境"></a>0x011 配置环境</h2><h3 id="0x0111-选择Anaconda"><a href="#0x0111-选择Anaconda" class="headerlink" title="0x0111 选择Anaconda"></a>0x0111 选择Anaconda</h3><p> 选择Anaconda <strong><a target="_blank" rel="noopener" href="https://www.continuum.io/downloads">python2.7</a></strong> 的发行版，下次选择python3.5的,有windows，mac与linux版本。</p>
+<h3 id="0x0112-选择pycharm"><a href="#0x0112-选择pycharm" class="headerlink" title="0x0112 选择pycharm"></a>0x0112 选择pycharm</h3><blockquote>
+<p>工欲善其事，必先利其器</p>
+</blockquote>
+<p>Python的IDE有很多，当然你也可以选择不用，但是我选的是Pycharm</p>
+<h3 id="0x0113"><a href="#0x0113" class="headerlink" title="0x0113"></a>0x0113</h3><p>需要安装的一些插件</p>
+<pre><code>pip install flask_bootstrap
+pip install flask_moment
+pip install docx
+pip install pymysql
+</code></pre><p>缺了的套件都可以用 pip install来安装</p>
+<h1 id="0x02-架构"><a href="#0x02-架构" class="headerlink" title="0x02 架构"></a>0x02 架构</h1><p>大体来说，代码架构是这样的</p>
+<pre><code>flack/
+├── app.py
+├── database.py
+├── models.py
+├── home.py
+├── templates/
+| └── some template html files
+├── static/
+| └── client-side js and css files
+└── requirements.txt
+</code></pre><h2 id="0x021-大致框架"><a href="#0x021-大致框架" class="headerlink" title="0x021 大致框架"></a>0x021 大致框架</h2><p>flask的框架大概是这样的：</p>
+<ul>
+<li>app.py的主要内容是包括页面显示，后台处理，Ajax服务以及自定义的页面面模版管道</li>
+<li>database.py与models.py主要是做数据持久化，以及数据实体的处理</li>
+<li>home.py是处理flask部署的时候设置</li>
+</ul>
+<h2 id="0x022-简单的后台处理流程"><a href="#0x022-简单的后台处理流程" class="headerlink" title="0x022 简单的后台处理流程"></a>0x022 简单的后台处理流程</h2><p>而页面处理主要是：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">初始化flask框架</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">app = Flask(__name__)</span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">初始化bootstrap前端样式</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">bootstrap = Bootstrap(app)</span><br><span class="line"><span class="meta">@app.route(&#x27;/index&#x27;)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span>():</span></span><br><span class="line">SQLQuery = <span class="string">&#x27;&#x27;&#x27;select `user`.type_id,count(*)</span></span><br><span class="line"><span class="string">          from attend,`user`</span></span><br><span class="line"><span class="string">          where attend.user_id=`user`.id</span></span><br><span class="line"><span class="string">               and attend.`status`=TRUE</span></span><br><span class="line"><span class="string">               and attend.meeting_id = %s</span></span><br><span class="line"><span class="string">          GROUP BY `attend`.cardtype_id&#x27;&#x27;&#x27;</span></span><br><span class="line">result = db_session.execute(SQLQuery % getMeeting_id())</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> render_template(<span class="string">&#x27;index.html&#x27;</span>, result=result)</span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>@app.route(‘/index’) 表示uri，资源的访问路径</li>
+<li>def index(): 定义一个函数，可以与路径名不一样，但是必须唯一，不支持函数重载</li>
+<li>return render_template(‘index.html’, result=result) 啪啦啪啦处理完了之后，通过render_template来与模版一起渲染，通过ninja引擎，来实现展现页面</li>
+</ol>
+<h2 id="0x023-简单的页面前端实现"><a href="#0x023-简单的页面前端实现" class="headerlink" title="0x023 简单的页面前端实现"></a>0x023 简单的页面前端实现</h2><p>必须实现框架的基本模版，扩展的是bootstrap框架的模版</p>
+<p>base.html<br><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">extends</span></span> &quot;bootstrap/base.html&quot; %&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">block</span></span> title %&#125;</span><span class="xml">资料管理系统</span><span class="template-tag">&#123;% <span class="name"><span class="name">endblock</span></span> %&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">block</span></span> navbar %&#125;</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;navbar navbar-inverse&quot;</span> <span class="attr">role</span>=<span class="string">&quot;navigation&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;navbar-header&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">                <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;navbar-toggle&quot;</span> <span class="attr">data-toggle</span>=<span class="string">&quot;collapse&quot;</span> <span class="attr">data-target</span>=<span class="string">&quot;.navbar-collapse&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">                    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;sr-only&quot;</span>&gt;</span>Toggle navigation<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">                    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;icon-bar&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">                    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;icon-bar&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">                    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;icon-bar&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">                <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">                <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;navbar-brand&quot;</span> <span class="attr">href</span>=<span class="string">&quot;/index&quot;</span>&gt;</span>参会人员管理系统<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;navbar-collapse collapse&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">                <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;nav navbar-nav&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;/zhengjian/jizhe&quot;</span>&gt;</span>记者证<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="xml">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;/zhengjian/lan&quot;</span>&gt;</span>蓝色工作证<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="xml">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;/zhengjian/lv&quot;</span>&gt;</span>绿色工作证<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="xml">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;/zhengjian/anbao&quot;</span>&gt;</span>安保证<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="xml">                <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    </span><span class="template-tag">&#123;% <span class="name"><span class="name">endblock</span></span> %&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="xml">    </span><span class="template-tag">&#123;% <span class="name"><span class="name">block</span></span> content %&#125;</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">        </span><span class="template-tag">&#123;% <span class="name"><span class="name">block</span></span> page_content %&#125;</span><span class="template-tag">&#123;% <span class="name"><span class="name">endblock</span></span> %&#125;</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    </span><span class="template-tag">&#123;% <span class="name"><span class="name">endblock</span></span> %&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="xml">    </span><span class="template-tag">&#123;% <span class="name"><span class="name">block</span></span> scripts %&#125;</span></span><br><span class="line"><span class="xml">    </span><span class="template-variable">&#123;&#123; super() &#125;&#125;</span></span><br><span class="line"><span class="xml">    </span><span class="template-variable">&#123;&#123; moment.include_moment() &#125;&#125;</span></span><br><span class="line"><span class="xml">    </span><span class="template-variable">&#123;&#123; moment.lang(&#x27;zh-CN&#x27;) &#125;&#125;</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;application/javascript&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">        $SCRIPT_ROOT = </span><span class="template-variable">&#123;&#123; request.script_root|tojson|<span class="name">safe</span> &#125;&#125;</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml">    </span><span class="template-tag">&#123;% <span class="name"><span class="name">endblock</span></span> %&#125;</span></span><br></pre></td></tr></table></figure><br>index.html<br><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">extends</span></span> &quot;base.html&quot; %&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">block</span></span> title %&#125;</span><span class="xml">资料管理系统</span><span class="template-tag">&#123;% <span class="name"><span class="name">endblock</span></span> %&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">block</span></span> page_content %&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>本次会议共制卡<span class="tag">&lt;<span class="name">b</span> <span class="attr">id</span>=<span class="string">&quot;sum&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span>张，具体情况如下：<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">if</span></span> result %&#125;</span></span><br><span class="line"><span class="xml">    </span><span class="template-tag">&#123;% <span class="name"><span class="name">for</span></span> r <span class="keyword">in</span> result %&#125;</span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">&quot;result&quot;</span>&gt;</span></span><span class="template-variable">&#123;&#123; r[0]|getTypeRealName &#125;&#125;</span><span class="xml">:</span><span class="template-variable">&#123;&#123; r[1] &#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="xml">    </span><span class="template-tag">&#123;% <span class="name"><span class="name">endfor</span></span> %&#125;</span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">endif</span></span> %&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">如果显示效果不好，请点击下载<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;/static/Soft/Chrome.exe&quot;</span>&gt;</span>谷歌浏览器<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">endblock</span></span> %&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">block</span></span> scripts %&#125;</span></span><br><span class="line"><span class="template-variable">&#123;&#123; super() &#125;&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">    $(function () &#123;</span></span><br><span class="line"><span class="xml">        $sum=0;</span></span><br><span class="line"><span class="xml">       $(&#x27;li#result&#x27;).each(function () &#123;</span></span><br><span class="line"><span class="xml">           li = $(this);</span></span><br><span class="line"><span class="xml">           text = li.text();</span></span><br><span class="line"><span class="xml">           array = text.split(&#x27;:&#x27;);</span></span><br><span class="line"><span class="xml">           $sum+=parseInt(array[1]);</span></span><br><span class="line"><span class="xml">       &#125;);</span></span><br><span class="line"><span class="xml">       $(&#x27;#sum&#x27;).text($sum);</span></span><br><span class="line"><span class="xml">    &#125;);</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">endblock</span></span> %&#125;</span></span><br></pre></td></tr></table></figure><br>index.html是通过获得后台的数据通过ninja引擎渲染获得的显示页面</p>
+<h2 id="0x024-数据对象持久化处理"><a href="#0x024-数据对象持久化处理" class="headerlink" title="0x024 数据对象持久化处理"></a>0x024 数据对象持久化处理</h2><p>最早开发的时候是用sqlite，后来改用mysql<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sqlalchemy import create_engine</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.orm import scoped_session, sessionmaker</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.ext.declarative import declarative_base</span><br><span class="line"><span class="comment">#&#x27;sqlite:///./card.db&#x27;</span></span><br><span class="line">engine = create_engine(<span class="string">&#x27;mysql+pymysql://root:root@localhost/card?charset=utf8&#x27;</span>, <span class="attribute">convert_unicode</span>=<span class="literal">False</span>)</span><br><span class="line"><span class="comment"># 创建数据库引擎( 当前目录下保存数据库文件)</span></span><br><span class="line">db_session = scoped_session(sessionmaker(<span class="attribute">autocommit</span>=<span class="literal">False</span>,</span><br><span class="line">                                     <span class="attribute">autoflush</span>=<span class="literal">False</span>,</span><br><span class="line">                                     <span class="attribute">bind</span>=engine))</span><br><span class="line">Base = declarative_base()</span><br><span class="line">Base.query = db_session.query_property()</span><br><span class="line"></span><br><span class="line">def init_db():</span><br><span class="line"><span class="comment"># 在这里导入所有的可能与定义模型有关的模块，这样他们才会合适地</span></span><br><span class="line"><span class="comment"># 在 metadata 中注册。否则，您将不得不在第一次执行 init_db() 时</span></span><br><span class="line"><span class="comment"># 先导入他们。</span></span><br><span class="line">import models</span><br><span class="line">Base.metadata.create_all(<span class="attribute">bind</span>=engine)</span><br></pre></td></tr></table></figure></p>
+<h2 id="0x025-数据实体定义"><a href="#0x025-数据实体定义" class="headerlink" title="0x025 数据实体定义"></a>0x025 数据实体定义</h2><p>一个数据实体类的定义，脱离了实际的数据库，很简单的完成CRUD的操作<br><figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="type">User</span>(<span class="type">Base</span>):</span></span><br><span class="line"><span class="class">    __tablename__ = &#x27;<span class="type">User&#x27;</span></span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">    id = <span class="type">Column</span>(<span class="type">Integer</span>, <span class="title">primary_key</span>=<span class="type">True</span>)</span></span><br><span class="line"><span class="class">    name = <span class="type">Column</span>(<span class="type">String(50)</span>, <span class="title">unique</span>=<span class="type">True</span>)</span></span><br><span class="line"><span class="class">    type_id = <span class="type">Column</span>(<span class="type">Integer</span>, <span class="type">ForeignKey</span>(&#x27;<span class="type">CardType</span>.<span class="title">id&#x27;</span>))</span></span><br><span class="line"><span class="class">    department = <span class="type">Column</span>(<span class="type">String(250)</span>)</span></span><br><span class="line"><span class="class">    status = <span class="type">Column</span>(<span class="type">BOOLEAN</span>, <span class="title">default</span>=<span class="type">True</span>)</span></span><br><span class="line"><span class="class">    path = <span class="type">Column</span>(<span class="type">String(500)</span>)</span></span><br><span class="line"><span class="class">    updatetime = <span class="type">Column</span>(<span class="type">String(500)</span>, <span class="title">default</span>=<span class="title">datetime</span>.<span class="title">datetime</span>.<span class="title">now</span>())</span></span><br><span class="line"><span class="class">    batchlog = relationship(&#x27;<span class="type">BatchLog</span>&#x27;, <span class="title">backref</span>=&#x27;<span class="title">users&#x27;</span>, <span class="title">lazy</span>=&#x27;<span class="title">dynamic&#x27;</span>)</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">    @hybrid_property</span></span><br><span class="line"><span class="class">    def getUpdateTime(<span class="title">self</span>):</span></span><br><span class="line"><span class="class">        time = datetime.datetime.strptime(<span class="title">self</span>.<span class="title">updatetime</span>, &#x27;%<span class="type">Y</span>-%<span class="title">m</span>-%<span class="title">d</span> %<span class="type">H</span>:%<span class="type">M</span>:%<span class="type">S</span>.%<span class="title">f&#x27;</span>)</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">        return time - datetime.timedelta(<span class="title">hours</span>=8)</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="0x03-开发"><a href="#0x03-开发" class="headerlink" title="0x03 开发"></a>0x03 开发</h1><p>光靠上面的只言片语，想完成一个flask的demo，或许还是有点困难的，有问题可以问我，或者看看flask的入门教程，也可以看看鄙人的代码。记录一下掉过的坑。</p>
+<h2 id="0x031-中文编码"><a href="#0x031-中文编码" class="headerlink" title="0x031 中文编码"></a>0x031 中文编码</h2><p>python2.7处理中文永远绕不过的就是中文编码的问题，那个该死的‘utf8’，下一次我一定用python3.5了</p>
+<h3 id="0x0311-mysql编码"><a href="#0x0311-mysql编码" class="headerlink" title="0x0311 mysql编码"></a>0x0311 mysql编码</h3><p>我怎么设置mysql的字符集<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">variables</span> <span class="keyword">like</span> <span class="string">&#x27;character%&#x27;</span>;</span><br></pre></td></tr></table></figure><br>mysql死活出来的乱码，于是使用了下面这一招<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">engine</span> = create_engine(<span class="string">&quot;mysql+pymysql://root:root@localhost/card?charset=utf8&quot;</span>, convert_unicode=<span class="literal">False</span>)</span><br><span class="line"><span class="comment"># 创建数据库引擎( 当前目录下保存数据库文件)</span></span><br><span class="line"><span class="attr">db_session</span> = scoped_session(sessionmaker(autocommit=<span class="literal">False</span>,</span><br><span class="line">                                         <span class="attr">autoflush</span>=<span class="literal">False</span>,</span><br><span class="line">                                         <span class="attr">bind</span>=engine))</span><br></pre></td></tr></table></figure></p>
+<h3 id="0x0312-路径中文编码"><a href="#0x0312-路径中文编码" class="headerlink" title="0x0312 路径中文编码"></a>0x0312 路径中文编码</h3><p>普通变量，使用decode(‘utf8’)函数<br><figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span>.decode(&#x27;utf8&#x27;)</span><br></pre></td></tr></table></figure><br>路径拼接，是用强制unicode的字符串<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rawpath = os.path.join(rawpath, <span class="string">u&#x27;记者证&#x27;</span>)</span><br></pre></td></tr></table></figure></p>
+<h2 id="0x032-word文档的仿宋字体设置"><a href="#0x032-word文档的仿宋字体设置" class="headerlink" title="0x032 word文档的仿宋字体设置"></a>0x032 word文档的仿宋字体设置</h2><p>在docx的源码，<code>--&gt;Lib--&gt;site-packages--&gt;docx--&gt;text--&gt;font.py</code><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@name.setter</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">name</span><span class="params">(<span class="keyword">self</span>,value)</span></span><span class="symbol">:</span></span><br><span class="line">    rPr = <span class="keyword">self</span>._element.get_or_add_rPr()</span><br><span class="line">    rPr.rFonts_ascii = value</span><br><span class="line">    rPr.rFonts_hAnsi = value</span><br><span class="line">    <span class="comment">#加上下面一句，亚洲字体</span></span><br><span class="line">    rPr.rFonts_eastAsia = value</span><br></pre></td></tr></table></figure><br>一般的段落是<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">acceptorparagraph.runs[<span class="number">0</span>].font.name = <span class="string">u&#x27;仿宋_GB2312&#x27;</span></span><br><span class="line">acceptorparagraph._element.r_lst[<span class="number">0</span>].rPr.rFonts.set(qn(<span class="string">&#x27;w:eastAsia&#x27;</span>), <span class="string">u&#x27;仿宋_GB2312&#x27;</span>)</span><br></pre></td></tr></table></figure><br>表格的话是<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">row_cells[<span class="number">0</span>].paragraphs[<span class="number">0</span>].runs[<span class="number">0</span>].font.name = <span class="string">u&#x27;仿宋_GB2312&#x27;</span></span><br><span class="line">row_cells[<span class="number">0</span>].paragraphs[<span class="number">0</span>].runs[<span class="number">0</span>].font.element.rPr.rFonts.eastAsia = <span class="string">u&#x27;仿宋_GB2312&#x27;</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="0x04-心得"><a href="#0x04-心得" class="headerlink" title="0x04 心得"></a>0x04 心得</h1><p>其实整个程序开发还是费了不少劲，但是成效还是很明显了：</p>
+<ol>
+<li>给我数据的人可以通过访问网页来查看相关参会人员的是否已经被成功接受</li>
+<li>所有人都能通过网页得知当前的证卡制作情况</li>
+<li>我理直气壮的提交做好的证件，不会被人说做漏了，也不会发生移交了卡发生丢失还赖我</li>
+<li>我能在任何时间统计出已经做了多少卡的数量，毕竟是工作量啊，不然总是个模糊数，岂不是“葫芦僧盘葫芦案”</li>
+<li>移交证卡的数量和名单列表自动生成，就不用每次都重新数，还容易出错，不然还说不清楚交出去多少</li>
+<li>连报账材料都自动生成了，以后再也不用费时做这些体力活了，只要排版打印就好</li>
+<li>只要我能说清楚了我做了啥，那就意味着标准在我手里，获得了标准的制定权就是拿到了游戏规则</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2017/02/09/20170209_%E7%81%AF%E5%A1%94/" rel="prev" title="灯塔--《别闹了，费曼先生》">
+      <i class="fa fa-chevron-left"></i> 灯塔--《别闹了，费曼先生》
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2017/02/15/20170215_%E8%87%AA%E7%A7%81%E7%9A%84%E5%9F%BA%E5%9B%A0/" rel="next" title="Evolution">
+      Evolution <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0x00-%E8%83%8C%E6%99%AF"><span class="nav-number">1.</span> <span class="nav-text">0x00 背景</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x001-%E6%9C%AA%E5%BF%85%E6%98%AF%E5%9D%91"><span class="nav-number">1.1.</span> <span class="nav-text">0x001 未必是坑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x002-%E8%A6%81%E6%B1%82%E4%B8%8D%E4%BD%8E"><span class="nav-number">1.2.</span> <span class="nav-text">0x002 要求不低</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x01-%E5%87%86%E5%A4%87"><span class="nav-number">2.</span> <span class="nav-text">0x01 准备</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x011-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83"><span class="nav-number">2.1.</span> <span class="nav-text">0x011 配置环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#0x0111-%E9%80%89%E6%8B%A9Anaconda"><span class="nav-number">2.1.1.</span> <span class="nav-text">0x0111 选择Anaconda</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x0112-%E9%80%89%E6%8B%A9pycharm"><span class="nav-number">2.1.2.</span> <span class="nav-text">0x0112 选择pycharm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x0113"><span class="nav-number">2.1.3.</span> <span class="nav-text">0x0113</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x02-%E6%9E%B6%E6%9E%84"><span class="nav-number">3.</span> <span class="nav-text">0x02 架构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x021-%E5%A4%A7%E8%87%B4%E6%A1%86%E6%9E%B6"><span class="nav-number">3.1.</span> <span class="nav-text">0x021 大致框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x022-%E7%AE%80%E5%8D%95%E7%9A%84%E5%90%8E%E5%8F%B0%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B"><span class="nav-number">3.2.</span> <span class="nav-text">0x022 简单的后台处理流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x023-%E7%AE%80%E5%8D%95%E7%9A%84%E9%A1%B5%E9%9D%A2%E5%89%8D%E7%AB%AF%E5%AE%9E%E7%8E%B0"><span class="nav-number">3.3.</span> <span class="nav-text">0x023 简单的页面前端实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x024-%E6%95%B0%E6%8D%AE%E5%AF%B9%E8%B1%A1%E6%8C%81%E4%B9%85%E5%8C%96%E5%A4%84%E7%90%86"><span class="nav-number">3.4.</span> <span class="nav-text">0x024 数据对象持久化处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x025-%E6%95%B0%E6%8D%AE%E5%AE%9E%E4%BD%93%E5%AE%9A%E4%B9%89"><span class="nav-number">3.5.</span> <span class="nav-text">0x025 数据实体定义</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x03-%E5%BC%80%E5%8F%91"><span class="nav-number">4.</span> <span class="nav-text">0x03 开发</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x031-%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81"><span class="nav-number">4.1.</span> <span class="nav-text">0x031 中文编码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#0x0311-mysql%E7%BC%96%E7%A0%81"><span class="nav-number">4.1.1.</span> <span class="nav-text">0x0311 mysql编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x0312-%E8%B7%AF%E5%BE%84%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81"><span class="nav-number">4.1.2.</span> <span class="nav-text">0x0312 路径中文编码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x032-word%E6%96%87%E6%A1%A3%E7%9A%84%E4%BB%BF%E5%AE%8B%E5%AD%97%E4%BD%93%E8%AE%BE%E7%BD%AE"><span class="nav-number">4.2.</span> <span class="nav-text">0x032 word文档的仿宋字体设置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x04-%E5%BF%83%E5%BE%97"><span class="nav-number">5.</span> <span class="nav-text">0x04 心得</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Sylvain Mars YU</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">553</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">127</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sylvain Mars YU</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

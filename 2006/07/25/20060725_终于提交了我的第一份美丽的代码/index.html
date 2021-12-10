@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"nasamars.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="&amp;emsp;&amp;emsp;今天是我实习的第三天,终于提交了我的第一份作业,自己还算是挺满意的,因为是我写得最最规范的代码,从变量命名,到空格,到语句的格式,到注释,到功能块的划分,每一段的代码几乎不超过10行,今天才发现,其实程序也是很美的.老大今天比较忙,一开始把我遗忘掉了.我就在看msdn,看了一段时间,老大过来看我的程序,发现那个排序的算法用了他自己定义的,不符合规格要我自己去写,而且算法还要">
+<meta property="og:type" content="article">
+<meta property="og:title" content="终于提交了我的第一份美丽的代码">
+<meta property="og:url" content="https://nasamars.github.io/2006/07/25/20060725_%E7%BB%88%E4%BA%8E%E6%8F%90%E4%BA%A4%E4%BA%86%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%BB%BD%E7%BE%8E%E4%B8%BD%E7%9A%84%E4%BB%A3%E7%A0%81/index.html">
+<meta property="og:site_name" content="我心中的香格里拉">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;今天是我实习的第三天,终于提交了我的第一份作业,自己还算是挺满意的,因为是我写得最最规范的代码,从变量命名,到空格,到语句的格式,到注释,到功能块的划分,每一段的代码几乎不超过10行,今天才发现,其实程序也是很美的.老大今天比较忙,一开始把我遗忘掉了.我就在看msdn,看了一段时间,老大过来看我的程序,发现那个排序的算法用了他自己定义的,不符合规格要我自己去写,而且算法还要">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2006-07-25T14:34:00.000Z">
+<meta property="article:modified_time" content="2021-12-10T01:40:06.612Z">
+<meta property="article:author" content="Sylvain Mars YU">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://nasamars.github.io/2006/07/25/20060725_%E7%BB%88%E4%BA%8E%E6%8F%90%E4%BA%A4%E4%BA%86%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%BB%BD%E7%BE%8E%E4%B8%BD%E7%9A%84%E4%BB%A3%E7%A0%81/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-cn'
+  };
+</script>
+
+  <title>终于提交了我的第一份美丽的代码 | 我心中的香格里拉</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我心中的香格里拉</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
+    <link itemprop="mainEntityOfPage" href="https://nasamars.github.io/2006/07/25/20060725_%E7%BB%88%E4%BA%8E%E6%8F%90%E4%BA%A4%E4%BA%86%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%BB%BD%E7%BE%8E%E4%B8%BD%E7%9A%84%E4%BB%A3%E7%A0%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sylvain Mars YU">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我心中的香格里拉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          终于提交了我的第一份美丽的代码
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2006-07-25 14:34:00" itemprop="dateCreated datePublished" datetime="2006-07-25T14:34:00+00:00">2006-07-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-10 01:40:06" itemprop="dateModified" datetime="2021-12-10T01:40:06+00:00">2021-12-10</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>&emsp;&emsp;今天是我实习的第三天,终于提交了我的第一份作业,自己还算是挺满意的,因为是我写得最最规范的代码,从变量命名,到空格,到语句的格式,到注释,到功能块的划分,每一段的代码几乎不超过10行,今天才发现,其实程序也是很美的.老大今天比较忙,一开始把我遗忘掉了.我就在看msdn,看了一段时间,老大过来看我的程序,发现那个排序的算法用了他自己定义的,不符合规格要我自己去写,而且算法还要重用.其实arraylist用是好用,但是要手工来做,还是蛮麻烦的.不久老老大走了过来,问我,在看文档拉?在查什么啊?我说arraylist.他说,msdn中文没有什么内容的,要看英文,于是,扑腾一下就连接到了英文的网页上去,在我敲入array的时候,他又开始说了,你这样找太费时间了,程序员的时间是很宝贵的,你看这边的导航栏,你要知道什么东西在什么地方能找到,象我就全部知道了,天哪,老老大很是可怕,这么的大的英文msdn的目录他全熟悉,怪不得是老老大.随后他叮嘱我说,尤其要看remark,这里的东西很关键,程序员的时间很少,要珍惜每一次查询的机会,要熟悉每一次查询的东西的功能,要学东西,不要为写代码而写代码.牢牢大这次很温和,比起前两次都温和,原来老老大也是很和蔼的人.算法好久都没怎么弄了,尤其是排序,看书还记得,惭愧了.忘记说了,软件园的饭堂还真是不错,比学校的好得多,饭是任吃的.吃完,老大总要绕园区一圈,因为他要抽烟,他今天说有关华工的家伙,搞数据库一流,经过他设计的数据库性能一流,他一个月的工资等于我老大一年,牛人啊.下午小睡一会后,继续作业,很快还就完成了,老大还算满意,我也很满意的说,毕竟是我最美丽的代码.我都为之感动了.接下来又开始做第二份的工作,连数据库了,操纵datagrid了,还是这些东西.还别说,虽然之前有gridview的经验,但是毕竟是低版本,唉很多特性竟然没有,气死偶了.另外老大今天特意说,原来dataset在商业中是不用的垃圾,要用就用dataset和dataAdpater,学习asp.net的同学要留意咯.三点多,老大特意过来提醒,有糖水和点心,快去拿.其实我一早就知道了,第一天,新人嘛,不好意思,啥都没有吃;第二天,吃了个点心,看到有绿豆糖水,也没敢喝;今天既拿了蛋挞,还弄了一碗糖水,不错的说.明天弄两碗.今天回来恰好遇到塞车,将近8点才回到家,一路公车的颠簸,整个人累死了.忽然觉得,原来这就是工作,还真是很辛苦,天天在公司都要拼命干活,所以还是做学生的好,悠闲自在,要好好enjoy剩下的学生的时间才行.否则真的对不起自己了.料想以后,估计也是如此的辛苦了,工资高,那还叫值得,否则真的吐血了.我在想,有什么工作,既不是很辛苦,工资又高呢?</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2006/07/24/20060724_%E7%AC%AC%E4%BA%8C%E5%A4%A9.../" rel="prev" title="第二天...">
+      <i class="fa fa-chevron-left"></i> 第二天...
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2006/07/27/20060727_%E6%9C%89%E5%8E%8B%E5%8A%9B,%E6%9C%AA%E8%A7%A3%E5%86%B3../" rel="next" title="有压力,未解决..">
+      有压力,未解决.. <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Sylvain Mars YU</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">553</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">127</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sylvain Mars YU</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

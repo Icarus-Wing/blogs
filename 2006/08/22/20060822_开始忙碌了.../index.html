@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"nasamars.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="&amp;emsp;&amp;emsp;继续做老大给的任务,两天了,终于设计好数据库了,学习了PoewrDesigner,开始仿照PetShop那样来的多层结构,发现其实要自己做一份出来还是很难很难的,或许是我害怕困难?或许是我有点愚钝?反正到现在还模模糊糊的.对了,前两天,问了我们的HR的经理,说为什么这次华工人这么少?她给我的答案多多少少让我很意外,说已经很照顾华工的人了,有的还可以直接来面试或笔试的,但是,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="开始忙碌了...">
+<meta property="og:url" content="https://nasamars.github.io/2006/08/22/20060822_%E5%BC%80%E5%A7%8B%E5%BF%99%E7%A2%8C%E4%BA%86.../index.html">
+<meta property="og:site_name" content="我心中的香格里拉">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;继续做老大给的任务,两天了,终于设计好数据库了,学习了PoewrDesigner,开始仿照PetShop那样来的多层结构,发现其实要自己做一份出来还是很难很难的,或许是我害怕困难?或许是我有点愚钝?反正到现在还模模糊糊的.对了,前两天,问了我们的HR的经理,说为什么这次华工人这么少?她给我的答案多多少少让我很意外,说已经很照顾华工的人了,有的还可以直接来面试或笔试的,但是,">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2006-08-22T14:32:00.000Z">
+<meta property="article:modified_time" content="2021-12-10T01:40:06.612Z">
+<meta property="article:author" content="Sylvain Mars YU">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://nasamars.github.io/2006/08/22/20060822_%E5%BC%80%E5%A7%8B%E5%BF%99%E7%A2%8C%E4%BA%86.../">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-cn'
+  };
+</script>
+
+  <title>开始忙碌了... | 我心中的香格里拉</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我心中的香格里拉</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
+    <link itemprop="mainEntityOfPage" href="https://nasamars.github.io/2006/08/22/20060822_%E5%BC%80%E5%A7%8B%E5%BF%99%E7%A2%8C%E4%BA%86.../">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sylvain Mars YU">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我心中的香格里拉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          开始忙碌了...
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2006-08-22 14:32:00" itemprop="dateCreated datePublished" datetime="2006-08-22T14:32:00+00:00">2006-08-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-10 01:40:06" itemprop="dateModified" datetime="2021-12-10T01:40:06+00:00">2021-12-10</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>&emsp;&emsp;继续做老大给的任务,两天了,终于设计好数据库了,学习了PoewrDesigner,开始仿照PetShop那样来的多层结构,发现其实要自己做一份出来还是很难很难的,或许是我害怕困难?或许是我有点愚钝?反正到现在还模模糊糊的.对了,前两天,问了我们的HR的经理,说为什么这次华工人这么少?她给我的答案多多少少让我很意外,说已经很照顾华工的人了,有的还可以直接来面试或笔试的,但是,分数出来就是这样…排得很后,尤其是上午的(综合素质考试).另外就是有的同学,一看就是那种读书很厉害,考试很优秀的人,不过公司要的不是考试能力好的人!还有的同学很厉害,编程很厉害,但是不适合在公司,更适合做老师,因为太偏执,钻牛角尖,很难融入人家的团队.还有的同学,沟通不行,不要说跟客户打交道,跟同事的沟通可能都会有问题…其实说的不就是人文修养嘛?杨叔子：没有一流的文科，就没有一流的理科；没有一流的理科，就没有一流的工科。大学生首先要学会做人，其次要学会思维，第三是学习知识和技能；一个国家没有科技，一打就垮；没有人文，不打自垮.华工一直最缺少的就是这种人文精神,没有人文精神做支柱,没有强大的理科做后盾,却拥有了强大的工科,这不能不说是一个奇迹!话说回来,华工人的理科底子都不差的…虽然增加了艺术学院之类的人文学科,但是距离人文精神还是相距甚远,不过从新传人身上仿佛还是可以找到些什么.什么是大学?1854年，都柏林天主教大学校长约翰·亨利·纽曼(John Henry Newman)的定义是:一所大学就是一个群英会集的殿堂，天下各处各地的学子到这里来，以寻求天下各种各样的知识。意大利崛起有博罗尼亚，法国人的崛起有巴黎大学，英国人的崛起有剑桥、牛津，美国人的崛起有哈佛。19世纪德国人要崛起的时候，出现了柏林大学。大学精神＋城市运动＝西方文明。竺可桢曾经说道:教授是大学的灵魂，一个大学学风的优劣，全视教授人选为转移。假使大学里有许多教授，以研究学问为毕生事业，以作育后进为无上职责，自然会养成良好的学风，不断的培育出来博学敦行的学者。爱因斯坦说学校的目标始终应当是，青年人在离开学校时，是作为一个和谐的人，而不是作为一个专家。曾经的曾经,我就是受着这些精神的鼓舞,受着上个世纪50年代的”海归”那种满腔热血报效祖国的感召,热血沸腾的踏入了校门,梦想着能够成就一番.然而,事实与理想是那么的遥远…但是,刚入校门的那块满是棱角的石头,现在已经变得光滑,去年的这个时候,我还感触文化的缺失…但是这一年来,自己也变得麻木了…但是依然不变的还是那种对人文精神的追求,对真理的渴望.三年来,几乎每个月我都会看完几本人文的书籍,对待每一门课都相当的认真…看起来是多么笨,本来一个月就可以搞定的考试,何必认真的去看;本来是学工科的人,看这么多的破书干嘛?好端端的,担忧这么多,不是费神吗?这块石头虽然外表平滑,其实内力还是那么的火热…一个人默默的努力着,不为什么,为的还是那种信念.</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2006/08/18/20060818_%E5%85%AC%E5%8F%B8%E7%94%B3%E8%AF%B7ISO9001/" rel="prev" title="公司申请ISO9001">
+      <i class="fa fa-chevron-left"></i> 公司申请ISO9001
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2006/09/17/20060917_%E4%B8%80%E7%AF%87%E6%B2%A1%E6%9C%89%E8%AE%B2%E6%BC%94%E7%9A%84%E6%BC%94%E8%AE%B2%E7%A8%BF/" rel="next" title="一篇没有讲演的演讲稿">
+      一篇没有讲演的演讲稿 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Sylvain Mars YU</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">553</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">127</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sylvain Mars YU</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
