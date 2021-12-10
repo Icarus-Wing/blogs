@@ -17,12 +17,11 @@ script:
 
 deploy:
   provider: pages
-  skip-cleanup: true
-  token: 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
-  keep-history: true
+  skip_cleanup: true
+  github_token: $GH_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
   on:
     branch: master
-  local-dir: public
 
 # after_script:
 #   - cd ./public
