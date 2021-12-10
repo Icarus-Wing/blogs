@@ -18,7 +18,7 @@ script:
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: $GH_TOKEN
+  github-token: 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
   keep-history: true
   on:
     branch: master
@@ -32,13 +32,14 @@ deploy:
 #   - git add .
 #   - git commit -m "Update docs"
 #   - git remote add origin https://${GH_REF}
-#   - git push --force nasamars:${GH_TOKEN} https://${GH_REF} origin:master
+#   - git push --force nasamars:${GH_TOKEN} https://${GH_REF} origin master
  # - git push --force "https://${GH_TOKEN}@${GH_REF}" master:master
 
 #  - hexo d
 #  - git add .
 #  - git commit -m "Update docs"
 #  - git push -f "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
+#  - git push --force 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 https://github.com/Nasamars/nasamars.github.io.git master master
 # E: Build LifeCycle
 
 branches:
