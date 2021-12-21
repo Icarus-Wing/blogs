@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8aad11dd-8039-4efa-884f-ab250ff037ed" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/source/_posts/20210924_MEME.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20211017_笔记0x11.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20211031_赢在起跑线是对冠军说的.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20211115_笔记0x12.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20211116_人间道.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20211125_世界变得真快.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20211126_1812序曲.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20211201_自己的战斗.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20211209_虚无.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20211211_笔记0x13.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20211212_孤独的文特森.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20211220_语言的终极.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/_posts/20210105_For_2021.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20210105_For_2021.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/20211209_虚无.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20211209_虚无.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,6 +268,9 @@
       <workItem from="1636988263217" duration="66000" />
       <workItem from="1637908791257" duration="1326000" />
       <workItem from="1639061076527" duration="294000" />
+      <workItem from="1639190575825" duration="575000" />
+      <workItem from="1639395567724" duration="928000" />
+      <workItem from="1639986506273" duration="226000" />
     </task>
     <task id="LOCAL-00001" summary="单车大战">
       <created>1523152461777</created>
