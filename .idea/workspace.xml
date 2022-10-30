@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8aad11dd-8039-4efa-884f-ab250ff037ed" name="Default" comment="焦虑">
-      <change afterPath="$PROJECT_DIR$/source/_posts/20220831_珍惜身边可以聊天的人.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20220902_是时候要有点追求了.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20220906_冷门小常识.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20220911_金色通道.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20220926_共生.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20221003_火花.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/20220103_For_2022.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20220103_For_2022.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/20220830_笔记0x20.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20220830_笔记0x20.md" afterDir="false" />
-    </list>
+    <list default="true" id="8aad11dd-8039-4efa-884f-ab250ff037ed" name="Default" comment="焦虑" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -312,6 +302,9 @@
       <workItem from="1662881821869" duration="806000" />
       <workItem from="1664177353141" duration="241000" />
       <workItem from="1664789965927" duration="695000" />
+      <workItem from="1665478400011" duration="435000" />
+      <workItem from="1666659247615" duration="97000" />
+      <workItem from="1666659369030" duration="1493000" />
     </task>
     <task id="LOCAL-00001" summary="单车大战">
       <created>1523152461777</created>
