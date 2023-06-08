@@ -8,6 +8,6 @@ name: Hexo Action
     # Github email
     user_email: canghai.yu@gmail.com # default is 41898282+github-actions[bot]@users.noreply.github.com
     # The deploy key for Github Pages repo
-    deploy_key: # default is 
+    deploy_key: HEXO_DEPLOY_KEY # default is 
     # Git commit messages to your GitHub Pages repository.
     commit_msg: # optional, default is 
