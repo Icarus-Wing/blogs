@@ -1,0 +1,13 @@
+name: Hexo Action
+  # You may pin to the exact commit or the version.
+  # uses: sma11black/hexo-action@08f5143fa402cdaccf9fc016d6bc91329f082eb0
+  uses: sma11black/hexo-action
+  with:
+    # Github user name
+    user_name: nasamars # default is github-actions[bot]
+    # Github email
+    user_email: canghai.yu@gmail.com # default is 41898282+github-actions[bot]@users.noreply.github.com
+    # The deploy key for Github Pages repo
+    deploy_key: # default is 
+    # Git commit messages to your GitHub Pages repository.
+    commit_msg: # optional, default is 
