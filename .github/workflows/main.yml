@@ -1,4 +1,4 @@
-name: Hexo Action
+- name: Hexo Action
   # You may pin to the exact commit or the version.
   # uses: sma11black/hexo-action@08f5143fa402cdaccf9fc016d6bc91329f082eb0
   uses: sma11black/hexo-action
