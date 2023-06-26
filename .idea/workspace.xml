@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8aad11dd-8039-4efa-884f-ab250ff037ed" name="Default" comment="焦虑">
-      <change afterPath="$PROJECT_DIR$/source/_posts/20230607_柏拉图式的爱情.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20230608_生动的大课.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20230611_人文温度.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20230626_文化与人.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/20051118_浓雾，迷失，路.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20051118_浓雾，迷失，路.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/20170224_机器纪元.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20170224_机器纪元.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/20230101_For_2023.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20230101_For_2023.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,18 +40,22 @@
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectId" id="1ZIrr6lwWFwBO5QdhOSpmbcaUVr" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="NodeJSConfigurationType" application-parameters="g" path-to-js-file="bin/hexo" working-dir="$PROJECT_DIR$/node_modules/hexo">
       <method v="2" />
@@ -339,6 +347,8 @@
       <workItem from="1685952138613" duration="29000" />
       <workItem from="1685952175183" duration="166000" />
       <workItem from="1686205522304" duration="1032000" />
+      <workItem from="1686446943880" duration="100000" />
+      <workItem from="1687753231504" duration="384000" />
     </task>
     <task id="LOCAL-00001" summary="单车大战">
       <created>1523152461777</created>
@@ -582,6 +592,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <ignored-roots>
       <path value="$PROJECT_DIR$/.deploy_git" />
       <path value="$PROJECT_DIR$/themes/next20200310fail/source/lib/Han" />
