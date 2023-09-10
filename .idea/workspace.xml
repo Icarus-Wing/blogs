@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8aad11dd-8039-4efa-884f-ab250ff037ed" name="Default" comment="焦虑">
-      <change afterPath="$PROJECT_DIR$/source/_posts/20230814_笔记0x24.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20230817_精神世界的地图.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20230903_过瘾.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/20120309_不可预测的哲学悖论.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20120309_不可预测的哲学悖论.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/20130903_十种必知的建筑风格.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20130903_十种必知的建筑风格.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/20230101_For_2023.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20230101_For_2023.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20230909_.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/20230903_过瘾.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20230903_过瘾.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -360,6 +355,7 @@
       <workItem from="1692025699382" duration="183000" />
       <workItem from="1692270168224" duration="700000" />
       <workItem from="1693786409507" duration="331000" />
+      <workItem from="1694261096098" duration="118000" />
     </task>
     <task id="LOCAL-00001" summary="单车大战">
       <created>1523152461777</created>
