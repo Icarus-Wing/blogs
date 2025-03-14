@@ -5,23 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8aad11dd-8039-4efa-884f-ab250ff037ed" name="Default" comment="焦虑">
-      <change afterPath="$PROJECT_DIR$/source/_posts/20231105_什么才算无知.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20231112_世界很奇怪.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20231125_另眼看非洲.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20231130_笔记0x26.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20240311_自扰.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20240324_变or不变.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20240414_For2024.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20240502_沃尔弗拉姆的探索.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20240504_换个眼光看世界.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/20240505_换个方式来吃饭.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20241103_假如回到20年前.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20241118_茫茫人海.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20241221_神秘的魔法师.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20241229_TA是谁.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20241229_低糖生活.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20241229_逃离心智.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20241229_驯龙记.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20241229_黑神话.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20250102_For2025.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20250222_出海.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20250224_克己复礼.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20250224_初出茅庐.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20250224_形而上.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20250224_悟.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/20250301_人工智能呼啸而来.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/20060917_一篇没有讲演的演讲稿.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20060917_一篇没有讲演的演讲稿.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/20070623_大学这几年(柒).md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20070623_大学这几年(柒).md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/20151111_infomation &amp;amp; evolution.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20151111_infomation &amp;amp; evolution.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/20221003_火花.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20221003_火花.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/20230101_For_2023.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20230101_For_2023.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/20230924_利器.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20230924_利器.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/20081113_我的十年感言.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20081113_我的十年感言.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/20240414_For2024.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/20240414_For2024.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +34,7 @@
       <list>
         <option value="HexoPost" />
         <option value="Hexo" />
+        <option value="Hexo Post" />
       </list>
     </option>
   </component>
@@ -69,7 +71,12 @@
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/sylvain/GitHub/blogs&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;fileTemplates&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -402,6 +409,20 @@
       <workItem from="1714876641036" duration="497000" />
       <workItem from="1717374799341" duration="21000" />
       <workItem from="1730631711575" duration="14000" />
+      <workItem from="1730631731324" duration="889000" />
+      <workItem from="1730632637099" duration="250000" />
+      <workItem from="1730632899200" duration="220000" />
+      <workItem from="1730633127914" duration="251000" />
+      <workItem from="1731891207238" duration="175000" />
+      <workItem from="1734749606588" duration="124000" />
+      <workItem from="1735461792617" duration="1088000" />
+      <workItem from="1735696072758" duration="123000" />
+      <workItem from="1735779954604" duration="35000" />
+      <workItem from="1737965589627" duration="57000" />
+      <workItem from="1740357718559" duration="215000" />
+      <workItem from="1740358000375" duration="35000" />
+      <workItem from="1740818340314" duration="380000" />
+      <workItem from="1741914994537" duration="46000" />
     </task>
     <task id="LOCAL-00001" summary="单车大战">
       <created>1523152461777</created>
