@@ -12,10 +12,46 @@ body {
 }
 
 // -----------------------------------------------------------
-// 2. 菜单不折行
+// 2. 菜单不折行 - 覆盖 Pisces 平板/手机展开菜单的样式
 // -----------------------------------------------------------
-.menu-item a {
-  white-space: nowrap;
+
+// 桌面端菜单
+.menu-item a,
+.menu-item a span {
+  white-space: nowrap !important;
+}
+
+// Pisces 方案在平板/手机下，site-nav 展开为浮动面板
+// 需要给面板设置足够宽度
+.site-nav-on .site-nav,
+.site-nav {
+  min-width: 120px !important;
+}
+
+// 平板/手机菜单项（display:block 堆叠时）
+@media (max-width: 991px) {
+  .site-nav {
+    min-width: 120px !important;
+  }
+
+  .menu-item {
+    width: 100% !important;
+  }
+
+  .menu-item a {
+    white-space: nowrap !important;
+    min-width: 80px !important;
+    padding: 8px 20px !important;
+    text-align: left !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px;
+  }
+
+  .menu-item a i {
+    flex-shrink: 0;
+    margin-right: 0 !important;
+  }
 }
 
 // -----------------------------------------------------------
