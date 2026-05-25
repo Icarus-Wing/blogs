@@ -6,8 +6,8 @@
 # ---------------------------------------------------------------
 # Scheme Settings
 # ---------------------------------------------------------------
-scheme: Pisces
-darkmode: false
+scheme: Gemini
+darkmode: true
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -17,23 +17,24 @@ menu:
   tags: /tags/ || fa fa-tags
   categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
+  search: /search/ || fa fa-search
 
 menu_settings:
   icons: true
-  badges: false
+  badges: true
 
 # ---------------------------------------------------------------
 # Sidebar Settings
 # ---------------------------------------------------------------
 sidebar:
-  position: right
+  position: left
   display: post
   padding: 18
   offset: 12
 
 avatar:
   url:
-  rounded: false
+  rounded: true
   rotated: false
 
 site_state: true
@@ -45,7 +46,7 @@ social:
 social_icons:
   enable: true
   icons_only: false
-  transition: false
+  transition: true
 
 # Table of Contents
 toc:
@@ -61,7 +62,7 @@ toc:
 footer:
   icon:
     name: fa fa-heart
-    animated: false
+    animated: true
     color: "#ff0000"
   powered: true
   beian:
@@ -70,8 +71,8 @@ footer:
 # Creative Commons License
 creative_commons:
   license: by-nc-sa
-  sidebar: false
-  post: false
+  sidebar: true
+  post: true
 
 # ---------------------------------------------------------------
 # Post Settings
@@ -87,7 +88,15 @@ post_meta:
     another_day: true
   categories: true
 
-tag_icon: false
+# Word count & reading time (requires hexo-symbols-count-time)
+symbols_count_time:
+  separated_meta: true
+  item_text_post: true
+  item_text_total: true
+  awl: 2
+  wpm: 275
+
+tag_icon: true
 
 post_navigation: left
 
@@ -119,21 +128,21 @@ codeblock:
     dark: prism-dark
   copy_button:
     enable: true
-    style: default
+    style: mac
 
 back2top:
   enable: true
-  sidebar: false
-  scrollpercent: false
+  sidebar: true
+  scrollpercent: true
 
 reading_progress:
-  enable: false
+  enable: true
   position: top
   color: "#37c6c0"
   height: 3px
 
 bookmark:
-  enable: false
+  enable: true
   color: "#222"
   save: auto
 
@@ -155,6 +164,11 @@ index_with_subtitle: false
 exturl: false
 
 # ---------------------------------------------------------------
+# Third Party: Image Zoom
+# ---------------------------------------------------------------
+mediumzoom: true
+
+# ---------------------------------------------------------------
 # Comments Settings
 # ---------------------------------------------------------------
 comments:
@@ -162,6 +176,16 @@ comments:
   active:
   storage: true
   lazyload: false
+
+# ---------------------------------------------------------------
+# Search (requires hexo-generator-searchdb)
+# ---------------------------------------------------------------
+local_search:
+  enable: true
+  trigger: auto
+  top_n_per_article: 3
+  unescape: false
+  preload: true
 
 # ---------------------------------------------------------------
 # Animation Settings
