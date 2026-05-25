@@ -1,0 +1,223 @@
+// ============================================================
+// 自定义样式：整体视觉提升
+// ============================================================
+
+// -----------------------------------------------------------
+// 1. 全局字体与间距优化
+// -----------------------------------------------------------
+body {
+  font-family: "Lato", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// -----------------------------------------------------------
+// 2. 菜单不折行
+// -----------------------------------------------------------
+.menu-item a {
+  white-space: nowrap;
+}
+
+// -----------------------------------------------------------
+// 3. 侧边栏：渐变品牌区域
+// -----------------------------------------------------------
+.site-brand-container {
+  background: linear-gradient(160deg, #0f2027, #203a43, #2c5364) !important;
+}
+
+.site-title a {
+  color: #fff !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.site-subtitle {
+  color: rgba(255,255,255,0.7) !important;
+}
+
+// 菜单项样式美化
+.menu-item a {
+  color: #555 !important;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+}
+
+.menu-item a:hover,
+.menu-item.active a {
+  color: #2196f3 !important;
+  background: rgba(33, 150, 243, 0.08) !important;
+}
+
+// -----------------------------------------------------------
+// 4. 文章卡片效果
+// -----------------------------------------------------------
+.post-block {
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 36px 40px;
+  margin-bottom: 30px;
+  background: #fff;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+.post-block:hover {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.10);
+  transform: translateY(-2px);
+}
+
+// 文章标题
+.post-title a {
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  color: #1a1a2e !important;
+  transition: color 0.25s;
+}
+
+.post-title a:hover {
+  color: #2196f3 !important;
+}
+
+// -----------------------------------------------------------
+// 5. 阅读更多按钮
+// -----------------------------------------------------------
+.post-button .btn {
+  border-radius: 20px !important;
+  padding: 8px 24px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.5px;
+  border: 1.5px solid #2196f3 !important;
+  color: #2196f3 !important;
+  background: transparent !important;
+  transition: all 0.25s ease !important;
+}
+
+.post-button .btn:hover {
+  background: #2196f3 !important;
+  color: #fff !important;
+}
+
+// -----------------------------------------------------------
+// 6. 文章元信息（日期、分类）
+// -----------------------------------------------------------
+.post-meta {
+  font-size: 13px;
+  color: #999;
+}
+
+.post-meta a {
+  color: #777 !important;
+  transition: color 0.2s;
+}
+
+.post-meta a:hover {
+  color: #2196f3 !important;
+}
+
+// -----------------------------------------------------------
+// 7. 侧边栏作者信息卡片
+// -----------------------------------------------------------
+.sidebar-inner {
+  padding: 20px 16px;
+}
+
+.site-author-name {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: #1a1a2e !important;
+}
+
+.site-state-item-count {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: #2196f3 !important;
+}
+
+// -----------------------------------------------------------
+// 8. 代码块优化
+// -----------------------------------------------------------
+.highlight, code {
+  border-radius: 6px;
+}
+
+.highlight {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+// -----------------------------------------------------------
+// 9. 分页按钮
+// -----------------------------------------------------------
+.pagination .page-number,
+.pagination .extend {
+  border-radius: 6px !important;
+  transition: all 0.2s ease;
+}
+
+.pagination .page-number.current {
+  background: #2196f3 !important;
+  border-color: #2196f3 !important;
+}
+
+// -----------------------------------------------------------
+// 10. 标签云
+// -----------------------------------------------------------
+.tag-cloud-tags a {
+  border-radius: 20px !important;
+  padding: 4px 12px !important;
+  margin: 4px !important;
+  border: 1px solid #e0e0e0 !important;
+  transition: all 0.2s ease !important;
+}
+
+.tag-cloud-tags a:hover {
+  background: #2196f3 !important;
+  border-color: #2196f3 !important;
+  color: #fff !important;
+}
+
+// -----------------------------------------------------------
+// 11. 页脚
+// -----------------------------------------------------------
+.footer {
+  font-size: 13px;
+  color: #aaa;
+}
+
+// -----------------------------------------------------------
+// 12. 深色模式适配
+// -----------------------------------------------------------
+@media (prefers-color-scheme: dark) {
+  .post-block {
+    background: #1e1e1e;
+    border-color: rgba(255,255,255,0.06);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  }
+
+  .post-block:hover {
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  }
+
+  .post-title a {
+    color: #e0e0e0 !important;
+  }
+}
+
+// -----------------------------------------------------------
+// 13. 移动端优化
+// -----------------------------------------------------------
+@media (max-width: 767px) {
+  .post-block {
+    padding: 24px 20px;
+    border-radius: 8px;
+  }
+
+  .post-title a {
+    font-size: 18px !important;
+  }
+}

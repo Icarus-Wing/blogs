@@ -3,10 +3,14 @@
 # Docs: https://theme-next.js.org/docs/
 # ===============================================================
 
+# Custom files
+custom_file_path:
+  style: source/_data/styles.styl
+
 # ---------------------------------------------------------------
 # Scheme Settings
 # ---------------------------------------------------------------
-scheme: Gemini
+scheme: Pisces
 darkmode: true
 
 # ---------------------------------------------------------------
@@ -26,10 +30,11 @@ menu_settings:
 # Sidebar Settings
 # ---------------------------------------------------------------
 sidebar:
-  position: left
+  position: right
   display: post
   padding: 18
   offset: 12
+  width: 260
 
 avatar:
   url:
@@ -149,11 +154,19 @@ bookmark:
 # Font Settings
 # ---------------------------------------------------------------
 font:
-  enable: false
-  host:
+  enable: true
+  host: https://fonts.googleapis.com
   global:
     external: true
     family: Lato
+    size: 1
+  title:
+    external: true
+    family: Roboto Slab
+    size:
+  headings:
+    external: true
+    family: Roboto Slab
     size:
 
 # ---------------------------------------------------------------
