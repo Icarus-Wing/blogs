@@ -1,0 +1,177 @@
+# ===============================================================
+# NexT Theme Configuration (v8)
+# Docs: https://theme-next.js.org/docs/
+# ===============================================================
+
+# ---------------------------------------------------------------
+# Scheme Settings
+# ---------------------------------------------------------------
+scheme: Pisces
+darkmode: false
+
+# ---------------------------------------------------------------
+# Menu Settings
+# ---------------------------------------------------------------
+menu:
+  home: / || fa fa-home
+  tags: /tags/ || fa fa-tags
+  categories: /categories/ || fa fa-th
+  archives: /archives/ || fa fa-archive
+
+menu_settings:
+  icons: true
+  badges: false
+
+# ---------------------------------------------------------------
+# Sidebar Settings
+# ---------------------------------------------------------------
+sidebar:
+  position: right
+  display: post
+  padding: 18
+  offset: 12
+
+avatar:
+  url:
+  rounded: false
+  rotated: false
+
+site_state: true
+
+social:
+  #GitHub: https://github.com/yourname || fab fa-github
+  #E-Mail: mailto:yourname@gmail.com || fa fa-envelope
+
+social_icons:
+  enable: true
+  icons_only: false
+  transition: false
+
+# Table of Contents
+toc:
+  enable: true
+  number: true
+  wrap: false
+  expand_all: false
+  max_depth: 6
+
+# ---------------------------------------------------------------
+# Footer Settings
+# ---------------------------------------------------------------
+footer:
+  icon:
+    name: fa fa-heart
+    animated: false
+    color: "#ff0000"
+  powered: true
+  beian:
+    enable: false
+
+# Creative Commons License
+creative_commons:
+  license: by-nc-sa
+  sidebar: false
+  post: false
+
+# ---------------------------------------------------------------
+# Post Settings
+# ---------------------------------------------------------------
+excerpt_description: true
+read_more_btn: true
+
+post_meta:
+  item_text: true
+  created_at: true
+  updated_at:
+    enable: true
+    another_day: true
+  categories: true
+
+tag_icon: false
+
+post_navigation: left
+
+# ---------------------------------------------------------------
+# Custom Pages
+# ---------------------------------------------------------------
+tagcloud:
+  min: 12
+  max: 30
+  start: "#ccc"
+  end: "#111"
+  amount: 200
+
+# ---------------------------------------------------------------
+# Misc Theme Settings
+# ---------------------------------------------------------------
+text_align:
+  desktop: justify
+  mobile: justify
+
+mobile_layout_economy: false
+
+codeblock:
+  theme:
+    light: default
+    dark: stackoverflow-dark
+  prism:
+    light: prism
+    dark: prism-dark
+  copy_button:
+    enable: true
+    style: default
+
+back2top:
+  enable: true
+  sidebar: false
+  scrollpercent: false
+
+reading_progress:
+  enable: false
+  position: top
+  color: "#37c6c0"
+  height: 3px
+
+bookmark:
+  enable: false
+  color: "#222"
+  save: auto
+
+# ---------------------------------------------------------------
+# Font Settings
+# ---------------------------------------------------------------
+font:
+  enable: false
+  host:
+  global:
+    external: true
+    family: Lato
+    size:
+
+# ---------------------------------------------------------------
+# SEO Settings
+# ---------------------------------------------------------------
+index_with_subtitle: false
+exturl: false
+
+# ---------------------------------------------------------------
+# Comments Settings
+# ---------------------------------------------------------------
+comments:
+  style: tabs
+  active:
+  storage: true
+  lazyload: false
+
+# ---------------------------------------------------------------
+# Animation Settings
+# ---------------------------------------------------------------
+motion:
+  enable: true
+  async: false
+  transition:
+    post_block: fadeIn
+    post_header: slideDownIn
+    post_body: slideDownIn
+    coll_header: slideLeftIn
+    sidebar: slideUpIn

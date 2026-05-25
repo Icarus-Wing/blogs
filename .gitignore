@@ -1,2 +1,8 @@
-
 .deploy_git/
+node_modules/
+public/
+db.json
+*.log
+.DS_Store
+.idea/
+.vscode/

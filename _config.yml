@@ -31,7 +31,10 @@ skip_render:
 new_post_name: :title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
-external_link: true # Open external links in new tab
+external_link:
+  enable: true
+  field: site
+  exclude: ''
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
@@ -40,8 +43,9 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: true
   tab_replace:
+  wrap: true
+  hljs: false
 
 # Category & Tag
 default_category: uncategorized
@@ -72,9 +76,3 @@ deploy:
   repo: git@github.com:Nasamars/nasamars.github.io
   branch: master
 
-# Admin
-admin:
-    name: hexo
-    password: hey
-    secret: hey hexo
-    expire: 60*1
