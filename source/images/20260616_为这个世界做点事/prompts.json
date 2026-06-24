@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "四十而惑的书桌",
+    "subject": "middle-aged reader at a desk",
+    "composition": "slightly high three-quarter view, interior foreground and landscape background",
+    "viewpoint": "high three-quarter view",
+    "palette": "warm amber, ink gray, muted celadon, deep indigo",
+    "style": "Chinese ink wash, Renaissance chiaroscuro, contemporary editorial digital painting",
+    "prompt": "A middle-aged Chinese reader sits alone at a plain wooden desk at dawn, scattered blank manuscript pages, tiny footnote marks, a tea cup, and ceramic shards subtly resembling fragments of Chinese history, an open window reveals a calm river and terraced fields fading into mist, faint silhouettes of ordinary people working in the distance, Chinese ink wash negative space blended with Renaissance chiaroscuro and refined contemporary editorial digital painting, warm lamp light against cool blue-gray morning, contemplative, humane, intellectually serious, magazine cover quality, no readable text, no logo, no watermark --ar 16:9 --s 350 --exp 25"
+  },
+  {
+    "id": 2,
+    "name": "往里走的房间",
+    "subject": "small inner room nested inside a vast exterior world",
+    "composition": "surreal cutaway architecture, room within landscape",
+    "viewpoint": "front-facing wide shot",
+    "palette": "warm white, stone gray, pale gold, dusk blue",
+    "style": "Surrealism, minimalist architectural concept art",
+    "prompt": "A tiny quiet room floating inside a much larger misty world, the walls are partly transparent like memory, outside are rivers, old roads, distant city lights, and scattered historical fragments, inside is only one chair, one lamp, and a clean table, Surrealist minimalist architectural concept art, precise negative space, soft volumetric dawn light, warm white and dusk blue palette, inward settlement after seeing the outside world, calm but profound, no readable text, no logo, no watermark --ar 16:9 --s 300 --exp 30"
+  },
+  {
+    "id": 3,
+    "name": "轴心时代的问题",
+    "subject": "floating question-shaped stone pillars",
+    "composition": "monumental low-angle landscape",
+    "viewpoint": "low angle",
+    "palette": "sandstone, oxidized bronze, cloudy pearl, shadow blue",
+    "style": "Greco-Roman classical, Dunhuang mural, fresco texture",
+    "prompt": "Ancient stone pillars shaped like abstract question marks rise from a desert plain, each pillar carries no words, only carved weathered traces from different civilizations, small human figures stand below in silence, Greco-Roman classical monumentality fused with Dunhuang mural mineral pigments and fresco texture, dramatic low-angle composition, cloudy pearl sky, sandstone and oxidized bronze palette, the feeling of great questions surviving across time, no readable text, no logo, no watermark --ar 21:9 --s 500 --exp 35"
+  },
+  {
+    "id": 4,
+    "name": "热闹纸上哀伤深处",
+    "subject": "torn opera stage paper and empty chairs",
+    "composition": "diagonal theatrical still life",
+    "viewpoint": "eye-level close mid shot",
+    "palette": "vermillion, soot black, faded gold, ash white",
+    "style": "Baroque chiaroscuro, Chinese opera stage, oil painting",
+    "prompt": "A torn sheet of theatrical stage paper curls across an empty Chinese opera platform, red tassels, abandoned props, and rows of empty wooden chairs recede into darkness, the last warm spotlight falls on dust in the air, Baroque chiaroscuro oil painting with Chinese opera visual language, diagonal composition, vermillion and soot black with faded gold, the sadness and compassion beneath noisy stories, no readable text, no logo, no watermark --ar 3:2 --s 550 --exp 40"
+  },
+  {
+    "id": 5,
+    "name": "判断世界的能力",
+    "subject": "compass made of books, fields, and city roads",
+    "composition": "top-down symbolic map",
+    "viewpoint": "bird's-eye view",
+    "palette": "paper beige, forest green, graphite, quiet red",
+    "style": "Bauhaus, cartographic illustration, clean editorial vector",
+    "prompt": "A precise top-down symbolic map where open books form a compass rose, rural fields, city roads, law lines, and river channels radiate from the center, small red markers show possible choices without any labels, Bauhaus-inspired cartographic editorial illustration, clean geometry, restrained vector shapes, paper beige, forest green, graphite, and quiet red palette, clarity, judgment, educated calm, no readable text, no logo, no watermark --ar 1:1 --s 250 --exp 15"
+  },
+  {
+    "id": 6,
+    "name": "甘心做脚注",
+    "subject": "tiny footnote supporting a massive book structure",
+    "composition": "macro close-up with monumental scale illusion",
+    "viewpoint": "extreme close-up",
+    "palette": "ivory paper, lamp gold, walnut brown, soft shadow",
+    "style": "Photorealistic macro, Dutch still life lighting",
+    "prompt": "An extreme close-up of a tiny handwritten footnote mark at the bottom of a blank ivory page, the mark casts a long shadow that becomes the foundation of a vast library-like structure rising in the background, photorealistic macro still life with Dutch old master lighting, shallow depth of field, ivory paper, lamp gold, walnut brown, and soft shadow palette, humble contribution, quiet dignity, no readable text, no logo, no watermark --ar 4:3 --s 300 --exp 20"
+  },
+  {
+    "id": 7,
+    "name": "普通人的历史",
+    "subject": "rural families and river economy",
+    "composition": "panoramic social landscape",
+    "viewpoint": "distant elevated panorama",
+    "palette": "earth ochre, rice green, river blue, smoke gray",
+    "style": "Chinese handscroll, social realist mural",
+    "prompt": "A panoramic handscroll-like landscape of ordinary people cooking, farming, repairing boats, carrying grain, and crossing small bridges along a long river, no emperors or generals, only daily life as the foundation of culture, Chinese handscroll composition fused with restrained social realist mural painting, distant elevated view, earth ochre, rice green, river blue, and smoke gray palette, humane, grounded, historically deep, no readable text, no logo, no watermark --ar 21:9 --s 450 --exp 30"
+  },
+  {
+    "id": 8,
+    "name": "消化外来之物",
+    "subject": "ceramic bowl transforming foreign seeds into local roots",
+    "composition": "centered symbolic still life",
+    "viewpoint": "slightly low close shot",
+    "palette": "porcelain white, moss green, clay red, dark ink",
+    "style": "Art Nouveau botanical, Chinese porcelain, watercolor",
+    "prompt": "A white porcelain bowl on dark soil contains foreign-looking seeds slowly sprouting into roots that become native landscape contours, the roots wrap gently around porcelain cracks without breaking the bowl, Art Nouveau botanical curves fused with Chinese porcelain aesthetics, delicate watercolor washes, centered symbolic still life, porcelain white, moss green, clay red, and dark ink palette, digestion, adaptation, cultural patience, no readable text, no logo, no watermark --ar 3:4 --s 500 --exp 35"
+  },
+  {
+    "id": 9,
+    "name": "技术与人文的边界扩展",
+    "subject": "neural constellation merging with classical notes and circuits",
+    "composition": "abstract radial field",
+    "viewpoint": "immersive abstract view",
+    "palette": "deep indigo, cyan, warm gold, bone white",
+    "style": "Complex systems aesthetic, digital painting, subtle glitch art",
+    "prompt": "A radial abstract field where neural constellations, handwritten scholarly notes, circuit traces, and river paths merge into one expanding boundary, small sparks of insight appear like stars, complex systems aesthetic with subtle glitch art and elegant digital painting, deep indigo, cyan, warm gold, and bone white palette, order emerging from inquiry, technology held inside humanistic reflection, no readable text, no logo, no watermark --ar 16:9 --s 400 --exp 55 --w 250"
+  },
+  {
+    "id": 10,
+    "name": "为世界做点事",
+    "subject": "small patch of earth being cultivated by unseen hands",
+    "composition": "quiet ground-level finale",
+    "viewpoint": "ground-level close wide shot",
+    "palette": "fresh soil brown, early green, dawn gold, pale sky",
+    "style": "Impressionist watercolor, Japanese woodblock clarity",
+    "prompt": "A small square patch of earth at ground level, newly planted green shoots catching dawn light, tools placed quietly nearby, no heroic figure visible, in the far background a vast world begins to brighten, Impressionist watercolor atmosphere combined with Japanese woodblock clarity, low ground-level close wide composition, fresh soil brown, early green, dawn gold, and pale sky palette, modest work, conscience, grounded hope, no readable text, no logo, no watermark --ar 16:9 --s 450 --exp 35"
+  }
+]

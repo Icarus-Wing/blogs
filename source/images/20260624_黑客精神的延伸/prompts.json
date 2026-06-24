@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "name": "午后图书馆的入口",
+    "subject": "一本从书架中微微发光的书",
+    "composition": "深景走廊式构图，前景书架形成框景",
+    "viewpoint": "平视远景",
+    "palette": "蜂蜜金、胡桃木棕、灰绿、纸张白",
+    "style": "印象派光影、水彩与编辑插画",
+    "prompt": "A quiet small library after lunch, tall wooden shelves forming a deep corridor, one newly arrived book glowing subtly among worn volumes, no person visible, dust floating in warm window light, Impressionist light blended with translucent watercolor and refined editorial illustration, honey gold, walnut brown, gray green and paper white, contemplative discovery, generous visual depth, no readable text, no logo, no watermark --ar 16:9 --s 350 --exp 20",
+    "imagegen_prompt": "Use case: illustration-story. Asset type: landscape editorial illustration for a Chinese book-note article. Scene: a quiet small library after lunch, tall wooden shelves forming a deep corridor, one newly arrived book glowing subtly among worn volumes, no people. Style: Impressionist light, translucent watercolor, refined magazine illustration. Composition: eye-level wide shot, shelves create a strong frame and deep perspective. Lighting: warm window light with floating dust. Palette: honey gold, walnut brown, gray green, paper white. Mood: curiosity and contemplative discovery. Constraints: no readable text, no logos, no watermark, polished 16:9 composition."
+  },
+  {
+    "id": 2,
+    "name": "生活操作台",
+    "subject": "被拆解成模块的日常生活系统",
+    "composition": "俯视轴测图，模块由细线互相连接",
+    "viewpoint": "鸟瞰",
+    "palette": "米白、石墨黑、钴蓝、警示橙",
+    "style": "包豪斯、信息设计、纸艺立体模型",
+    "prompt": "An entire everyday life represented as a modular operating console: sleep, meals, work, exercise, relationships and reflection shown as distinct tactile paper modules connected by precise lines, top-down axonometric composition, Bauhaus information design fused with handcrafted paper sculpture, ivory, graphite, cobalt blue and warning orange, rational yet slightly uncanny, the desire to control life as a system, no labels, no readable text, no logo, no watermark --ar 16:9 --s 220 --exp 15",
+    "imagegen_prompt": "Use case: stylized-concept. Asset type: landscape editorial illustration. Primary request: visualize everyday life as a modular operating console. Subject: tactile paper modules representing sleep, meals, work, exercise, relationships and reflection, connected by precise lines; use icons and forms only, no labels. Style: Bauhaus information design fused with handcrafted paper sculpture. Composition: top-down axonometric view with clear hierarchy. Palette: ivory, graphite, cobalt blue, warning orange. Mood: rational, controlled, slightly uncanny. Constraints: no readable text, no logos, no watermark, polished 16:9 composition."
+  },
+  {
+    "id": 3,
+    "name": "从美德清单到硅谷",
+    "subject": "跨越两个时代的打勾清单",
+    "composition": "左右对照的时代剖面，中间由电路线连接",
+    "viewpoint": "正面宽幅",
+    "palette": "羊皮纸棕、铜绿、霓虹青、深夜蓝",
+    "style": "十八世纪蚀刻版画与未来主义数字拼贴",
+    "prompt": "A split-era visual bridge: on one side an eighteenth-century hand keeping a meticulous virtue checklist by candlelight, on the other side a modern hand adjusting a glowing self-tracking interface, the two systems connected by a single copper circuit line, historical etching and aged parchment merging into futuristic digital collage, warm sepia transitioning to neon cyan and midnight blue, American self-help culture evolving into Silicon Valley optimization, no readable words, no famous likeness, no logo, no watermark --ar 16:9 --s 420 --exp 35",
+    "imagegen_prompt": "Use case: historical-scene. Asset type: landscape editorial illustration. Scene: a split-era bridge from eighteenth-century self-discipline to modern Silicon Valley optimization. Left: an anonymous hand making check marks on a virtue ledger by candlelight. Right: an anonymous hand adjusting a luminous self-tracking interface. Connect both halves with one copper circuit line. Style: historical etching and aged parchment transitioning into futuristic digital collage. Composition: symmetrical frontal wide frame. Palette transitions from sepia and verdigris to neon cyan and midnight blue. Constraints: no readable words, no identifiable historical or modern person, no logos, no watermark, polished 16:9 composition."
+  },
+  {
+    "id": 4,
+    "name": "六种执念",
+    "subject": "六个围绕空心核心旋转的象征物",
+    "composition": "放射状抽象构图，中心留白",
+    "viewpoint": "沉浸式抽象视角",
+    "palette": "朱红、群青、酸性黄、墨黑、象牙白",
+    "style": "构成主义、立体主义、混合媒介拼贴",
+    "prompt": "Six distinct symbolic objects orbit an empty center: a segmented clock, a weighted motivation lever, a single travel bag, a biometric heart crystal, two interlocking masks, and a small meditation stone, radial abstract composition with energetic diagonals, Constructivism fused with Cubism and layered mixed-media collage, vermilion, ultramarine, acid yellow, ink black and ivory, lively intellectual taxonomy with a hollow center suggesting obsession, no labels, no readable text, no logo, no watermark --ar 16:9 --s 520 --exp 45",
+    "imagegen_prompt": "Use case: stylized-concept. Asset type: landscape editorial illustration. Primary request: depict six forms of life hacking as six different symbolic objects orbiting an empty center: segmented clock, weighted motivation lever, single travel bag, biometric heart crystal, two interlocking masks, small meditation stone. Style: Constructivism, Cubism and layered mixed-media collage. Composition: radial abstract field with energetic diagonals and clear separation between all six objects; the center remains empty. Palette: vermilion, ultramarine, acid yellow, ink black, ivory. Constraints: no labels, no readable text, no logos, no watermark, polished 16:9 composition."
+  },
+  {
+    "id": 5,
+    "name": "美德的近敌",
+    "subject": "一条在中途分裂的禅意石径",
+    "composition": "低机位引导线，路径由宁静逐渐扭曲",
+    "viewpoint": "贴地仰视",
+    "palette": "雾白、苔绿、深墨、暗红",
+    "style": "中国水墨、极简主义、细微超现实主义",
+    "prompt": "A minimalist stone path begins in a calm misty garden, then splits almost imperceptibly: one branch continues toward open light while the other tightens into a dark compulsive spiral, no people, low ground-level perspective, Chinese ink wash negative space fused with minimalist surrealism, mist white, moss green, deep ink and one restrained dark red accent, serenity turning into indifference, diligence into obsession, subtle philosophical tension, no text, no logo, no watermark --ar 16:9 --s 400 --exp 35",
+    "imagegen_prompt": "Use case: stylized-concept. Asset type: landscape philosophical editorial illustration. Scene: a minimalist stone path in a misty garden splits subtly; one branch continues toward open light, the other tightens into a dark compulsive spiral. No people. Style: Chinese ink wash negative space fused with restrained surrealism and minimalism. Composition: very low ground-level perspective with the path as a leading line. Palette: mist white, moss green, deep ink, one dark red accent. Mood: calm becoming dangerous through excess. Constraints: no text, no logos, no watermark, polished 16:9 composition."
+  },
+  {
+    "id": 6,
+    "name": "量化身体的牢笼",
+    "subject": "由生理数据曲线围成的人体轮廓",
+    "composition": "极近距离中心构图，曲线像牢笼向外扩散",
+    "viewpoint": "特写",
+    "palette": "临床白、冷青、紫黑、心电红",
+    "style": "医学概念艺术、故障艺术、玻璃质感数字绘画",
+    "prompt": "A translucent human torso silhouette enclosed by luminous biometric curves, sleep graphs, pulse waves and nutrition rings that gradually become cage bars, extreme close-up centered composition, clinical concept art with subtle glitch artifacts and glass-like digital painting, sterile white, cold cyan, violet black and a sharp heartbeat red, beautiful data becoming oppressive, scientifically suggestive but not a medical diagram, no numbers, no readable text, no logo, no watermark --ar 16:9 --s 300 --exp 40",
+    "imagegen_prompt": "Use case: stylized-concept. Asset type: landscape editorial illustration about quantified self. Subject: a translucent anonymous human torso silhouette enclosed by luminous biometric curves, sleep waves, pulse lines and nutrition rings that gradually become cage bars. Style: clinical concept art, subtle glitch effects, glass-like digital painting. Composition: extreme close-up, centered, curves radiate outward. Palette: sterile white, cold cyan, violet black, sharp heartbeat red. Mood: seductive precision becoming oppression. Constraints: no numbers, no readable text, not a literal medical chart, no gore, no logos, no watermark, polished 16:9 composition."
+  },
+  {
+    "id": 7,
+    "name": "算法无法抵达的亲密",
+    "subject": "隔着算法棋盘相望的两副面具",
+    "composition": "斜向舞台构图，前景规则严密，背景逐渐虚化",
+    "viewpoint": "高位三分之四视角",
+    "palette": "酒红、肤粉、炭黑、冷银",
+    "style": "表现主义油画、戏剧舞台、现代寓言",
+    "prompt": "Two elegant theatrical masks face each other across a rigid algorithmic game board, perfectly arranged tokens and arrows fill the foreground while a warm human handprint fades in the unreachable background, high three-quarter diagonal stage composition, Expressionist oil painting with dramatic theater lighting, burgundy, muted skin pink, charcoal and cold silver, seduction techniques versus genuine intimacy, emotionally tense and unsentimental, no text, no logo, no watermark --ar 16:9 --s 500 --exp 35",
+    "imagegen_prompt": "Use case: illustration-story. Asset type: landscape editorial allegory. Subject: two elegant theatrical masks face one another across a rigid algorithmic game board; perfectly arranged tokens and arrows occupy the foreground, while one warm human handprint fades in the distant background. Style: Expressionist oil painting and dramatic stage design. Composition: high three-quarter diagonal view. Palette: burgundy, muted skin pink, charcoal, cold silver. Mood: calculated attraction unable to reach genuine intimacy. Constraints: no text, no logos, no watermark, polished 16:9 composition."
+  },
+  {
+    "id": 8,
+    "name": "外包的自由",
+    "subject": "悬浮工作舱下方承重的无名双手",
+    "composition": "上下分层的社会剖面，上轻下重",
+    "viewpoint": "侧面剖视",
+    "palette": "奢华金、云白、工业灰、锈橙",
+    "style": "社会现实主义壁画、装饰艺术、剪纸剖面",
+    "prompt": "A luxurious weightless work pod floats above the clouds with a relaxed empty chair and automated conveniences, but beneath it hundreds of anonymous hands hold cables, packages and service trays that keep the pod aloft, vertical social cutaway composition, Social Realist mural fused with Art Deco geometry and layered cut-paper texture, cloud white and polished gold above, industrial gray and rust orange below, freedom built on invisible labor, critical but dignified, no text, no logo, no watermark --ar 16:9 --s 430 --exp 30",
+    "imagegen_prompt": "Use case: stylized-concept. Asset type: landscape social-critique editorial illustration. Scene: a luxurious weightless work pod floats above clouds with an empty relaxed chair and automated conveniences; below, many anonymous hands hold cables, parcels and service trays that keep it aloft. Style: Social Realist mural fused with Art Deco geometry and layered cut-paper texture. Composition: side cutaway with two strong social layers, airy above and dense below. Palette: cloud white and polished gold above, industrial gray and rust orange below. Mood: critical, lucid, dignified. Constraints: no text, no logos, no watermark, polished 16:9 composition."
+  },
+  {
+    "id": 9,
+    "name": "自主循环",
+    "subject": "由代码碎片自我组装成的机械飞轮",
+    "composition": "动态螺旋构图，人物仅为边缘小剪影",
+    "viewpoint": "广角仰视",
+    "palette": "深靛蓝、电光青、熔金、黑色",
+    "style": "硬科幻概念艺术、复杂系统美学、细微赛博朋克",
+    "prompt": "A vast mechanical flywheel assembles itself from flowing code fragments, file folders, tool icons and small autonomous agents, accelerating into a luminous spiral while a tiny anonymous engineer silhouette steps back from execution at the edge, wide low-angle view, hard science-fiction concept art with complex-systems aesthetics and restrained cyberpunk light, deep indigo, electric cyan, molten gold and black, exhilarating autonomous loops, tools lifting a person to higher-level thinking, no readable code, no brand marks, no famous likeness, no watermark --ar 16:9 --s 340 --exp 45",
+    "imagegen_prompt": "Use case: stylized-concept. Asset type: landscape technology editorial illustration. Subject: a vast mechanical flywheel assembling itself from abstract code fragments, file folders, tool symbols and small autonomous agents; a tiny anonymous engineer silhouette stands back at the edge. Style: hard science-fiction concept art, complex-systems aesthetics, restrained cyberpunk lighting. Composition: dynamic luminous spiral, wide low-angle view, strong scale contrast. Palette: deep indigo, electric cyan, molten gold, black. Mood: exhilarating autonomy and transition from execution to orchestration. Constraints: no readable code, no brand marks, no identifiable person, no text, no watermark, polished 16:9 composition."
+  },
+  {
+    "id": 10,
+    "name": "不可优化的下午",
+    "subject": "草地上发呆的人与停摆的计时器",
+    "composition": "超宽远景，大面积天空与留白",
+    "viewpoint": "远距离平视",
+    "palette": "夏日青绿、天空蓝、云白、柔和日光黄",
+    "style": "日本浮世绘平面感、印象派空气、水粉",
+    "prompt": "A lone anonymous person lies quietly in summer grass watching clouds drift, a small mechanical timer rests stopped and forgotten nearby, vast open sky occupying most of the frame, ultra-wide distant composition with generous negative space, Japanese woodblock clarity blended with Impressionist atmosphere and soft gouache, fresh green, sky blue, cloud white and gentle sunlight yellow, purposeless wandering, idleness as a precious human freedom, serene ending, no text, no logo, no watermark --ar 16:9 --s 450 --exp 25",
+    "imagegen_prompt": "Use case: illustration-story. Asset type: landscape closing illustration for a philosophical book-note article. Scene: one anonymous person lies quietly in summer grass watching clouds drift; a small mechanical timer lies stopped and forgotten nearby. Style: Japanese woodblock clarity blended with Impressionist atmosphere and soft gouache. Composition: ultra-wide distant view, the open sky occupies most of the frame, generous negative space. Palette: fresh green, sky blue, cloud white, gentle sunlight yellow. Mood: purposeless wandering, idleness as precious human freedom, serene conclusion. Constraints: no text, no logos, no watermark, polished 16:9 composition."
+  }
+]
