@@ -26,6 +26,13 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+exclude:
+  - "images/**/prompts.json"
+  - "images/**/contact_sheet.png"
+  - "images/**/wechat*.json"
+  - "images/**/wechat*.html"
+  - "images/**/md2wechat*.html"
+  - "images/20260701_无名之辈长安十二时辰/**"
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -89,4 +96,3 @@ deploy:
   type: git
   repo: git@github.com:Nasamars/nasamars.github.io
   branch: master
-

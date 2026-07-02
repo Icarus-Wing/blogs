@@ -7,3 +7,21 @@ db.json
 .idea/
 .vscode/
 .playwright-mcp/
+.playwright-cli/
+
+# Generated local publishing artifacts.
+output/
+md2wechat-preview-*.png
+scripts/build_*_wechat_draft.js
+scripts/render_*_wechat_preview.js
+scripts/verify_*_wechat_draft.js
+
+# Keep local WeChat draft data out of GitHub.
+source/images/**/prompts.json
+source/images/**/contact_sheet.png
+source/images/**/wechat*.json
+source/images/**/wechat*.html
+source/images/**/md2wechat*.html
+
+# This article currently does not reference local blog images.
+source/images/20260701_无名之辈长安十二时辰/
