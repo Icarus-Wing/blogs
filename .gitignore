@@ -15,6 +15,9 @@ md2wechat-preview-*.png
 scripts/build_*_wechat_draft.js
 scripts/render_*_wechat_preview.js
 scripts/verify_*_wechat_draft.js
+tools/build_*_wechat_draft.js
+tools/render_*_wechat_preview.js
+tools/verify_*_wechat_draft.js
 
 # Keep local WeChat draft data out of GitHub.
 source/images/**/prompts.json

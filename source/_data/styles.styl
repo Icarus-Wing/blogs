@@ -1,259 +1,301 @@
-// ============================================================
-// 自定义样式：整体视觉提升
-// ============================================================
+// Warm paper / navy ink / copper, sampled from the 盗火者 reference.
+// Loaded through NexT's supported custom_file_path; no npm theme edits.
+:root {
+  --paper: #f5eddc;
+  --ink: #17263b;
+  --copper: #b75d32;
+  --muted: #75654f;
+  --rule: #d8c5a4;
+}
 
-// -----------------------------------------------------------
-// 1. 全局字体与间距优化
-// -----------------------------------------------------------
 body {
-  font-family: "Lato", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(rgba(96, 74, 43, .024) 1px, transparent 1px);
+  background-size: 100% 7px;
 }
-
-// -----------------------------------------------------------
-// 2. 菜单不折行 - 覆盖 Pisces 平板/手机展开菜单的样式
-// -----------------------------------------------------------
-
-// 桌面端菜单
-.menu-item a,
-.menu-item a span {
-  white-space: nowrap !important;
+.headband { height: 4px; background: var(--copper); }
+.main {
+  width: calc(100% - 64px);
+  max-width: 1080px;
+  margin: 32px auto 0;
+  gap: 28px;
 }
-
-// Pisces 方案在平板/手机下，site-nav 展开为浮动面板
-// 需要给面板设置足够宽度
-.site-nav-on .site-nav,
-.site-nav {
-  min-width: 120px !important;
+.main-inner {
+  width: calc(100% - 268px);
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
 }
-
-// 平板/手机菜单项（display:block 堆叠时）
-@media (max-width: 991px) {
-  .site-nav {
-    min-width: 120px !important;
-  }
-
-  .menu-item {
-    width: 100% !important;
-  }
-
-  .menu-item a {
-    white-space: nowrap !important;
-    min-width: 80px !important;
-    padding: 8px 20px !important;
-    text-align: left !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 8px;
-  }
-
-  .menu-item a i {
-    flex-shrink: 0;
-    margin-right: 0 !important;
-  }
+.column { width: 240px; flex-shrink: 0; }
+header.header {
+  border: 1px solid var(--rule);
+  box-shadow: none;
+  background: var(--paper);
 }
-
-// -----------------------------------------------------------
-// 3. 侧边栏：渐变品牌区域
-// -----------------------------------------------------------
 .site-brand-container {
-  background: linear-gradient(160deg, #0f2027, #203a43, #2c5364) !important;
+  background: var(--ink);
+  border-top: 4px solid #d97735;
 }
-
-.site-title a {
-  color: #fff !important;
-  font-size: 20px !important;
-  font-weight: 700 !important;
+.site-meta { padding: 28px 14px; }
+.site-title {
+  font-size: 21px;
+  font-weight: 700;
   letter-spacing: 1px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  line-height: 1.6;
 }
-
-.site-subtitle {
-  color: rgba(255,255,255,0.7) !important;
-}
-
-// 菜单项样式美化
-.menu-item a {
-  color: #555 !important;
+.site-subtitle { color: #c6ced9; }
+.menu { padding: 12px 0; }
+.menu-item a, .menu-item button {
+  color: var(--ink);
   font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  border-radius: 4px;
-  transition: all 0.25s ease;
+  padding: 9px 22px;
 }
-
-.menu-item a:hover,
-.menu-item.active a {
-  color: #2196f3 !important;
-  background: rgba(33, 150, 243, 0.08) !important;
+.menu-item a:hover, .menu-item button:hover, .menu-item-active a {
+  color: #a24d23;
+  background: #eadcc3;
 }
-
-// -----------------------------------------------------------
-// 4. 文章卡片效果
-// -----------------------------------------------------------
-.post-block {
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-  padding: 36px 40px;
-  margin-bottom: 30px;
-  background: #fff;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  border: 1px solid rgba(0,0,0,0.04);
-}
-
-.post-block:hover {
-  box-shadow: 0 8px 30px rgba(0,0,0,0.10);
-  transform: translateY(-2px);
-}
-
-// 文章标题
-.post-title a {
-  font-size: 22px !important;
-  font-weight: 700 !important;
-  color: #1a1a2e !important;
-  transition: color 0.25s;
-}
-
-.post-title a:hover {
-  color: #2196f3 !important;
-}
-
-// -----------------------------------------------------------
-// 5. 阅读更多按钮
-// -----------------------------------------------------------
-.post-button .btn {
-  border-radius: 20px !important;
-  padding: 8px 24px !important;
-  font-size: 13px !important;
-  font-weight: 500 !important;
-  letter-spacing: 0.5px;
-  border: 1.5px solid #2196f3 !important;
-  color: #2196f3 !important;
-  background: transparent !important;
-  transition: all 0.25s ease !important;
-}
-
-.post-button .btn:hover {
-  background: #2196f3 !important;
-  color: #fff !important;
-}
-
-// -----------------------------------------------------------
-// 6. 文章元信息（日期、分类）
-// -----------------------------------------------------------
-.post-meta {
-  font-size: 13px;
-  color: #999;
-}
-
-.post-meta a {
-  color: #777 !important;
-  transition: color 0.2s;
-}
-
-.post-meta a:hover {
-  color: #2196f3 !important;
-}
-
-// -----------------------------------------------------------
-// 7. 侧边栏作者信息卡片
-// -----------------------------------------------------------
 .sidebar-inner {
-  padding: 20px 16px;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  box-shadow: none;
+}
+.site-author-name, .site-state-item-count { color: var(--ink); }
+.sidebar-nav .sidebar-nav-active, .sidebar-nav li:hover,
+.sidebar-toc-active .sidebar-toc .nav .active > a {
+  color: var(--copper);
+  border-bottom-color: var(--copper);
 }
 
-.site-author-name {
-  font-size: 16px !important;
-  font-weight: 700 !important;
-  color: #1a1a2e !important;
+.post-block, .post-block:first-of-type {
+  padding: 34px 44px 40px;
+  margin-bottom: 28px;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  background: var(--paper);
+  background-image: linear-gradient(rgba(96, 74, 43, .024) 1px, transparent 1px);
+  background-size: 100% 7px;
+  box-shadow: 0 8px 24px rgba(65, 48, 27, .04);
+}
+.posts-expand .post-header {
+  margin: 0 0 34px;
+  padding: 30px 24px 26px;
+  background: var(--ink);
+  border-top: 6px solid #d97735;
+  box-shadow: 0 8px 22px rgba(23, 38, 59, .12);
+}
+.posts-expand .post-title, .posts-expand .post-title-link {
+  color: #fff8e8;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: .5px;
+}
+.posts-expand .post-title-link::before { background: #d9a15b; }
+.posts-expand .post-meta-container {
+  margin-top: 18px;
+  color: #c6ced9;
+  font-family: $font-family-base;
+  font-size: 12px;
+  line-height: 1.9;
+}
+.post-header .post-meta a {
+  color: #e6bc83;
+  border-bottom-color: rgba(230, 188, 131, .45);
+}
+.post-header .post-meta time { border: 0; }
+
+.post-body {
+  max-width: 720px;
+  margin: 0 auto;
+  color: #273444;
+  font-size: 17px;
+  line-height: 1.95;
+  text-align: left;
+
+  p { margin: 0 0 21px; }
+  h1, h2, h3, h4, h5, h6 {
+    color: #18263a;
+    font-weight: 700;
+    scroll-margin-top: 28px;
+  }
+  h1 {
+    margin: 40px 0 24px;
+    font-size: 27px;
+    line-height: 1.5;
+    text-align: center;
+    border: 0;
+  }
+  h2 {
+    margin: 40px 0 20px;
+    padding: 6px 0 6px 13px;
+    border: 0;
+    border-left: 4px solid #d97735;
+    font-size: 22px;
+    line-height: 1.5;
+  }
+  h3 { margin: 30px 0 16px; font-size: 20px; }
+  strong { color: #13243b; font-weight: 800; }
+  em { color: #a24d23; }
+  ul, ol { padding-left: 1.7em; margin-bottom: 28px; }
+  li { padding-left: .3em; margin-bottom: 12px; }
+  li::marker { color: var(--copper); font-weight: 700; }
+  ol { list-style-type: decimal-leading-zero; }
+
+  blockquote {
+    margin: 32px 0;
+    padding: 24px 26px;
+    background: var(--ink);
+    border: 0;
+    border-left: 5px solid #d97735;
+    border-radius: 2px;
+    color: #fff8e8;
+    box-shadow: 0 8px 22px rgba(23, 38, 59, .10);
+    font-size: 18px;
+
+    p:last-child, ul:last-child, ol:last-child { margin-bottom: 0; }
+    strong, em, a, li::marker { color: #e6bc83; }
+    h1, h2, h3, h4, h5, h6 { color: #fff8e8; }
+    blockquote { padding: 12px 18px; box-shadow: none; }
+  }
+
+  figure.editorial-figure, figure:not(.highlight) {
+    margin: 26px 0 32px;
+    padding: 6px 6px 12px;
+    background: #eadcc3;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    box-shadow: 0 8px 20px rgba(43, 35, 24, .10);
+
+    img {
+      display: block;
+      box-sizing: border-box;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      padding: 0;
+      border: 0;
+      border-radius: 2px;
+    }
+    figcaption {
+      margin: 11px 4px 0;
+      color: #75654f;
+      font-family: $font-family-base;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.6;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+  }
+  hr {
+    margin: 40px auto;
+    width: 64px;
+    height: 2px;
+    border: 0;
+    background: var(--copper);
+    background-image: none;
+  }
+  code { color: #91451f; background: #eadcc3; border-radius: 3px; }
+  .highlight {
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  table { font-family: $font-family-base; font-size: 14px; }
 }
 
-.site-state-item-count {
-  font-size: 20px !important;
-  font-weight: 700 !important;
-  color: #2196f3 !important;
-}
-
-// -----------------------------------------------------------
-// 8. 代码块优化
-// -----------------------------------------------------------
-.highlight, code {
-  border-radius: 6px;
-}
-
-.highlight {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-// -----------------------------------------------------------
-// 9. 分页按钮
-// -----------------------------------------------------------
-.pagination .page-number,
-.pagination .extend {
-  border-radius: 6px !important;
-  transition: all 0.2s ease;
-}
-
-.pagination .page-number.current {
-  background: #2196f3 !important;
-  border-color: #2196f3 !important;
-}
-
-// -----------------------------------------------------------
-// 10. 标签云
-// -----------------------------------------------------------
-.tag-cloud-tags a {
-  border-radius: 20px !important;
-  padding: 4px 12px !important;
-  margin: 4px !important;
-  border: 1px solid #e0e0e0 !important;
-  transition: all 0.2s ease !important;
-}
-
-.tag-cloud-tags a:hover {
-  background: #2196f3 !important;
-  border-color: #2196f3 !important;
-  color: #fff !important;
-}
-
-// -----------------------------------------------------------
-// 11. 页脚
-// -----------------------------------------------------------
-.footer {
+.index .post-body { font-size: 16px; }
+.index .post-body > h1:first-child { margin-top: 0; font-size: 22px; }
+.index .post-title, .index .post-title-link { font-size: 25px; }
+.post-button { margin-top: 28px; }
+.post-button .btn {
+  padding: 6px 22px;
+  border-width: 1px;
+  border-radius: 2px;
+  font-family: $font-family-base;
   font-size: 13px;
-  color: #aaa;
+}
+.post-eof { display: none; }
+.post-copyright {
+  padding: 16px 20px;
+  background: #efe3cd;
+  border-left: 3px solid var(--copper);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+.post-nav { border-top-color: var(--rule); font-size: 14px; }
+.post-tags a, .tag-cloud-tags a {
+  padding: 3px 9px;
+  margin: 4px;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+}
+.pagination { margin: 36px 0; border: 0; }
+.pagination .page-number.current {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff8e8;
+}
+.footer { color: var(--muted); font-size: 12px; }
+.footer-inner {
+  box-sizing: border-box;
+  width: calc(100% - 64px);
+  max-width: 1080px;
+  padding-right: 268px;
+}
+.search-popup { background: var(--paper); color: var(--ink); }
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 2px solid var(--copper);
+  outline-offset: 4px;
 }
 
-// -----------------------------------------------------------
-// 12. 深色模式适配
-// -----------------------------------------------------------
-@media (prefers-color-scheme: dark) {
-  .post-block {
-    background: #1e1e1e;
-    border-color: rgba(255,255,255,0.06);
-    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+@media (max-width: 991px) {
+  .main {
+    display: block;
+    width: calc(100% - 40px);
+    max-width: 812px;
+    margin-top: 20px;
   }
-
-  .post-block:hover {
-    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
-  }
-
-  .post-title a {
-    color: #e0e0e0 !important;
-  }
+  .column, .main-inner { width: 100%; }
+  .main-inner { padding: 0; margin-top: 20px; }
+  .site-meta { padding: 22px 48px; }
+  .menu { margin: 0; }
+  .site-nav { min-width: 0; background: var(--paper); }
+  .menu-item a, .menu-item button { white-space: nowrap; }
+  // NexT uses a navy off-canvas sidebar on tablet and phone.
+  .sidebar-inner { background: transparent; border: 0; }
+  .sidebar { background: var(--ink); }
+  .sidebar .site-author-name, .sidebar .site-state-item-count { color: #fff8e8; }
+  .footer-inner { width: 100%; padding: 0 20px; }
 }
 
-// -----------------------------------------------------------
-// 13. 移动端优化
-// -----------------------------------------------------------
 @media (max-width: 767px) {
-  .post-block {
-    padding: 24px 20px;
-    border-radius: 8px;
+  .main { width: 100%; margin-top: 0; }
+  header.header { border: 0; }
+  .site-title { font-size: 19px; }
+  .main-inner { margin-top: 0; }
+  .post-block, .post-block:first-of-type {
+    padding: 22px 20px 30px;
+    border: 0;
+    border-bottom: 1px solid var(--rule);
+    border-radius: 0;
+    margin-bottom: 16px;
+    box-shadow: none;
   }
+  .posts-expand .post-header { margin-bottom: 28px; padding: 24px 18px 22px; }
+  .posts-expand .post-title, .posts-expand .post-title-link { font-size: 25px; }
+  .posts-expand .post-meta-container { font-size: 11px; margin-top: 14px; }
+  .post-body {
+    font-size: 17px;
+    h1 { font-size: 25px; }
+    h2 { font-size: 21px; }
+    blockquote { padding: 22px 20px; font-size: 17px; }
+  }
+  .index .post-title, .index .post-title-link { font-size: 23px; }
+}
 
-  .post-title a {
-    font-size: 18px !important;
-  }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
 }

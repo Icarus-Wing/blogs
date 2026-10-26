@@ -5,13 +5,15 @@
 
 # Custom files
 custom_file_path:
+  variable: source/_data/variables.styl
   style: source/_data/styles.styl
 
 # ---------------------------------------------------------------
 # Scheme Settings
 # ---------------------------------------------------------------
 scheme: Pisces
-darkmode: true
+# Keep the reference's warm paper palette in both system appearances.
+darkmode: false
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -34,7 +36,7 @@ sidebar:
   display: post
   padding: 18
   offset: 12
-  width: 260
+  width_dual_column: 240
 
 avatar:
   url:
@@ -56,7 +58,7 @@ social_icons:
 toc:
   enable: true
   number: true
-  wrap: false
+  wrap: true
   expand_all: false
   max_depth: 6
 
@@ -66,8 +68,8 @@ toc:
 footer:
   icon:
     name: fa fa-heart
-    animated: true
-    color: "#ff0000"
+    animated: false
+    color: "#b75d32"
   powered: true
   beian:
     enable: false
@@ -118,8 +120,8 @@ tagcloud:
 # Misc Theme Settings
 # ---------------------------------------------------------------
 text_align:
-  desktop: justify
-  mobile: justify
+  desktop: left
+  mobile: left
 
 mobile_layout_economy: false
 
@@ -142,7 +144,7 @@ back2top:
 reading_progress:
   enable: true
   position: top
-  color: "#37c6c0"
+  color: "#d97735"
   height: 3px
 
 bookmark:
@@ -155,19 +157,21 @@ bookmark:
 # ---------------------------------------------------------------
 font:
   enable: true
-  host: https://fonts.googleapis.com
   global:
-    external: true
-    family: Lato
+    external: false
+    family: "-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif"
     size: 1
   title:
-    external: true
-    family: Roboto Slab
+    external: false
+    family: "Optima, 'Songti SC', STSong, 'Noto Serif CJK SC', serif"
     size:
   headings:
-    external: true
-    family: Roboto Slab
+    external: false
+    family: "Optima, 'Songti SC', STSong, 'Noto Serif CJK SC', serif"
     size:
+  posts:
+    external: false
+    family: "Optima, 'Songti SC', STSong, 'Noto Serif CJK SC', serif"
 
 # ---------------------------------------------------------------
 # SEO Settings
@@ -203,7 +207,7 @@ local_search:
 # Animation Settings
 # ---------------------------------------------------------------
 motion:
-  enable: true
+  enable: false
   async: false
   transition:
     post_block: fadeIn
